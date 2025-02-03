@@ -1,5 +1,7 @@
-import { Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import GlobalStyle from './styled/GlobalStyle';
+import Layout from './common/Layout';
+import Main from './pages/main';
 // import { ThemeProvider } from 'styled-components';
 // import { theme } from './styles/theme';
 
@@ -9,7 +11,11 @@ const App = () => {
       {/* <ThemeProvider theme={theme}> */}
       <GlobalStyle />
 
-      <Routes>{/* 라우터 설정 */}</Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Main />} />
+        </Route>
+      </Routes>
       {/* </ThemeProvider> */}
     </>
   );

@@ -5,12 +5,11 @@ import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-  /* other styles */
   
   body {
     font-size: 16px;
     line-height: 1.6;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Pretendard', sans-serif;
     color:#333;
   }
   a {
@@ -19,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
   li { list-style:none }
   img { vertical-align: top; }
+  
 
 
   
@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
 
 
   
-  .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; }
+  /* .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; } */
   .main { width: 100%; }
 
   button { border:none; cursor: pointer; }
