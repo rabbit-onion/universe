@@ -30,8 +30,9 @@ const GlobalStyle = createGlobalStyle`
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
-
+  background: grey;
+  width : 345px;
+  height : 223px;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -45,6 +46,10 @@ const GlobalStyle = createGlobalStyle`
   object-fit: cover;
 }
 
+.mainthumbnail {
+  width : 100%;
+  height : 100%;
+}
 
   
   /* .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; } */
