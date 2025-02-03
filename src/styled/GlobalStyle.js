@@ -30,16 +30,18 @@ const GlobalStyle = createGlobalStyle`
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: grey;
+  background: #fff;
   width : 345px;
   height : 223px;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .swiper-slide img {
+border-radius : 10px;
   display: block;
   width: 100%;
   height: 100%;
