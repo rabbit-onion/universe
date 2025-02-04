@@ -6,6 +6,7 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   ${reset}
   
+  * {box-sizing: border-box;}
   body {
     font-size: 16px;
     line-height: 1.6;
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color:#333; 
+    color:#333;
   }
   li { list-style:none }
   img { vertical-align: top; }
