@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,10 +8,18 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const Mainslide = () => {
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
   return (
     <div>
       <Swiper modules={[Navigation]} spaceBetween={15} slidesPerView={5} navigation>
-        <SwiperSlide>
+        <SwiperSlide className={isHovering ? 'grow' : ''} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
           <img src="../public/images/pattern/thunail.png"></img>
         </SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
