@@ -1,16 +1,14 @@
 import { IoClose } from 'react-icons/io5';
 import styled from 'styled-components';
+import VideoInfo from '../components/main/VideoInfo';
 
 export const ModalWrap = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  margin-top: 60px;
   background-color: #fff;
   width: 1440px;
-  height: 300px;
   border-radius: 60px;
-  padding: 0 60px;
+  overflow: hidden;
 `;
 
 export const CloseBtn = styled.button`
@@ -20,9 +18,10 @@ export const CloseBtn = styled.button`
   background-color: transparent;
 `;
 
-const Modal = () => {
+const ModalLayout = () => {
   return (
     <ModalWrap>
+      <VideoInfo />
       <CloseBtn>
         <IoClose size={60} color="white" />
       </CloseBtn>
@@ -30,4 +29,4 @@ const Modal = () => {
   );
 };
 
-export default Modal;
+export default ModalLayout;
