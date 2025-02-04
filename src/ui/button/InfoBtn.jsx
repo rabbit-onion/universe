@@ -22,14 +22,9 @@ export const PlayingBtn = styled.button`
   color: #ffffff;
 `;
 
-export const Bgdiv = styled.div`
-  width: 100%;
-  height: 100px;
-  background-color: #000;
-`;
 const InfoBtn = () => {
   return (
-    <Bgdiv>
+    <>
       <PlayingBtn>
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -47,7 +42,7 @@ const InfoBtn = () => {
         </svg>
         상세정보
       </PlayingBtn>
-    </Bgdiv>
+    </>
   );
 };
 

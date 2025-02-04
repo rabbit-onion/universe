@@ -23,28 +23,21 @@ export const PreviewBtn = styled.button`
   border-radius: 65.5px;
 `;
 
-export const Bgdiv = styled.div`
-  width: 100%;
-  height: 100px;
-  background-color: #000;
-`;
 const GotoPreviewBtn = () => {
   return (
-    <Bgdiv>
-      <PreviewBtn>
-        공식 예고편 보러가기
-        <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M1.00593 1.47363L1.0167 1.50103L1.00593 1.47363Z"
-            fill="white"
-            stroke="white"
-            strokeWidth="3"
-            fillOpacity="1"
-            strokeOpacity="1"
-          />
-        </svg>
-      </PreviewBtn>
-    </Bgdiv>
+    <PreviewBtn>
+      공식 예고편 보러가기
+      <svg width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1.00593 1.47363L1.0167 1.50103L1.00593 1.47363Z"
+          fill="white"
+          stroke="white"
+          strokeWidth="3"
+          fillOpacity="1"
+          strokeOpacity="1"
+        />
+      </svg>
+    </PreviewBtn>
   );
 };
 

@@ -11,15 +11,9 @@ export const Good = styled.button`
   border-radius: 68px;
 `;
 
-export const Bgdiv = styled.div`
-  width: 100%;
-  height: 100px;
-  background-color: #000;
-`;
-
 const GoodBtn = () => {
   return (
-    <Bgdiv>
+    <>
       <Good>
         <svg
           width="30"
@@ -38,7 +32,7 @@ const GoodBtn = () => {
           />
         </svg>
       </Good>
-    </Bgdiv>
+    </>
   );
 };
 

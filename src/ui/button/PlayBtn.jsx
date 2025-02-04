@@ -20,15 +20,9 @@ export const PlayingBtn = styled.button`
   padding: 10px;
 `;
 
-export const Bgdiv = styled.div`
-  width: 100%;
-  height: 100px;
-  background-color: #000;
-`;
-
 const PlayBtn = () => {
   return (
-    <Bgdiv>
+    <>
       <PlayingBtn>
         <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -38,7 +32,7 @@ const PlayBtn = () => {
         </svg>
         재생
       </PlayingBtn>
-    </Bgdiv>
+    </>
   );
 };
 

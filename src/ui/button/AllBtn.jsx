@@ -5,15 +5,9 @@ export const AllAges = styled.button`
   background-color: transparent;
 `;
 
-export const Bgdiv = styled.div`
-  width: 100%;
-  height: 100px;
-  background-color: #000;
-`;
-
 const AllBtn = () => {
   return (
-    <Bgdiv>
+    <>
       <AllAges>
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -38,7 +32,7 @@ const AllBtn = () => {
           />
         </svg>
       </AllAges>
-    </Bgdiv>
+    </>
   );
 };
 

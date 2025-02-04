@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 export const Day7Btn = styled.button`
   width: 64px;
   height: 64px;
@@ -18,16 +19,11 @@ export const Day7Btn = styled.button`
   border-radius: 64px;
 `;
 
-export const Bgdiv = styled.div`
-  width: 100%;
-  height: 100px;
-  background-color: #000;
-`;
 const DayBtn = () => {
   return (
-    <Bgdiv>
+    <>
       <Day7Btn>월</Day7Btn>
-    </Bgdiv>
+    </>
   );
 };
 
