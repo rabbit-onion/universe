@@ -2,7 +2,7 @@ import React from 'react';
 
 const IssueAnimation = () => {
   return (
-    <div className="inner">
+    <div className="inner div_top_margin">
       <h2>2025년 2분기에 공개! 역대급 화제작!</h2>
       <div className=" center_wrap">
         <div className="issue_content_wrap">

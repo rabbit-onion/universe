@@ -19,24 +19,56 @@ const Mainslide = () => {
   return (
     <>
       {' '}
-      <div className="inner">
+      <div className="inner div_top_margin">
         <h2>유니버스 독점작</h2>
         <div>
-          <Swiper modules={[Navigation]} spaceBetween={15} slidesPerView={5} slidesPerGroup={5} loop="true" navigation>
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={15}
+            slidesPerView={5.5}
+            slidesPerGroup={5.5}
+            loop="true"
+            navigation
+          >
             <SwiperSlide>
-              <img src="../public/images/pattern/thunail.png"></img>
+              <img src="../public/images/pattern/horizon/chihiro.webp"></img>
             </SwiperSlide>
             <SwiperSlide>
-              <img src="../public/images/pattern/thunail.png"></img>
+              <img src="../public/images/pattern/horizon/hell.webp"></img>
             </SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 55</SwiperSlide>
-            <SwiperSlide>Slide 54</SwiperSlide>
-            <SwiperSlide>Slide 522</SwiperSlide>
-            <SwiperSlide>Slide 522</SwiperSlide>
+            <SwiperSlide>
+              <img src="../public/images/pattern/horizon/horimiya.webp"></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="../public/images/pattern/horizon/jusul.webp"></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="../public/images/pattern/horizon/mashle.webp"></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              {' '}
+              <img src="../public/images/pattern/horizon/frieren.webp"></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              {' '}
+              <img src="../public/images/pattern/horizon/hosinoko.webp"></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              {' '}
+              <img src="../public/images/pattern/horizon/moruka.webp"></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              {' '}
+              <img src="../public/images/pattern/horizon/sinjjang.webp"></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              {' '}
+              <img src="../public/images/pattern/horizon/slamdunk.webp"></img>
+            </SwiperSlide>
+            <SwiperSlide>
+              {' '}
+              <img src="../public/images/pattern/horizon/slamdunk.webp"></img>
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>

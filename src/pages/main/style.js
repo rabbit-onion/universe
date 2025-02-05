@@ -15,6 +15,15 @@ export const MainWrap = styled.div`
     background-color: #f5f5f5;
     padding: 100px;
   }
+  .mainthumbnail {
+    width: 100%;
+    height: 100%;
+  }
+  .user_content_wrap {
+    gap: 150px;
+    display: flex;
+    flex-direction: row;
+  }
   .content_wrap {
     gap: 20px;
     display: flex;

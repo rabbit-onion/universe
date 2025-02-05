@@ -56,17 +56,17 @@ border-radius : 10px;
   height: 100%;
   object-fit: cover;
 }
+.bottombanner {
+width : 1680px;
+height : 76px; 
+background-color : #4D94FF;
+border-radius : 10px;
+} 
 
-.mainthumbnail {
-  width : 100%;
-  height : 100%;
+.div_top_margin {
+margin-top : 150px;
 }
-.grow {
- z-index : 10;
-  width: 500px !important;
-  height: 300px;
 
-}
   
   /* .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; } */
   .main { width: 100%; }

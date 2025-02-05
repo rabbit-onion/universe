@@ -7,13 +7,15 @@ import UserWatching from '../../components/main/userWatching';
 import PopularAnimation from '../../components/main/popularAnimation';
 import HotPost from '../../components/main/hotPost';
 import IssueAnimation from '../../components/main/issueAnimation';
+import BottomBanner from '../../components/banner/bottomBanner';
 
 const Main = () => {
   return (
     <>
       <div>메인페이지</div>
-      <HorizontalThumbnail />
+
       <MainWrap>
+        <HorizontalThumbnail />
         <Mainslide />
         <UserWatching />
 
@@ -22,6 +24,7 @@ const Main = () => {
         <PopularAnimation />
         <HotPost />
         <IssueAnimation />
+        <BottomBanner />
       </MainWrap>
     </>
   );

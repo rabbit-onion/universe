@@ -5,7 +5,7 @@ const HotPost = () => {
   const { id, title, tag } = useSelector;
   return (
     <>
-      <div className="bg-gr">
+      <div className="bg-gr div_top_margin">
         <h2>오늘 HOT한 게시물</h2>
         <div className="content_wrap">
           <div className="hotpost_content">
@@ -13,7 +13,7 @@ const HotPost = () => {
             <div className="hotpost_content_title">
               <label>HOT</label>
               <p>캐릭캐릭체인지</p>
-              <p>#오늘 #애니 #추천 #ㅈㄱㄴ #노래미침 #사카모토입니다만'</p>
+              <p>#오늘 #애니 #추천 #ㅈㄱㄴ #노래미침 #사카모토입니다만</p>
             </div>
           </div>
         </div>{' '}
