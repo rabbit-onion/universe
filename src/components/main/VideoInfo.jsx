@@ -1,93 +1,157 @@
-import styled from 'styled-components';
-
-export const ModalTop = styled.div`
-  width: 1440px;
-  height: 950px;
-  background-color: gray;
-`;
-
-export const ModalMain = styled.div`
-  width: 1440px;
-  height: 950px;
-  background-color: lavender;
-`;
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getVideo } from '../../store/modules/getThunk';
+import {
+  Btns,
+  FlexBox,
+  InfoDetail,
+  ModalMain,
+  ModalTop,
+  Overlay,
+  ProgressBar,
+  TopInner,
+  VideoBox,
+  VideoDesc,
+  EpisodeSec,
+  EpisodeTop,
+  EpisodeItem,
+  EpisodeNum,
+  EpisodeTitle,
+  EpisodeDesc,
+  EpisodeInfo,
+  SeasonSelect,
+} from './style';
 
 const VideoInfo = () => {
+  const { monsterData } = useSelector((state) => state.videoR);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getVideo());
+  }, []);
+
+  if (!monsterData || monsterData.length === 0) {
+    return <div>Loading . . . </div>;
+  }
+
+  const { backdrop_path } = monsterData;
+  const bgurl = 'https://image.tmdb.org/t/p/w500/';
+
+  const videoId = 'eBivqKyjiqA';
+  const opts = [
+    'autoplay=1',
+    'mute=1',
+    'modestbranding=1',
+    'controls=0',
+    'loop=1',
+    'rel=0',
+    'playlist=' + videoId,
+  ].join('&');
+
   return (
     <>
       <ModalTop>
-        <div>bg영상 재생부분</div>
-        <h1>괴수 8호</h1>
-        <div>재생바 컴포넌트</div>
+        <VideoBox
+          width="100%"
+          height="950px"
+          src={`https://www.youtube.com/embed/${videoId}?${opts}`}
+          title="애니메이션 '괴수 8호' 제1기 총집편"
+          frameBorder="0"
+          allow="autoplay; encrypted-media;"
+          allowFullScreen
+          style={{ pointerEvents: 'none' }}
+        />
+        <Overlay />
 
-        {/* flex줄 박스 */}
-        <div>
-          <div>
-            <button>재생버튼 컴포넌트</button>
-            <button>+버튼 컴포넌트</button>
-            <button>따봉버튼 컴포넌트</button>
-          </div>
-          <button>뮤트버튼 컴포넌트</button>
-        </div>
-      </ModalTop>
-      <ModalMain>
-        <div className="videoDesc">
-          <strong>2025년 리미티드 시리즈</strong>
-          <div>
-            <p>
-              일상적으로 괴수가 사람들을 위협하는 세계.
-              <br />
-              괴수를 토벌하는 '일본방위대' 입대에 뜻을 두었던 히비노 카프카는, 어느덧 그 꿈을 접고 괴수 전문 청소업에서
-              일하고 있었다.
-              <br />
-              일찍이 그렇게 맹세했던 소꿉친구인 제3부대 대장·아시로 미나의 활약과,
-              <br />
-              방위대를 목표로 하는 후배·이치카와 레노와의 만남을 계기로 다시 꿈을 쫓기 시작하는 카프카.
-              <br />
-              그러나 그 순간, 수수께끼의 소형 괴수에 의해 강대한 힘을 가진 '괴수로 변신'하고 만다!
-              <br />
-              '괴수 8호'라는 이름으로 일본 전역에서 쫓기는 존재가 된 카프카는, 그래도 방위대원에 대한 꿈을 포기하지
-              않고,괴수 재해에 맞서는 것이었다
-            </p>
+        <TopInner>
+          <h1>
+            <img src="/images/video/monsterTitle.png" alt="" />
+          </h1>
+          <ProgressBar>
+            <div></div>
+          </ProgressBar>
+          {/* flex줄 박스 */}
+          <Btns>
             <div>
-              <p>
-                <strong>제작</strong>
-                프로덕션LG
-              </p>
-              <p>
-                <strong>감독</strong>
-                미야 시게유키, 카미야 토모미
-              </p>
-              <p>
-                <strong>시리즈 특징 </strong>
-                #액션 #재난 #먼치킨 #배틀 #성장
-              </p>
+              <button>
+                <img src="/images/video/playBtn.svg" alt="" />
+              </button>
+              <button>
+                <img src="/images/video/plusBtn.svg" alt="" />
+              </button>
+              <button>
+                <img src="/images/video/goodBtn.svg" alt="" />
+              </button>
             </div>
-          </div>
-        </div>
+            <button>
+              <img src="/images/video/muteBtn.svg" alt="" />
+            </button>
+          </Btns>
 
-        <div className="episodes-sec">
-          <div className="episodes__top">
+          <VideoDesc>
+            <strong>2025년 리미티드 시리즈</strong>
+            <FlexBox>
+              <p>
+                일상적으로 괴수가 사람들을 위협하는 세계.
+                <br />
+                괴수를 토벌하는 '일본방위대' 입대에 뜻을 두었던 히비노 카프카는, 어느덧 그 꿈을 접고 괴수 전문
+                청소업에서 일하고 있었다.
+                <br />
+                일찍이 그렇게 맹세했던 소꿉친구인 제3부대 대장·아시로 미나의 활약과,
+                <br />
+                방위대를 목표로 하는 후배·이치카와 레노와의 만남을 계기로 다시 꿈을 쫓기 시작하는 카프카.
+                <br />
+                그러나 그 순간, 수수께끼의 소형 괴수에 의해 강대한 힘을 가진 '괴수로 변신'하고 만다!
+                <br />
+                '괴수 8호'라는 이름으로 일본 전역에서 쫓기는 존재가 된 카프카는, 그래도 방위대원에 대한 꿈을 포기하지
+                않고,괴수 재해에 맞서는 것이었다
+              </p>
+              <InfoDetail>
+                <p>
+                  <strong>제작</strong>
+                  프로덕션LG
+                </p>
+                <p>
+                  <strong>감독</strong>
+                  미야 시게유키, 카미야 토모미
+                </p>
+                <p>
+                  <strong>시리즈 특징 </strong>
+                  #액션 #재난 #먼치킨 #배틀 #성장
+                </p>
+              </InfoDetail>
+            </FlexBox>
+          </VideoDesc>
+        </TopInner>
+      </ModalTop>
+
+      <ModalMain>
+        <EpisodeSec>
+          <EpisodeTop>
             <h2>회차</h2>
-            <select name="series" id="series">
-              <option>=== 시즌 ===</option>
+            <SeasonSelect name="series" id="series">
+              <option>리미티드 시리즈</option>
               <option value="1">1기</option>
               <option value="2">2기</option>
               <option value="3">3기</option>
-            </select>
-          </div>
+            </SeasonSelect>
+          </EpisodeTop>
           <div className="episodes__list">
             {/* item 컴포넌트 map처리 */}
-            <div className="episodes__item">
-              <div>1</div>
-              <div>thumbnail</div>
-              <div className="episode__info">
-                <div className="episode__title">
-                  <span>1화</span>
-                  <h3>괴수가 된 남자</h3>
+            <EpisodeItem>
+              <EpisodeNum>1</EpisodeNum>
+              <div>
+                <img src={`${bgurl}${backdrop_path}`} alt="" />
+              </div>
+              <EpisodeInfo>
+                <EpisodeTitle>
+                  <div>
+                    <span>1화</span>
+                    <h3>괴수가 된 남자</h3>
+                  </div>
                   <span>60분</span>
-                </div>
-                <div className="episode__desc">
+                </EpisodeTitle>
+                <EpisodeDesc>
                   일상적인 괴수의 위협에 노출된 일본.
                   <br />
                   괴수를 토벌하는 「일본 방위대」 입대를 지망했던 히비노 카프카는 꿈을 포기하고 괴수 전문 청소업자로서
@@ -97,13 +161,13 @@ const VideoInfo = () => {
                   떠올리며 안타까움을 느끼는 나날을 보내던 중,
                   <br />
                   카프카는 방위 대원을 지망하는 후배 이치카와 레노를 만났는데.
-                </div>
-              </div>
-            </div>
+                </EpisodeDesc>
+              </EpisodeInfo>
+            </EpisodeItem>
             <hr />
           </div>
           <button>회차 더보기 버튼</button>
-        </div>
+        </EpisodeSec>
 
         <div className="rec-contents-sec">
           <h2>함께 시청된 콘텐츠</h2>

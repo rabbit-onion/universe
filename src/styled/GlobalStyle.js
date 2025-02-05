@@ -6,16 +6,19 @@ import reset from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   ${reset}
   
-  * {box-sizing: border-box;}
+  * {
+    box-sizing: border-box;
+    font-family: 'Pretendard', sans-serif;
+  }
   body {
     font-size: 16px;
     line-height: 1.6;
     font-family: 'Pretendard', sans-serif;
-    color:#333;
+    color:#000;
   }
   a {
     text-decoration: none;
-    color:#333;
+    color:#000;
   }
   li { list-style:none }
   img { vertical-align: top; }
@@ -46,10 +49,6 @@ const GlobalStyle = createGlobalStyle`
   object-fit: cover;
 }
 
-
-  
-  /* .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; } */
-  .main { width: 100%; }
 
   button { border:none; cursor: pointer; }
   .hide{
