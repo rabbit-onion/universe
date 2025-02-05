@@ -2,7 +2,7 @@ import React from 'react';
 
 const PopularAnimation = () => {
   return (
-    <div>
+    <div className="inner">
       <h2>실시간 인기 애니메이션</h2>
       <div className="content_wrap">
         <div className="vertical_watching_content">

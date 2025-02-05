@@ -5,6 +5,8 @@ import Mainslide from '../../components/main/mainslide';
 import { MainWrap } from './style';
 import UserWatching from '../../components/main/userWatching';
 import PopularAnimation from '../../components/main/popularAnimation';
+import HotPost from '../../components/main/hotPost';
+import IssueAnimation from '../../components/main/issueAnimation';
 
 const Main = () => {
   return (
@@ -12,15 +14,14 @@ const Main = () => {
       <div>메인페이지</div>
       <HorizontalThumbnail />
       <MainWrap>
-        <div className="inner">
-          <Mainslide />
-        </div>
+        <Mainslide />
         <UserWatching />
-        <div className="inner">
-          <Mainslide />
-          <Mainslide />
-          <PopularAnimation />
-        </div>
+
+        <Mainslide />
+        <Mainslide />
+        <PopularAnimation />
+        <HotPost />
+        <IssueAnimation />
       </MainWrap>
     </>
   );

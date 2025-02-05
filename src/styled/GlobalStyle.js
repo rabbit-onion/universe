@@ -41,7 +41,7 @@ font-weight : 600;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
   
 .swiper-slide:hover {
