@@ -19,33 +19,54 @@ const GlobalStyle = createGlobalStyle`
   li { list-style:none }
   img { vertical-align: top; }
   
-
+h2 {
+margin-bottom : 35px;
+font-size : 35px;
+font-weight : 600;
+}
 
   
 .swiper {
   width: 100%;
   height: 100%;
+  overflow : visible;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
-
+  width : 345px;
+  height : 223px;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+  
+.swiper-slide:hover {
+transform: scale(1.7); 
+  z-index: 10;
 }
 
 .swiper-slide img {
-  display: block;
+border-radius : 10px;
+
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+.mainthumbnail {
+  width : 100%;
+  height : 100%;
+}
+.grow {
+ z-index : 10;
+  width: 500px !important;
+  height: 300px;
 
+}
   
   /* .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; } */
   .main { width: 100%; }
