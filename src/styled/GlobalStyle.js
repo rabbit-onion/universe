@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.6;
     font-family: 'Pretendard', sans-serif;
     color:#333;
+    overflow-x : hidden;
   }
   a {
     text-decoration: none;
@@ -23,8 +24,8 @@ h2 {
 margin-bottom : 35px;
 font-size : 35px;
 font-weight : 600;
-}
 
+}
   
 .swiper {
   width: 100%;
@@ -35,36 +36,74 @@ font-weight : 600;
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  width : 345px;
-  height : 223px;
+  width : 18vw;
+  height : 24.2vh;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.5s ease;
+ transition: transform 0.5s ease;
 }
-  
+
 .swiper-slide:hover {
 transform: scale(1.7); 
   z-index: 10;
 }
-
 .swiper-slide img {
 border-radius : 10px;
-
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+  .swiper-button-prev {
+  opacity : 0;
+ 
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s ease;
+  }
+    .swiper-button-prev:hover {
+    transition: transform 0.8s ease;
+  opacity : 1;
+  } 
+    .swiper-button-prev::after {
+color : white;
+    }
+
+  .swiper-button-next {
+  padding : 6vh 2vw ;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity : 0;
+
+  } 
+  .swiper-button-next:hover {
+    transition: transform 0.8s ease;
+  opacity : 1;
+  } 
+    .swiper-button-next::after {
+color : white;
+    }
 .bottombanner {
-width : 1680px;
-height : 76px; 
+width : 85vw;
+height : 8vh; 
 background-color : #4D94FF;
 border-radius : 10px;
 } 
-
+.bottombanner_title_wrap {
+    display: flex;
+    margin-left : 2vw;
+    gap : 2vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    color : white;
+}
 .div_top_margin {
 margin-top : 150px;
+}
+
+img {
+object-fit: cover;
 }
 
   

@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const Mainslide = () => {
+const FirstMainslide = () => {
   const thumbnails = [
     { src: '../public/images/pattern/horizon/chihiro.webp', alt: 'thumbnail 1' },
     { src: '../public/images/pattern/horizon/hell.webp', alt: 'thumbnail 2' },
@@ -23,7 +23,7 @@ const Mainslide = () => {
 
   return (
     <>
-      <div className="inner div_top_margin">
+      <div className="inner ">
         <h2>유니버스 독점작</h2>
         <div>
           <Swiper modules={[Navigation]} spaceBetween={15} slidesPerView={5} slidesPerGroup={5} loop="true" navigation>
@@ -39,4 +39,4 @@ const Mainslide = () => {
   );
 };
 
-export default Mainslide;
+export default FirstMainslide;

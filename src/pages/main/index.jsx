@@ -8,6 +8,9 @@ import PopularAnimation from '../../components/main/popularAnimation';
 import HotPost from '../../components/main/hotPost';
 import IssueAnimation from '../../components/main/issueAnimation';
 import BottomBanner from '../../components/banner/bottomBanner';
+import FirstMainslide from '../../components/main/Firstmainslide';
+import Footer from '../../common/footer';
+import DateSlide from '../../components/main/dateSlide';
 
 const Main = () => {
   return (
@@ -16,9 +19,9 @@ const Main = () => {
 
       <MainWrap>
         <HorizontalThumbnail />
-        <Mainslide />
+        <FirstMainslide />
+        <DateSlide />
         <UserWatching />
-
         <Mainslide />
         <Mainslide />
         <PopularAnimation />

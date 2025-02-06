@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const Mainslide = () => {
+const DateSlide = () => {
   const thumbnails = [
     { src: '../public/images/pattern/horizon/chihiro.webp', alt: 'thumbnail 1' },
     { src: '../public/images/pattern/horizon/hell.webp', alt: 'thumbnail 2' },
@@ -39,4 +39,4 @@ const Mainslide = () => {
   );
 };
 
-export default Mainslide;
+export default DateSlide;
