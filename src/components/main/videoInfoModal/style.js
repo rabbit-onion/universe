@@ -83,9 +83,13 @@ export const FlexBox = styled.div`
   align-items: center;
   margin-top: 5px;
   > p {
+    width: 743px;
     font-size: 14px;
     line-height: 22px;
     letter-spacing: -0.02em;
+    white-space: pre-wrap;
+    flex-grow: 1;
+    padding-right: 250px;
   }
 `;
 
@@ -93,15 +97,30 @@ export const InfoDetail = styled.div`
   display: flex;
   flex-direction: column;
   gap: 23px;
+  width: 289px;
   font-size: 15px;
+  div {
+    display: flex;
+    color: #5f5f5f;
+    line-height: 18px;
+    white-space: pre;
+    &:last-child p {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+  }
   strong {
     font-weight: 600;
     color: #1c1c1c;
     margin-right: 17px;
   }
-  p {
-    color: #5f5f5f;
-    line-height: 18px;
+
+  span {
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 `;
 

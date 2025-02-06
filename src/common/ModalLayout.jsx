@@ -1,6 +1,6 @@
 import { IoClose } from 'react-icons/io5';
 import styled from 'styled-components';
-import VideoInfo from '../components/main/VideoInfo';
+import VideoInfo from '../components/main/videoInfoModal/VideoInfo';
 
 export const Dimmed = styled.div`
   position: absolute;

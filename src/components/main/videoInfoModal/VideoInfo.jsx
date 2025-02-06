@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getVideo } from '../../store/modules/getThunk';
+import { getVideo } from '../../../store/modules/getThunk';
 import {
   ModalTop,
   VideoWrap,
@@ -18,31 +18,29 @@ import {
   SeasonSelect,
   MoreBtn,
   RecContentSec,
-  RecList,
-  RecItem,
-  RecCard,
-  RecCardTop,
-  RecCardBottom,
-  ListOverlay,
   PvSec,
   PvCard,
   ModalFooter,
   ModalFooterDesc,
 } from './style';
 import EpisodeList from './EpisodeList';
+import RecommendList from './RecommendList';
 
 const VideoInfo = () => {
   const { monsterData } = useSelector((state) => state.videoR);
-  const { genres, id, name, origin_country, overview, production_companies, seasons, type } = monsterData;
+  const { videoData } = useSelector((state) => state.videoR);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getVideo());
   }, []);
 
-  if (!monsterData || monsterData.length === 0) {
+  if (!monsterData || !videoData || monsterData.length === 0 || videoData.length === 0) {
     return <div>Loading . . . </div>;
   }
+
+  const { genres, id, name, origin_country, overview, production_companies, seasons, type } = monsterData;
+  const formattedOverview = overview.replace(/\. /g, '.\n');
 
   const videoId = 'eBivqKyjiqA';
   const opts = [
@@ -96,20 +94,27 @@ const VideoInfo = () => {
           <VideoDesc>
             <strong>2025년 리미티드 시리즈</strong>
             <FlexBox>
-              <p>{overview}</p>
+              <p>{formattedOverview}</p>
               <InfoDetail>
-                <p>
+                <div>
                   <strong>제작</strong>
-                  {production_companies.map((item) => `${item.name}`)}
-                </p>
-                <p>
-                  <strong>감독</strong>
-                  미야 시게유키, 카미야 토모미
-                </p>
-                <p>
+                  <p>
+                    {production_companies.map((item) => (
+                      <span>{item.name}</span>
+                    ))}
+                  </p>
+                </div>
+                <div>
                   <strong>시리즈 특징 </strong>
-                  #액션 #재난 #먼치킨 #배틀 #성장
-                </p>
+                  <p>
+                    {genres.map((item) => (
+                      <span>
+                        {item.name}
+                        <br />
+                      </span>
+                    ))}
+                  </p>
+                </div>
               </InfoDetail>
             </FlexBox>
           </VideoDesc>
@@ -122,12 +127,12 @@ const VideoInfo = () => {
             <h2>회차</h2>
             <SeasonSelect name="series" id="series">
               <option>리미티드 시리즈</option>
-              <option value="1">1기</option>
-              <option value="2">2기</option>
-              <option value="3">3기</option>
+              {seasons.map((season, idx) => (
+                <option value={idx + 1}>{season.name}</option>
+              ))}
             </SeasonSelect>
           </EpisodeTop>
-          <EpisodeList />
+          <EpisodeList id={id} name={name} seasons={seasons} />
           <MoreBtn>
             <img src="/images/video/icon/downArrow.svg" alt="" />
           </MoreBtn>
@@ -135,26 +140,7 @@ const VideoInfo = () => {
 
         <RecContentSec>
           <h2>함께 시청된 콘텐츠</h2>
-          <RecList>
-            {/* item map처리 */}
-            <RecItem>
-              <RecCard>
-                <RecCardTop>
-                  <img src="/images/video/tokyoR.png" alt="" />
-                </RecCardTop>
-                <RecCardBottom>
-                  <div>
-                    <h4>도쿄리벤저스</h4>
-                    <span>학원 청춘</span> | <span>TVA 완결</span>
-                  </div>
-                  <button>
-                    <img src="/images/video/icon/plusIcon.svg" alt="" />
-                  </button>
-                </RecCardBottom>
-              </RecCard>
-            </RecItem>
-            <ListOverlay />
-          </RecList>
+          <RecommendList videoData={videoData} />
           <hr />
           <MoreBtn>
             <img src="/images/video/icon/downArrow.svg" alt="" />

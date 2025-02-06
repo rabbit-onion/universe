@@ -58,10 +58,46 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
     }));
 
     // TV 쇼 데이터에 비디오 정보 추가
+    // const tvShowsWithVideos = tvRes.data.results.map((show, index) => ({
+    //   ...show,
+    //   type: 'tv',
+    //   videos: tvVideosRes[index].data.results,
+    // }));
+
+    // ========================================================
+    // season정보 가져오기
+    const tvSeasonsPromises = await Promise.all(
+      tvRes.data.results.map(async (show) => {
+        const seasonsData = await axios.get(`https://api.themoviedb.org/3/tv/${show.id}`, {
+          params: {
+            api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+            language: 'ko-KR',
+          },
+        });
+
+        // 각 시즌의 상세 정보 가져오기
+        const seasonResponses = await Promise.all(
+          seasonsData.data.seasons.map((season) =>
+            axios.get(`https://api.themoviedb.org/3/tv/${show.id}/season/${season.season_number}`, {
+              params: {
+                api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+                language: 'ko-KR',
+              },
+            })
+          )
+        );
+
+        return seasonResponses.map((response) => response.data);
+      })
+    );
+
+    // 이제 tvSeasonsPromises는 이미 resolve된 데이터이므로
+    // 추가적인 Promise.all이 필요하지 않습니다
     const tvShowsWithVideos = tvRes.data.results.map((show, index) => ({
       ...show,
       type: 'tv',
       videos: tvVideosRes[index].data.results,
+      seasons: tvSeasonsPromises[index],
     }));
 
     // ==============================================================================
@@ -80,7 +116,24 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
       },
     });
 
-    const monsterWithVideo = { ...monsterRes.data, type: 'tv', videos: monsterVideoRes.data.results };
+    // 몬스터의 시즌 정보만 가져오기
+    const monsterSeasonRes = await Promise.all(
+      monsterRes.data.seasons.map((season) =>
+        axios.get(`https://api.themoviedb.org/3/tv/207468/season/${season.season_number}`, {
+          params: {
+            api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+            language: 'ko-KR',
+          },
+        })
+      )
+    );
+
+    const monsterWithVideo = {
+      ...monsterRes.data,
+      type: 'tv',
+      videos: monsterVideoRes.data.results,
+      seasons: monsterSeasonRes.map((response) => response.data),
+    };
     // ================================================================================
 
     return {
