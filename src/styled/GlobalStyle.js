@@ -46,7 +46,7 @@ font-weight : 600;
 }
 
 .swiper-slide:hover {
-transform: scale(1.7); 
+transform: scale(1.5); 
   z-index: 10;
 }
 .swiper-slide img {
@@ -70,7 +70,7 @@ color : white;
     }
 
   .swiper-button-next {
-  padding : 6vh 2vw ;
+  padding : 10vh 2vw ;
   background-color: rgba(0, 0, 0, 0.4);
   opacity : 0;
 
