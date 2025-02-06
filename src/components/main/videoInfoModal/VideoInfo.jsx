@@ -39,7 +39,11 @@ const VideoInfo = () => {
     return <div>Loading . . . </div>;
   }
 
-  const { genres, id, name, origin_country, overview, production_companies, seasons, type } = monsterData;
+  if (!monsterData.seasons || !videoData) {
+    return <div>Loading . . .</div>;
+  }
+
+  const { genres, id, name, overview, production_companies, seasons, backdrop_path, type } = monsterData;
   const formattedOverview = overview.replace(/\. /g, '.\n');
 
   const videoId = 'eBivqKyjiqA';
@@ -99,16 +103,16 @@ const VideoInfo = () => {
                 <div>
                   <strong>제작</strong>
                   <p>
-                    {production_companies.map((item) => (
-                      <span>{item.name}</span>
+                    {production_companies.map((item, idx) => (
+                      <span key={item.id}>{item.name}</span>
                     ))}
                   </p>
                 </div>
                 <div>
                   <strong>시리즈 특징 </strong>
                   <p>
-                    {genres.map((item) => (
-                      <span>
+                    {genres.map((item, idx) => (
+                      <span key={item.id}>
                         {item.name}
                         <br />
                       </span>
@@ -127,12 +131,12 @@ const VideoInfo = () => {
             <h2>회차</h2>
             <SeasonSelect name="series" id="series">
               <option>리미티드 시리즈</option>
-              {seasons.map((season, idx) => (
-                <option value={idx + 1}>{season.name}</option>
-              ))}
+              <option value="1">스페셜</option>
+              <option value="2">1기</option>
+              <option value="3">2기</option>
             </SeasonSelect>
           </EpisodeTop>
-          <EpisodeList id={id} name={name} seasons={seasons} />
+          <EpisodeList id={id} name={name} seasons={seasons} backdrop_path={backdrop_path} />
           <MoreBtn>
             <img src="/images/video/icon/downArrow.svg" alt="" />
           </MoreBtn>

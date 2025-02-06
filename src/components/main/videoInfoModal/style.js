@@ -137,7 +137,7 @@ export const ModalMain = styled.div`
 export const EpisodeSec = styled.div`
   padding: 37px 60px 74px 60px;
   width: 100%;
-  height: 1953px;
+  height: 1963px;
   hr {
     border: none;
     height: 1px;
@@ -153,7 +153,7 @@ export const EpisodeTop = styled.div`
   }
 `;
 
-export const EpisodeItem = styled.div`
+export const EpisodeItemWrap = styled.div`
   display: flex;
   align-items: center;
   padding: 50px 14px;

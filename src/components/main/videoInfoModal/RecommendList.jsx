@@ -5,7 +5,7 @@ const RecommendList = ({ videoData }) => {
   return (
     <>
       {videoData.map((video) => (
-        <RecommendItem key={videoData.id} video={video} />
+        <RecommendItem key={video.id} video={video} />
       ))}
       <ListOverlay />
     </>

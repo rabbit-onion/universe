@@ -26,6 +26,24 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
       },
     });
 
+    // tvRes의 기본정보 최적화
+    const tvShows = tvRes.data.results.map((show) => ({
+      adult: show.adult,
+      backdrop_path: show.backdrop_path,
+      episode_run_time: show.episode_run_time,
+      genres: show.genres,
+      id: show.id,
+      name: show.name,
+      original_language: show.original_language,
+      overview: show.overview,
+      popularity: show.popularity,
+      poster_path: show.poster_path,
+      production_companies: show.production_companies,
+      seasons: show.seasons,
+      type: show.type,
+      vote_average: show.vote_average,
+    }));
+
     // 각 영화의 비디오 데이터 가져오기
     const movieVideosPromises = movieRes.data.results.map((movie) =>
       axios.get(`https://api.themoviedb.org/3/movie/${movie.id}/videos`, {
@@ -58,50 +76,15 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
     }));
 
     // TV 쇼 데이터에 비디오 정보 추가
-    // const tvShowsWithVideos = tvRes.data.results.map((show, index) => ({
-    //   ...show,
-    //   type: 'tv',
-    //   videos: tvVideosRes[index].data.results,
-    // }));
-
-    // ========================================================
-    // season정보 가져오기
-    const tvSeasonsPromises = await Promise.all(
-      tvRes.data.results.map(async (show) => {
-        const seasonsData = await axios.get(`https://api.themoviedb.org/3/tv/${show.id}`, {
-          params: {
-            api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
-            language: 'ko-KR',
-          },
-        });
-
-        // 각 시즌의 상세 정보 가져오기
-        const seasonResponses = await Promise.all(
-          seasonsData.data.seasons.map((season) =>
-            axios.get(`https://api.themoviedb.org/3/tv/${show.id}/season/${season.season_number}`, {
-              params: {
-                api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
-                language: 'ko-KR',
-              },
-            })
-          )
-        );
-
-        return seasonResponses.map((response) => response.data);
-      })
-    );
-
-    // 이제 tvSeasonsPromises는 이미 resolve된 데이터이므로
-    // 추가적인 Promise.all이 필요하지 않습니다
     const tvShowsWithVideos = tvRes.data.results.map((show, index) => ({
       ...show,
       type: 'tv',
       videos: tvVideosRes[index].data.results,
-      seasons: tvSeasonsPromises[index],
     }));
 
     // ==============================================================================
     // 확인용 임시코드(나중에 지울거임)
+    // monster의 기본정보, 비디오정보 가져오기
     const monsterRes = await axios.get(`https://api.themoviedb.org/3/tv/207468`, {
       params: {
         api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
@@ -116,25 +99,22 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
       },
     });
 
-    // 몬스터의 시즌 정보만 가져오기
-    const monsterSeasonRes = await Promise.all(
-      monsterRes.data.seasons.map((season) =>
-        axios.get(`https://api.themoviedb.org/3/tv/207468/season/${season.season_number}`, {
-          params: {
-            api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
-            language: 'ko-KR',
-          },
-        })
-      )
-    );
+    // 몬스터의 특정 시즌 정보 가져오기
+    const monterSeason1Res = await axios.get(`https://api.themoviedb.org/3/tv/207468/season/1`, {
+      params: {
+        api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+        language: 'ko-KR',
+      },
+    });
 
-    const monsterWithVideo = {
+    const monsterWithSeason = {
       ...monsterRes.data,
       type: 'tv',
       videos: monsterVideoRes.data.results,
-      seasons: monsterSeasonRes.map((response) => response.data),
+      seasons: monterSeason1Res.data,
     };
-    // ================================================================================
+
+    //================================================================================
 
     return {
       movies: {
@@ -150,10 +130,47 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
         totalResults: tvRes.data.total_results,
       },
       monster: {
-        results: monsterWithVideo,
+        results: monsterWithSeason,
       },
     };
   } catch (error) {
     console.log(error);
+    throw error;
   }
 });
+
+// ========================================================
+// 전체 tv작품의 season정보 가져오기
+// const tvSeasonsPromises = await Promise.all(
+//   tvRes.data.results.map(async (show) => {
+//     const seasonsData = await axios.get(`https://api.themoviedb.org/3/tv/${show.id}`, {
+//       params: {
+//         api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+//         language: 'ko-KR',
+//       },
+//     });
+
+//     // 각 시즌의 상세 정보 가져오기
+//     const seasonResponses = await Promise.all(
+//       seasonsData.data.seasons.map((season) =>
+//         axios.get(`https://api.themoviedb.org/3/tv/${show.id}/season/${season.season_number}`, {
+//           params: {
+//             api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+//             language: 'ko-KR',
+//           },
+//         })
+//       )
+//     );
+
+//     return seasonResponses.map((response) => response.data);
+//   })
+// );
+
+// 이제 tvSeasonsPromises는 이미 resolve된 데이터이므로
+// 추가적인 Promise.all이 필요하지 않습니다
+// const tvShowsWithVideos = tvRes.data.results.map((show, index) => ({
+//   ...show,
+//   type: 'tv',
+//   videos: tvVideosRes[index].data.results,
+//   seasons: tvSeasonsPromises[index],
+// }));
