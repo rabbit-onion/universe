@@ -6,18 +6,26 @@ export const ModalTop = styled.div`
   height: 1079px;
 `;
 
+export const VideoWrap = styled.div`
+  width: 100%;
+  height: 878px;
+  overflow: hidden;
+`;
+
 export const VideoBox = styled.iframe`
   position: relative;
-  margin-top: -70px;
   z-index: 1;
+  width: 100%;
+  height: 100%;
+  scale: 1.3;
 `;
 
 export const Overlay = styled.div`
   position: absolute;
-  top: 455px;
+  top: 758px;
   width: 1440px;
-  height: 425px;
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 4%, transparent 100%);
+  height: 120px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0.2) 70%, transparent 100%);
   z-index: 2;
 `;
 
@@ -49,13 +57,16 @@ export const ProgressBar = styled.div`
   }
 `;
 
-export const Btns = styled.div`
+export const TopBtns = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 80px;
-  img {
-    height: 68px;
-    width: auto;
+  button {
+    background-color: transparent;
+    img {
+      height: 68px;
+      width: auto;
+    }
   }
 `;
 
@@ -70,6 +81,7 @@ export const FlexBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
   > p {
     font-size: 14px;
     line-height: 22px;
@@ -95,16 +107,18 @@ export const InfoDetail = styled.div`
 
 export const ModalMain = styled.div`
   width: 1440px;
-  padding: 17px 60px;
-  background-color: lavender;
   h2 {
     font-weight: 600;
     font-size: 25px;
     line-height: 30px;
+    margin-bottom: 50px;
   }
 `;
 
 export const EpisodeSec = styled.div`
+  padding: 37px 60px 74px 60px;
+  width: 100%;
+  height: 1953px;
   hr {
     border: none;
     height: 1px;
@@ -115,6 +129,9 @@ export const EpisodeSec = styled.div`
 export const EpisodeTop = styled.div`
   display: flex;
   justify-content: space-between;
+  h2 {
+    margin-bottom: 0;
+  }
 `;
 
 export const EpisodeItem = styled.div`
@@ -137,7 +154,7 @@ export const EpisodeNum = styled.div`
   font-weight: 500;
   font-size: 30px;
   line-height: 36px;
-  padding: 0 18px 0 28px;
+  padding: 0 28px 0 18px;
 `;
 
 export const EpisodeInfo = styled.div`
@@ -177,4 +194,122 @@ export const SeasonSelect = styled.select`
   line-height: 18px;
   border: none;
   padding: 0 20px;
+`;
+
+export const MoreBtn = styled.button`
+  display: block;
+  margin: auto;
+  margin-top: 75px;
+  background-color: transparent;
+`;
+
+export const RecContentSec = styled.div`
+  width: 100%;
+  height: 1388px;
+  padding: 50px 60px 24px 60px;
+  background: #f1f1f1;
+  hr {
+    border: none;
+    height: 3px;
+    background-color: #c5c5c5;
+    margin-bottom: 68px;
+  }
+`;
+
+export const RecList = styled.div``;
+export const RecItem = styled.div``;
+
+export const RecCard = styled.div`
+  width: 398px;
+  height: 418px;
+  background-color: #fff;
+  border-radius: 25px;
+`;
+
+export const RecCardTop = styled.div`
+  width: 100%;
+  height: 244px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+export const RecCardBottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 44px 25px 49px 29px;
+  h4 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 21px;
+  }
+  span {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  button {
+    background-color: transparent;
+    img {
+      width: 18px;
+      height: 18px;
+      margin-top: -24px;
+    }
+  }
+`;
+
+export const ListOverlay = styled.div`
+  background: linear-gradient(to top, rgba(255, 255, 255, 1) 4%, transparent 100%);
+`;
+
+export const PvSec = styled.div`
+  width: 100%;
+  height: 447px;
+  padding: 45px 60px 49px 60px;
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+`;
+
+export const PvCard = styled.div`
+  width: 345px;
+  height: 223px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  background-color: gray;
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export const ModalFooter = styled.div`
+  width: 100%;
+  height: 332px;
+  background-color: #4b4b4b;
+  color: white;
+  padding: 45px 60px;
+  h2 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
+`;
+
+export const ModalFooterDesc = styled.div`
+  p {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    strong {
+      margin-right: 10px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
 `;
