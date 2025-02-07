@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
           <Route path="/home" element={<Home />} />
+
           {/* 최종 path는 작품ID로 들어갈듯 */}
           <Route path="/videoInfo" element={<VideoInfo />} />
         </Route>

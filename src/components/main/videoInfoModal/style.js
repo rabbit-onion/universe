@@ -19,6 +19,9 @@ export const ModalWrap = styled.div`
   background-color: #fff;
   border-radius: 60px;
   overflow: hidden;
+  button {
+    border: none;
+  }
 `;
 
 export const ModalTop = styled.div`

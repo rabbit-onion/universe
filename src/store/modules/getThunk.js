@@ -4,11 +4,12 @@ import axios from 'axios';
 export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1) => {
   const movieUrl = `https://api.themoviedb.org/3/discover/movie`;
   const tvUrl = 'https://api.themoviedb.org/3/discover/tv';
+  const API_KEY = import.meta.env.VITE_APP_TMDB_KEY;
 
   try {
     const movieRes = await axios.get(movieUrl, {
       params: {
-        api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+        api_key: API_KEY,
         language: 'ko-KR',
         with_genres: '16', // 애니메이션 장르 ID
         include_adult: true,
@@ -18,7 +19,7 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
 
     const tvRes = await axios.get(tvUrl, {
       params: {
-        api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+        api_key: API_KEY,
         language: 'ko-KR',
         with_genres: '16',
         include_adult: true,
@@ -48,7 +49,7 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
     const movieVideosPromises = movieRes.data.results.map((movie) =>
       axios.get(`https://api.themoviedb.org/3/movie/${movie.id}/videos`, {
         params: {
-          api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+          api_key: API_KEY,
           language: 'ko-KR',
         },
       })
@@ -58,7 +59,7 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
     const tvVideosPromises = tvRes.data.results.map((show) =>
       axios.get(`https://api.themoviedb.org/3/tv/${show.id}/videos`, {
         params: {
-          api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+          api_key: API_KEY,
           language: 'ko-KR',
         },
       })
@@ -87,14 +88,14 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
     // monster의 기본정보, 비디오정보 가져오기
     const monsterRes = await axios.get(`https://api.themoviedb.org/3/tv/207468`, {
       params: {
-        api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+        api_key: API_KEY,
         language: 'ko-KR',
       },
     });
 
     const monsterVideoRes = await axios.get(`https://api.themoviedb.org/3/tv/207468/videos`, {
       params: {
-        api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+        api_key: API_KEY,
         language: 'ko-KR',
       },
     });
@@ -102,7 +103,7 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
     // 몬스터의 특정 시즌 정보 가져오기
     const monterSeason1Res = await axios.get(`https://api.themoviedb.org/3/tv/207468/season/1`, {
       params: {
-        api_key: '4f5c92af7075a90835f789ce7ff8ddb5',
+        api_key: API_KEY,
         language: 'ko-KR',
       },
     });
