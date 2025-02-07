@@ -2,6 +2,8 @@
 
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -42,13 +44,9 @@ font-weight : 600;
   display: flex;
   justify-content: center;
   align-items: center;
- transition: transform 0.5s ease;
+transition: transform 0.5s ease;
 }
 
-.swiper-slide:hover {
-transform: scale(1.5); 
-  z-index: 10;
-}
 .swiper-slide img {
 border-radius : 10px;
   width: 100%;
@@ -57,7 +55,6 @@ border-radius : 10px;
 }
   .swiper-button-prev {
   opacity : 0;
- 
   background-color: rgba(0, 0, 0, 0.4);
   transition: transform 0.5s ease;
   }
@@ -105,7 +102,18 @@ margin-top : 150px;
 img {
 object-fit: cover;
 }
-
+ .black_blur {
+      position: absolute;
+      background-color: transparent;
+      background-image: linear-gradient(
+        180deg,
+        hsla(0, 0%, 8%, 0) 0,
+        hsla(0, 0%, 8%, 0.15) 15%,
+        hsla(0, 0%, 8%, 0.35) 29%,
+        hsla(0, 0%, 8%, 0.58) 44%,
+        #141414 68%,
+        #141414
+      );
   
   /* .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; } */
   .main { width: 100%; }
@@ -119,6 +127,8 @@ object-fit: cover;
      font-size: 0;
      line-height: 0;
   }
+
+  
 `;
 
 export default GlobalStyle;

@@ -1,6 +1,17 @@
 import styled from 'styled-components';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export const MainWrap = styled.div`
+
+.swiper-slide:hover {
+  transform: scale(1.5); 
+    z-index: 10;
+  }
+  .slick-slide {
+    width: 500px;
+    height: 500px;
+  }
   .inner {
     padding-left: 5.2vw;
   }
@@ -30,6 +41,9 @@ export const MainWrap = styled.div`
       #ffffff 68%,
       #ffffff
     );
+
+   
+    }
     background-position: 0 top;
     background-repeat: repeat-x;
     background-size: 100% 100%;
