@@ -1,5 +1,7 @@
-const NotFile = () => {
-  return <div></div>;
+import React from 'react';
+
+const Notfile = () => {
+  return <div>nf</div>;
 };
 
-export default NotFile;
+export default Notfile;
