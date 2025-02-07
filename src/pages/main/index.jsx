@@ -1,19 +1,28 @@
-import styled from 'styled-components';
-import ModalLayout from '../../common/ModalLayout';
+import React from 'react';
 
-export const Wrap = styled.div`
-  position: relative;
-  background: url('/images/video/pageBg.png') no-repeat 0 0 / cover;
-  width: 100%;
-  height: 6926px;
-  min-height: 100vh;
-`;
+import HorizontalThumbnail from '../../components/main/HorizontalThumbnail';
+import Mainslide from '../../components/main/mainslide';
+import { MainWrap } from './style';
+import UserWatching from '../../components/main/userWatching';
+import PopularAnimation from '../../components/main/popularAnimation';
 
 const Main = () => {
   return (
-    <Wrap>
-      <ModalLayout />
-    </Wrap>
+    <>
+      <div>메인페이지</div>
+      <HorizontalThumbnail />
+      <MainWrap>
+        <div className="inner">
+          <Mainslide />
+        </div>
+        <UserWatching />
+        <div className="inner">
+          <Mainslide />
+          <Mainslide />
+          <PopularAnimation />
+        </div>
+      </MainWrap>
+    </>
   );
 };
 
