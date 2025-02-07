@@ -79,7 +79,11 @@ const VideoInfo = () => {
 
               <TopInner>
                 <h1>
-                  <img src="/images/video/monsterTitle.png" alt="" />
+                  <img
+                    src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/monsterTitle.png"
+                    alt=""
+                    crossOrigin="anonymous"
+                  />
                 </h1>
                 <ProgressBar>
                   <div></div>
@@ -87,17 +91,33 @@ const VideoInfo = () => {
                 <TopBtns>
                   <div>
                     <button>
-                      <img src="/images/video/playBtn.svg" alt="" />
+                      <img
+                        src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/playBtn.svg"
+                        alt=""
+                        crossOrigin="anonymous"
+                      />
                     </button>
                     <button>
-                      <img src="/images/video/plusBtn.svg" alt="" />
+                      <img
+                        src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/plusBtn.svg"
+                        alt=""
+                        crossOrigin="anonymous"
+                      />
                     </button>
                     <button>
-                      <img src="/images/video/goodBtn.svg" alt="" />
+                      <img
+                        src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/goodBtn.svg"
+                        alt=""
+                        crossOrigin="anonymous"
+                      />
                     </button>
                   </div>
                   <button>
-                    <img src="/images/video/muteBtn.svg" alt="" />
+                    <img
+                      src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/muteBtn.svg"
+                      alt=""
+                      crossOrigin="anonymous"
+                    />
                   </button>
                 </TopBtns>
 
@@ -144,7 +164,11 @@ const VideoInfo = () => {
                 </EpisodeTop>
                 <EpisodeList id={id} name={name} seasons={seasons} backdrop_path={backdrop_path} />
                 <MoreBtn>
-                  <img src="/images/video/icon/downArrow.svg" alt="" />
+                  <img
+                    src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/downArrow.svg"
+                    alt=""
+                    crossOrigin="anonymous"
+                  />
                 </MoreBtn>
               </EpisodeSec>
 
@@ -153,14 +177,22 @@ const VideoInfo = () => {
                 <RecommendList videoData={videoData} />
                 <hr />
                 <MoreBtn>
-                  <img src="/images/video/icon/downArrow.svg" alt="" />
+                  <img
+                    src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/downArrow.svg"
+                    alt=""
+                    crossOrigin="anonymous"
+                  />
                 </MoreBtn>
               </RecContentSec>
 
               <PvSec>
                 <h2>예고편 및 다른 영상</h2>
                 <PvCard>
-                  <img src="/images/video/monsterPV.png" alt="" />
+                  <img
+                    src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/video/monsterPV.png"
+                    alt=""
+                    crossOrigin="anonymous"
+                  />
                 </PvCard>
                 <p>괴수 8호 (공식 예고편)</p>
               </PvSec>

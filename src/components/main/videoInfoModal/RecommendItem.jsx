@@ -7,7 +7,11 @@ const RecommendItem = ({ video }) => {
     <>
       <RecCard>
         <RecCardTop>
-          <img src="/images/video/tokyoR.png" alt="" />
+          <img
+            src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/tokyoR.png"
+            alt=""
+            crossOrigin="anonymous"
+          />
         </RecCardTop>
         <RecCardBottom>
           <div>
@@ -15,7 +19,11 @@ const RecommendItem = ({ video }) => {
             <span>학원 청춘</span> | <span>TVA 완결</span>
           </div>
           <button>
-            <img src="/images/video/icon/plusIcon.svg" alt="" />
+            <img
+              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/plusIcon.svg"
+              alt=""
+              crossOrigin="anonymous"
+            />
           </button>
         </RecCardBottom>
       </RecCard>

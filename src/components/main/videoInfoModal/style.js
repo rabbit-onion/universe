@@ -229,6 +229,7 @@ export const EpisodeDesc = styled.div`
   font-size: 15px;
   line-height: 18px;
   margin-top: 11px;
+  width: 80%;
 `;
 
 export const SeasonSelect = styled.select`
