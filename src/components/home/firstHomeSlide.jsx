@@ -23,8 +23,9 @@ const FirstHomeSlide = () => {
   ];
   return (
     <>
-      <div className="inner ">
-        <h2>유니버스 독점작</h2>
+      <div className="div_top_margin center_wrap ">
+        <h2>요즘 뜨는 모든 애니메이션</h2>
+        <h3>뜨거운 관심을 받는 애니메이션들이 모두 유니버스에</h3>
         <div>
           <Swiper
             className="swiper-container"

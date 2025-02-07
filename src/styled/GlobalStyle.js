@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
   
   body {
+  background-color : #141414;
     font-size: 16px;
     line-height: 1.6;
     font-family: 'Pretendard', sans-serif;
@@ -98,7 +99,13 @@ border-radius : 10px;
 .div_top_margin {
 margin-top : 150px;
 }
-
+.center_wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+  }
 img {
 object-fit: cover;
 }
@@ -114,7 +121,15 @@ object-fit: cover;
         #141414 68%,
         #141414
       );
-  
+     background-position: 0 top;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    bottom: -1px;
+    height: 14.7vw;
+    opacity: 1;
+    top: auto;
+    width: 100%;
+  }
   /* .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; } */
   .main { width: 100%; }
 
