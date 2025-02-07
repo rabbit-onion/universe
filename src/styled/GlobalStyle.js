@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Pretendard', sans-serif;
   }
   body {
+  background-color :white;
     font-size: 16px;
     line-height: 1.6;
     font-family: 'Pretendard', sans-serif;
@@ -100,32 +101,45 @@ const GlobalStyle = createGlobalStyle`
   .div_top_margin {
     margin-top : 150px;
   }
-
-
+  .center_wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+  }
   img {
     object-fit: cover;
   }
-
   .black_blur {
-    position: absolute;
-    background-color: transparent;
-    background-image: linear-gradient(
-      180deg,
-      hsla(0, 0%, 8%, 0) 0,
-      hsla(0, 0%, 8%, 0.15) 15%,
-      hsla(0, 0%, 8%, 0.35) 29%,
-      hsla(0, 0%, 8%, 0.58) 44%,
-      #141414 68%,
-      #141414
-    );
+      position: absolute;
+      background-color: transparent;
+      background-image: linear-gradient(
+        180deg,
+        hsla(0, 0%, 8%, 0) 0,
+        hsla(0, 0%, 8%, 0.15) 15%,
+        hsla(0, 0%, 8%, 0.35) 29%,
+        hsla(0, 0%, 8%, 0.58) 44%,
+        #141414 68%,
+        #141414
+      );
+    background-position: 0 top;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    bottom: -1px;
+    height: 14.7vw;
+    opacity: 1;
+    top: auto;
+    width: 100%;
   }
-
+  .double_line_slides {
+    gap : 20px;
+  }
   
   .main { 
     width: 100%;
     margin-top: 80px;
   }
-
 
   button { 
     border:none; cursor: pointer; 

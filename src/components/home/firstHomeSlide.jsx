@@ -23,8 +23,9 @@ const FirstHomeSlide = () => {
   ];
   return (
     <>
-      <div className="inner ">
-        <h2>유니버스 독점작</h2>
+      <div className="div_top_margin center_wrap double_line_slides">
+        <h2>요즘 뜨는 모든 애니메이션</h2>
+        <h3>뜨거운 관심을 받는 애니메이션들이 모두 유니버스에</h3>
         <div>
           <Swiper
             className="swiper-container"
@@ -39,6 +40,7 @@ const FirstHomeSlide = () => {
             slidesPerView={'auto'} // 한 번에 보여줄 슬라이드 개수 (자동 크기)
             allowTouchMove={false} // 터치 이동 비활성화
             modules={[Autoplay]} // Autoplay 모듈 활성화
+            dir={'rtl'}
           >
             {thumbnails.map((image, index) => (
               <SwiperSlide key={index}>
