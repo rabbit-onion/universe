@@ -8,6 +8,10 @@ import 'slick-carousel/slick/slick-theme.css';
 const GlobalStyle = createGlobalStyle`
   ${reset}
   
+  * {
+    box-sizing: border-box;
+    font-family: 'Pretendard', sans-serif;
+  }
   body {
   background-color : #141414;
     font-size: 16px;
@@ -15,10 +19,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Pretendard', sans-serif;
     color:#333;
     overflow-x : hidden;
+
   }
   a {
     text-decoration: none;
-    color:#333; 
+    color:#000;
   }
   li { list-style:none }
   img { vertical-align: top; }
@@ -108,6 +113,7 @@ margin-top : 150px;
   }
 img {
 object-fit: cover;
+
 }
  .black_blur {
       position: absolute;
@@ -132,6 +138,7 @@ object-fit: cover;
   }
   /* .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; } */
   .main { width: 100%; }
+
 
   button { border:none; cursor: pointer; }
   .hide{
