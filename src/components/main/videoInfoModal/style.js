@@ -1,5 +1,29 @@
 import styled from 'styled-components';
 
+export const TestBg = styled.div`
+  width: 100%;
+  background: url('https://raw.githubusercontent.com/rabbit-onion/universe-resources/main/images/modal/pageBg.png')
+    no-repeat 0 0;
+`;
+
+export const Dimmed = styled.div`
+  background-color: rgba(0, 0, 0, 0.7);
+`;
+
+export const ModalWrap = styled.div`
+  position: relative;
+  width: 1440px;
+  min-width: 1440px;
+  margin: auto;
+  top: 50px;
+  background-color: #fff;
+  border-radius: 60px;
+  overflow: hidden;
+  button {
+    border: none;
+  }
+`;
+
 export const ModalTop = styled.div`
   position: relative;
   width: 1440px;
@@ -156,7 +180,7 @@ export const EpisodeTop = styled.div`
 export const EpisodeItemWrap = styled.div`
   display: flex;
   align-items: center;
-  padding: 50px 14px;
+  padding: 50px 0;
   &:first-child {
     padding: 26px 0 50px 0;
   }
@@ -205,6 +229,7 @@ export const EpisodeDesc = styled.div`
   font-size: 15px;
   line-height: 18px;
   margin-top: 11px;
+  width: 80%;
 `;
 
 export const SeasonSelect = styled.select`

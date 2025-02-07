@@ -15,7 +15,7 @@ import FirstHomeSlide from '../../components/home/firstHomeSlide';
 const Main = () => {
   return (
     <>
-      <div>메인페이지</div>
+      {/* <div>메인페이지</div> */}
 
       <MainWrap>
         <HorizontalThumbnail />
