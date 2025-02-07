@@ -112,17 +112,17 @@ const GlobalStyle = createGlobalStyle`
     object-fit: cover;
   }
   .black_blur {
-      position: absolute;
-      background-color: transparent;
-      background-image: linear-gradient(
-        180deg,
-        hsla(0, 0%, 8%, 0) 0,
-        hsla(0, 0%, 8%, 0.15) 15%,
-        hsla(0, 0%, 8%, 0.35) 29%,
-        hsla(0, 0%, 8%, 0.58) 44%,
-        #141414 68%,
-        #141414
-      );
+    position: absolute;
+    background-color: transparent;
+    background-image: linear-gradient(
+      180deg,
+      hsla(0, 0%, 8%, 0) 0,
+      hsla(0, 0%, 8%, 0.15) 15%,
+      hsla(0, 0%, 8%, 0.35) 29%,
+      hsla(0, 0%, 8%, 0.58) 44%,
+      #141414 68%,
+      #141414
+    );
     background-position: 0 top;
     background-repeat: repeat-x;
     background-size: 100% 100%;
