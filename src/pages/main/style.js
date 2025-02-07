@@ -85,12 +85,12 @@ export const MainWrap = styled.div`
     height: 61vh;
     border-radius: 25px;
   }
-  .hotpost_content_op {
+  .hotpost_content_oplow {
     position: absolute;
     width: 26.5vw;
     height: 34.5vh;
     background-color: black;
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: 5;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
