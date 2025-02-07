@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Pretendard', sans-serif;
   }
   body {
-  background-color :white;
+    background-color :white;
     font-size: 16px;
     line-height: 1.6;
     font-family: 'Pretendard', sans-serif;
@@ -80,7 +80,7 @@ const GlobalStyle = createGlobalStyle`
     opacity : 1;
   } 
   .swiper-button-next::after {
-  color : white;
+    color : white;
   }
   .bottombanner {
     width : 85vw;
