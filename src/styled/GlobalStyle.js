@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Pretendard', sans-serif;
   }
   body {
-  background-color : #141414;
+  background-color :white;
     font-size: 16px;
     line-height: 1.6;
     font-family: 'Pretendard', sans-serif;
@@ -113,7 +113,6 @@ margin-top : 150px;
   }
 img {
 object-fit: cover;
-
 }
  .black_blur {
       position: absolute;
@@ -136,6 +135,10 @@ object-fit: cover;
     top: auto;
     width: 100%;
   }
+  .double_line_slides {
+    gap : 20px;
+    }
+
   /* .inner { width:1400px; margin:auto; box-sizing:border-box; position:relative; padding:120px 0; } */
   .main { width: 100%; }
 

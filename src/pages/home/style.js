@@ -1,6 +1,14 @@
 import styled from 'styled-components';
-
+export const DarkMode = styled.body`
+  background-color: #141414;
+`;
 export const HomeWrap = styled.div`
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: white;
+  }
   .new_animation_wrap {
     position: relative;
   }
@@ -31,4 +39,30 @@ export const HomeWrap = styled.div`
     width: 50%;
     height: 100%;
   }
+  .review_swiper_slides {
+    display: flex;
+    flex-direction: column;
+    width: 29.6vw;
+    height: 26.6vh;
+    background-color: #3e3e3e;
+    color: white;
+    border-radius: 20px;
+  }
+
+  .review_doc {
+    font-size: 16px;
+  }
+  .start_univ_logo {
+    width: 46.3vw;
+    height: 13vh;
+  }
+`;
+
+export const ReviewTitle = styled.h1`
+  font-size: 20px;
+`;
+
+export const ReviewName = styled.h2`
+  font-size: 12px;
+  margin-bottom: 10px;
 `;
