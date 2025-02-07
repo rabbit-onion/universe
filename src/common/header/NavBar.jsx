@@ -1,5 +1,16 @@
 import { Link } from 'react-router-dom';
-import { MenuBox, NavBarWrap, NavLeft, NavRight, ProfileBox, ProfileIcons, ProfilePic, SearchBar } from './style';
+import {
+  MenuBox,
+  NavBarWrap,
+  NavLeft,
+  NavRight,
+  ProfileBox,
+  ProfileIcons,
+  ProfilePic,
+  SearchBar,
+  SearchContBox,
+  SearchIcon,
+} from './style';
 
 const NavBar = () => {
   return (
@@ -22,22 +33,28 @@ const NavBar = () => {
 
         <NavRight>
           <SearchBar>
-            <form>
-              <button type="submit">
-                <img
-                  src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
-                  alt=""
-                  crossOrigin="anonymous"
-                />
-              </button>
-              <input type="text" placeholder="제목, 제작사, 감독으로 검색(초성)" />
+            <SearchIcon className="clicked">
+              <img
+                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
+                alt=""
+                crossOrigin="anonymous"
+              />
+            </SearchIcon>
+            <form role="search" className="clicked">
+              <img
+                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
+                alt=""
+                crossOrigin="anonymous"
+              />
+              <label className="hide">검색</label>
+              <input
+                type="search"
+                placeholder="제목, 제작사, 감독으로 검색(초성)"
+                aria-description="검색어 입력 후 엔터키를 눌러 검색하세요."
+              />
             </form>
-            <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
-              alt=""
-              crossOrigin="anonymous"
-            />
           </SearchBar>
+          <SearchContBox className="clicked"></SearchContBox>
 
           <ProfileBox>
             <ProfileIcons>
