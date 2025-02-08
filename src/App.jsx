@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './common/Layout';
 import { Home, Main, NotFile, Search, DailyAni, Community, Membership } from './pages';
 import ModalLayout from './common/ModalLayout';
+import GotoPreviewBtn from './ui/button/GotoPreviewBtn';
 // import { ThemeProvider } from 'styled-components';
 // import { theme } from './styles/theme';
 
@@ -27,6 +28,7 @@ const App = () => {
 
         <Route path="*" element={<NotFile />} />
       </Routes>
+
       {/* </ThemeProvider> */}
     </>
   );

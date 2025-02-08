@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import {
+  CloseIcon,
   MenuBox,
   NavBarWrap,
   NavLeft,
@@ -7,12 +8,30 @@ import {
   ProfileBox,
   ProfileIcons,
   ProfilePic,
-  SearchBar,
+  SearchBox,
+  SearchBtn,
   SearchContBox,
-  SearchIcon,
 } from './style';
+import { useEffect, useState } from 'react';
+import SearchContList from './SearchContList';
 
 const NavBar = () => {
+  const [clicked, setClicked] = useState(false);
+  const [focused, setFocused] = useState(false);
+
+  const setFocus = () => {
+    setFocused(true);
+  };
+
+  const changeInput = (e) => {
+    const { name, value } = e.target;
+    if (value === '' || value === null) {
+      setFocused(false);
+    } else {
+      setFocused(true);
+    }
+  };
+
   return (
     <>
       <NavBarWrap>
@@ -32,29 +51,53 @@ const NavBar = () => {
         </NavLeft>
 
         <NavRight>
-          <SearchBar>
-            <SearchIcon className="clicked">
+          {clicked ? (
+            <SearchBox>
+              <form>
+                <img
+                  src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
+                  alt=""
+                  crossOrigin="anonymous"
+                />
+                <label htmlFor="search" className="hide">
+                  검색어
+                </label>
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="제목, 제작사, 감독으로 검색(초성)"
+                  onFocus={setFocus}
+                  onChange={changeInput}
+                />
+              </form>
+
+              {focused ? (
+                <CloseIcon
+                  src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/close.svg"
+                  alt=""
+                />
+              ) : (
+                <></>
+              )}
+
+              <SearchContBox>
+                <SearchContList />
+              </SearchContBox>
+            </SearchBox>
+          ) : (
+            <SearchBtn
+              onClick={() => {
+                setClicked(true);
+              }}
+            >
               <img
                 src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
                 alt=""
                 crossOrigin="anonymous"
               />
-            </SearchIcon>
-            <form role="search" className="clicked">
-              <img
-                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
-                alt=""
-                crossOrigin="anonymous"
-              />
-              <label className="hide">검색</label>
-              <input
-                type="search"
-                placeholder="제목, 제작사, 감독으로 검색(초성)"
-                aria-description="검색어 입력 후 엔터키를 눌러 검색하세요."
-              />
-            </form>
-          </SearchBar>
-          <SearchContBox className="clicked"></SearchContBox>
+            </SearchBtn>
+          )}
 
           <ProfileBox>
             <ProfileIcons>

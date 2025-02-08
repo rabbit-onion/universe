@@ -1,6 +1,7 @@
 import { HeaderWrap } from './style';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
+import GotoPreviewBtn from '../../ui/button/GotoPreviewBtn';
 
 const Header = () => {
   return (
