@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Pretendard', sans-serif;
     color: #333;
     overflow-x : hidden;
-    
   }
   a {
     text-decoration: none;

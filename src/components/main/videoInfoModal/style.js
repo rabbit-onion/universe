@@ -1,15 +1,5 @@
 import styled from 'styled-components';
 
-export const TestBg = styled.div`
-  width: 100%;
-  background: url('https://raw.githubusercontent.com/rabbit-onion/universe-resources/main/images/modal/pageBg.png')
-    no-repeat 0 0;
-`;
-
-export const Dimmed = styled.div`
-  background-color: rgba(0, 0, 0, 0.7);
-`;
-
 export const ModalWrap = styled.div`
   position: relative;
   width: 1440px;
