@@ -1,7 +1,11 @@
-import React from 'react';
+import { FooterWrap } from './style';
 
 const Footer = () => {
-  return <div>FOOTER</div>;
+  return (
+    <>
+      <FooterWrap>footer</FooterWrap>
+    </>
+  );
 };
 
 export default Footer;

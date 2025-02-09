@@ -10,7 +10,6 @@ const RecommendItem = ({ video }) => {
           <img
             src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/tokyoR.png"
             alt=""
-            crossOrigin="anonymous"
           />
         </RecCardTop>
         <RecCardBottom>
@@ -22,7 +21,6 @@ const RecommendItem = ({ video }) => {
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/plusIcon.svg"
               alt=""
-              crossOrigin="anonymous"
             />
           </button>
         </RecCardBottom>
