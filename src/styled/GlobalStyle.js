@@ -137,6 +137,8 @@ const GlobalStyle = createGlobalStyle`
   
   .main { 
     width: 100%;
+    height: 100%;
+    min-height: 100vh;
     margin-top: 80px;
   }
 
@@ -152,21 +154,6 @@ const GlobalStyle = createGlobalStyle`
     height: 0;
     font-size: 0;
     line-height: 0;
-  }
-
-  ::placeholder {
-    color: #404040;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 16px;
-    opacity: 1; /* Firefox에서 필요 */
-  }
-
-  // input:search타입 닫기버튼 숨기기
-  input[type="search"]::-webkit-search-cancel-button {
-    opacity: 0;
-    scale: 1.5;
-    z-index: 100;
   }
 `;
 

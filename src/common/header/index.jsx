@@ -12,7 +12,6 @@ const Header = () => {
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/logo.svg"
               alt=""
-              crossOrigin="anonymous"
             />
           </Link>
         </h1>

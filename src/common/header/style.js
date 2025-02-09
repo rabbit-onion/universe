@@ -69,6 +69,20 @@ export const SearchBox = styled.div`
       font-weight: 500;
       font-size: 13px;
       line-height: 16px;
+      & ::placeholder {
+        color: #404040;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        opacity: 1; /* Firefox에서 필요 */
+      }
+      &::-webkit-search-cancel-button {
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: url('https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/close.svg')
+          no-repeat 0 0 / cover;
+      }
     }
     img {
       position: absolute;

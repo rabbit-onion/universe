@@ -77,7 +77,6 @@ const VideoInfo = () => {
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/monsterTitle.png"
               alt=""
-              crossOrigin="anonymous"
             />
           </h1>
           <ProgressBar>
@@ -89,21 +88,18 @@ const VideoInfo = () => {
                 <img
                   src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/playBtn.svg"
                   alt=""
-                  crossOrigin="anonymous"
                 />
               </button>
               <button>
                 <img
                   src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/plusBtn.svg"
                   alt=""
-                  crossOrigin="anonymous"
                 />
               </button>
               <button>
                 <img
                   src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/goodBtn.svg"
                   alt=""
-                  crossOrigin="anonymous"
                 />
               </button>
             </div>
@@ -111,7 +107,6 @@ const VideoInfo = () => {
               <img
                 src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/muteBtn.svg"
                 alt=""
-                crossOrigin="anonymous"
               />
             </button>
           </TopBtns>
@@ -162,7 +157,6 @@ const VideoInfo = () => {
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/downArrow.svg"
               alt=""
-              crossOrigin="anonymous"
             />
           </MoreBtn>
         </EpisodeSec>
@@ -175,7 +169,6 @@ const VideoInfo = () => {
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/downArrow.svg"
               alt=""
-              crossOrigin="anonymous"
             />
           </MoreBtn>
         </RecContentSec>
@@ -186,7 +179,6 @@ const VideoInfo = () => {
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/monsterPV.png"
               alt=""
-              crossOrigin="anonymous"
             />
           </PvCard>
           <p>괴수 8호 (공식 예고편)</p>
