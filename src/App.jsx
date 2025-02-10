@@ -1,7 +1,7 @@
 import GlobalStyle from './styled/GlobalStyle';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './common/Layout';
-import { Home, Main, NotFile, Search, DailyAni, Community, Membership, Login, Join, Logout, Video } from './pages';
+import { Home, Main, NotFile, Search, DailyAni, Community, Membership, Login, Join, Video } from './pages';
 import ModalLayout from './common/ModalLayout';
 import { AuthLayout, NonHeaderLayout } from './components';
 // import { ThemeProvider } from 'styled-components';
