@@ -94,8 +94,7 @@ export const VideoDesc = styled.div`
 export const FlexBox = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 5px;
+  margin-top: 10px;
   > p {
     width: 743px;
     font-size: 14px;
@@ -111,7 +110,6 @@ export const InfoDetail = styled.div`
   display: flex;
   flex-direction: column;
   gap: 23px;
-  width: 289px;
   font-size: 15px;
   div {
     display: flex;
@@ -120,8 +118,6 @@ export const InfoDetail = styled.div`
     white-space: pre;
     &:last-child p {
       display: flex;
-      flex-direction: column;
-      gap: 7px;
     }
   }
   strong {
@@ -131,7 +127,7 @@ export const InfoDetail = styled.div`
   }
 
   span {
-    margin-right: 15px;
+    margin-right: 5px;
     &:last-child {
       margin-right: 0;
     }
