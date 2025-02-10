@@ -35,6 +35,19 @@ export const HomeWrap = styled.div`
     height: 80%;
     width: 100%;
   }
+    .uni_back_typo {
+    position : absolute;
+    font-size : 500px;
+    font-weight : 700;
+    color : #333333;
+    }
+  .home_comm_section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+  }
   .mac_mockup_img {
     width: 50%;
     height: 100%;
