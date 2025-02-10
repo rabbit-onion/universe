@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   img { vertical-align: top; }
   
   h2 {
-    margin-bottom : 35px;
+    margin-bottom : 20px;
     font-size : 35px;
     font-weight : 600;
   }
@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   .swiper {
     width: 100%;
     height: 100%;
-    overflow : visible;
+    overflow : visible !important;
   }
 
   .swiper-slide {
@@ -48,6 +48,7 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease;
+     z-index: -1; /* 기본 z-index */
   }
 
   .swiper-slide img {
@@ -57,9 +58,14 @@ const GlobalStyle = createGlobalStyle`
     object-fit: cover;
   }
   .swiper-button-prev {
+      padding: 12vh 2vw;
     opacity : 0;
     background-color: rgba(0, 0, 0, 0.4);
     transition: transform 0.5s ease;
+        position: absolute;
+    bottom: -1px;
+    top: 24px;
+    left: 0;
   }
   .swiper-button-prev:hover {
     transition: transform 0.8s ease;
@@ -70,9 +76,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .swiper-button-next {
-    padding : 10vh 2vw ;
+    padding : 12vh 2vw ;
     background-color: rgba(0, 0, 0, 0.4);
     opacity : 0;
+    position: absolute;
+    bottom: -1px;
+    top: 24px;
+    right: 0;
   } 
   .swiper-button-next:hover {
     transition: transform 0.8s ease;
@@ -83,7 +93,7 @@ const GlobalStyle = createGlobalStyle`
   }
   .bottombanner {
     width : 85vw;
-    height : 8vh; 
+    height : 6vh; 
     background-color : #4D94FF;
     border-radius : 10px;
   } 

@@ -12,6 +12,18 @@ const UserWatching = () => {
               <p className="vertical_userwatching_content_title">캐릭캐릭체인지</p>
             </div>
           </div>
+          <div className="vertical_watching_content">
+            <img className="vertical_userwatching_content_img" src="../public/images/pattern/vertical/keroro.jpg"></img>
+            <div className="vertical_userwatching_content_title_container">
+              <p className="vertical_userwatching_content_title">캐릭캐릭체인지</p>
+            </div>
+          </div>
+          <div className="vertical_watching_content">
+            <img className="vertical_userwatching_content_img" src="../public/images/pattern/vertical/keroro.jpg"></img>
+            <div className="vertical_userwatching_content_title_container">
+              <p className="vertical_userwatching_content_title">캐릭캐릭체인지</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
