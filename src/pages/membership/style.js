@@ -5,7 +5,11 @@ export const MembershipWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 3530px;
+`;
+
+export const MembershipBox = styled.div`
+  height: 3530px;
 `;
 
 export const DivWrap = styled.div`
@@ -65,6 +69,10 @@ export const MembershipAd = styled.div`
   margin-bottom: 364px;
 `;
 
+export const DivBox = styled.div`
+  justify-content: center;
+`;
+
 export const Pay = styled.div`
   width: 449px;
   height: 82px;
@@ -91,4 +99,6 @@ export const ShortCut = styled.div`
   align-items: center;
   font-size: 30px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
 `;

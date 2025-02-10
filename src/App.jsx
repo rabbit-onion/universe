@@ -1,9 +1,10 @@
 import GlobalStyle from './styled/GlobalStyle';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './common/Layout';
-import { Home, Main, NotFile, Search, DailyAni, Community, Membership, Login, Join, Logout } from './pages';
+import { Home, Main, NotFile, Search, DailyAni, Community, Membership, Login, Join, Profile } from './pages';
 import ModalLayout from './common/ModalLayout';
 import AuthLayout from './common/AuthLayout';
+
 // import { ThemeProvider } from 'styled-components';
 // import { theme } from './styles/theme';
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/dailyAni" element={<DailyAni />} />
           <Route path="/community" element={<Community />} />
           <Route path="/membership" element={<Membership />} />
+          <Route path="/profile" element={<Profile />} />
 
           {/* 최종 path는 작품ID로 들어갈듯 */}
           <Route path="/videoInfo" element={<ModalLayout />} />

@@ -11,10 +11,11 @@ export const Watching = styled.div`
   border-radius: 10px;
 `;
 
-const WatchingCard = () => {
+const WatchingCard = ({ children }) => {
   return (
     <>
       <Watching>
+        {children}
         <ProgressBar />
       </Watching>
     </>

@@ -8,10 +8,10 @@ export const Vertical = styled.div`
   background-color: #fff;
 `;
 
-const VerticalCard = () => {
+const VerticalCard = ({ children }) => {
   return (
     <>
-      <Vertical></Vertical>
+      <Vertical>{children}</Vertical>
     </>
   );
 };

@@ -10,4 +10,5 @@ export { default as Membership } from './membership';
 export { default as Mypage } from './mypage';
 export { default as Notfile } from './notfile';
 export { default as Video } from './video';
+export { default as Profile } from './profile';
 export { default as NotFile } from './notfile';

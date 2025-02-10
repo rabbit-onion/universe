@@ -1,11 +1,22 @@
-import { MembershipWrap, DivWrap, Section, Ad, List, MembershipAd, Pay, ShortCut } from './style';
+import {
+  MembershipWrap,
+  DivWrap,
+  Section,
+  Ad,
+  List,
+  MembershipAd,
+  Pay,
+  ShortCut,
+  MembershipBox,
+  DivBox,
+} from './style';
 
 const Membership = () => {
   return (
     <MembershipWrap>
-      <div>
+      <MembershipBox>
         <MembershipAd>광고화면</MembershipAd>
-        <div>
+        <DivBox>
           <List>
             <li>
               <DivWrap>
@@ -46,8 +57,8 @@ const Membership = () => {
           </List>
           <Pay>이용권 구매하기</Pay>
           <ShortCut>광고형 스텐다드 이용권이 궁금하시다면?</ShortCut>
-        </div>
-      </div>
+        </DivBox>
+      </MembershipBox>
     </MembershipWrap>
   );
 };
