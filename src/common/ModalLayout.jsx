@@ -9,18 +9,25 @@ export const Dimmed = styled.div`
   right: 0;
   bottom: 0;
   width: 100%;
+  height: 100%;
+  min-height: 5426px;
   min-width: 1920px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
 `;
 
 export const ModalWrap = styled.div`
   position: relative;
-  margin: auto;
-  margin-top: 130px;
-  background-color: #fff;
   width: 1440px;
+  min-width: 1440px;
+  margin: auto;
+  top: 50px;
+  background-color: #fff;
   border-radius: 60px;
   overflow: hidden;
+  button {
+    border: none;
+  }
 `;
 
 export const CloseBtn = styled.button`

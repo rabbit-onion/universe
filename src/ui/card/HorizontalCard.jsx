@@ -7,10 +7,10 @@ export const Horizon = styled.div`
   background-color: #fff;
 `;
 
-const HorizontalCard = () => {
+const HorizontalCard = ({ children }) => {
   return (
     <>
-      <Horizon></Horizon>
+      <Horizon>{children}</Horizon>
     </>
   );
 };

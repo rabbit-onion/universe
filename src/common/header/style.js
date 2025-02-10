@@ -4,7 +4,7 @@ export const HeaderWrap = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +23,7 @@ export const NavBarWrap = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
-  padding: 0 90px 0 111px;
+  padding-left: 111px;
 `;
 
 export const NavLeft = styled.ul`
@@ -36,34 +36,10 @@ export const NavRight = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 11px;
 `;
 
-export const SearchBar = styled.div`
-  margin-right: 7px;
-  form {
-    display: none;
-    position: relative;
-    &.clicked {
-      display: block;
-    }
-    input {
-      width: 261px;
-      height: 40px;
-      background: #ffffff;
-      border: 1px solid #0068ff;
-      border-radius: 5px;
-      padding-left: 45px;
-      font-size: 13px;
-    }
-    img {
-      position: absolute;
-      top: 12px;
-      left: 20px;
-    }
-  }
-`;
-
-export const SearchIcon = styled.div`
+export const SearchBtn = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,23 +50,95 @@ export const SearchIcon = styled.div`
     background: rgba(0, 0, 0, 0.1);
     border-radius: 17px;
   }
-  &.clicked {
-    display: none;
+  img {
+    width: 16px;
+    height: 16px;
   }
 `;
 
-export const SearchContBox = styled.div`
-  display: none;
+export const SearchBox = styled.div`
+  form {
+    position: relative;
+    input {
+      width: 261px;
+      height: 40px;
+      padding: 0 14px 0 45px;
+      background: #ffffff;
+      border: 1px solid #0068ff;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      & ::placeholder {
+        color: #404040;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        opacity: 1; /* Firefox에서 필요 */
+      }
+      &::-webkit-search-cancel-button {
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: url('https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/close.svg')
+          no-repeat 0 0 / cover;
+      }
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+    }
+  }
+`;
+
+export const CloseIcon = styled.img`
   position: absolute;
-  top: 130%;
+  top: 50%;
+  left: 230px;
+  transform: translateY(-50%);
+`;
+
+export const SearchContBox = styled.div`
+  position: absolute;
+  top: 52px;
   left: 0;
   width: 261px;
   height: 332px;
   background: #ffffff;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  &.clicked {
-    display: block;
+  padding: 18px 20px;
+  > strong {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #0068ff;
+  }
+  ul {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000;
+    li {
+      display: flex;
+      margin-bottom: 14px;
+      span {
+        display: block;
+        width: 24px;
+      }
+      strong {
+        flex-grow: 1;
+        width: 30px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
   }
 `;
 
