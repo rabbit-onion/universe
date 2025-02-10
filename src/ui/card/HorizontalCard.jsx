@@ -8,7 +8,11 @@ export const Horizon = styled.div`
 `;
 
 const HorizontalCard = ({ children }) => {
-  return <Horizon>{children}</Horizon>;
+  return (
+    <>
+      <Horizon>{children}</Horizon>
+    </>
+  );
 };
 
 export default HorizontalCard;

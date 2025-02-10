@@ -8,9 +8,7 @@ import HotPost from '../../components/main/hotPost';
 import IssueAnimation from '../../components/main/animation/issueAnimation';
 import BottomBanner from '../../components/banner/bottomBanner';
 import FirstMainslide from '../../components/main/slides/firstMainslide';
-import Footer from '../../common/footer';
 import DateSlide from '../../components/main/slides/dateSlide';
-import FirstHomeSlide from '../../components/home/firstHomeSlide';
 
 const Main = () => {
   return (

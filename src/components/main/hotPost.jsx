@@ -16,7 +16,7 @@ const HotPost = () => {
                 <label>HOT</label>
                 <label>TOP3</label>
               </div>
-              <h2>캐릭캐릭체인지</h2>
+              <p className="hotpost_content_maintitle">캐릭캐릭체인지</p>
               <p>#오늘 #애니 #추천 #ㅈㄱㄴ #노래미침 #사카모토입니다만</p>
             </div>
           </div>
@@ -28,7 +28,7 @@ const HotPost = () => {
                 <label>HOT</label>
                 <label>TOP3</label>
               </div>
-              <h2>캐릭캐릭체인지</h2>
+              <p className="hotpost_content_maintitle">캐릭캐릭체인지</p>
               <p>#오늘 #애니 #추천 #ㅈㄱㄴ #노래미침 #사카모토입니다만</p>
             </div>
           </div>
@@ -40,7 +40,7 @@ const HotPost = () => {
                 <label>HOT</label>
                 <label>TOP3</label>
               </div>
-              <h2>캐릭캐릭체인지</h2>
+              <p className="hotpost_content_maintitle">캐릭캐릭체인지</p>
               <p>#오늘 #애니 #추천 #ㅈㄱㄴ #노래미침 #사카모토입니다만</p>
             </div>
           </div>

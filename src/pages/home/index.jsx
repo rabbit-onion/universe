@@ -7,6 +7,7 @@ import KidsAnimationSlide from '../../components/home/kidsAnimationSlide';
 import CommunityAds from '../../components/home/communityAds';
 import ReviewSlide from '../../components/home/reviewSlide';
 import StartUniverse from '../../components/home/startUniverse';
+import DeviceMockup from '../../components/home/deviceMockup';
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
             <KidsAnimationSlide />
             <CommunityAds />
             <ReviewSlide />
+            <DeviceMockup />
             <StartUniverse />
           </div>
         </HomeWrap>

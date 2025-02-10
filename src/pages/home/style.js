@@ -35,7 +35,24 @@ export const HomeWrap = styled.div`
     height: 80%;
     width: 100%;
   }
+    .uni_back_typo {
+    position : absolute;
+    font-size : 500px;
+    font-weight : 700;
+    color : #333333;
+    }
+  .home_comm_section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+  }
   .mac_mockup_img {
+    width: 50%;
+    height: 100%;
+  }
+  .device_mockup_img {
     width: 50%;
     height: 100%;
   }
@@ -55,6 +72,25 @@ export const HomeWrap = styled.div`
   .start_univ_logo {
     width: 46.3vw;
     height: 13vh;
+    object-fit: contain;
+  }
+  .left_ani_pic {
+    width: 100%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    border-radius: 20px;
+  }
+  .right_ani_pic {
+    width: 100%;
+    transform: translate(50%, -50%);
+    opacity: 0.4;
+    border-radius: 20px;
+  }
+  .main_ani_pic {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
   }
 `;
 
@@ -65,4 +101,29 @@ export const ReviewTitle = styled.h1`
 export const ReviewName = styled.h2`
   font-size: 12px;
   margin-bottom: 10px;
+`;
+
+export const AniSection = styled.section`
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 38rem;
+  top: 4.15rem;
+  margin-bottom: 10rem;
+  display: block;
+`;
+export const LeftAniPic = styled.div`
+  position: absolute;
+  top: 52%;
+  width: 76%;
+`;
+export const RightAniPic = styled.div`
+  position: absolute;
+  top: 52%;
+  left: 24%;
+  width: 76%;
+`;
+
+export const MainAniPic = styled.div`
+  position: relative;
 `;
