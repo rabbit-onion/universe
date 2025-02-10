@@ -60,6 +60,10 @@ const GlobalStyle = createGlobalStyle`
     opacity : 0;
     background-color: rgba(0, 0, 0, 0.4);
     transition: transform 0.5s ease;
+        position: absolute;
+    bottom: -1px;
+    top: 24px;
+    left: 0;
   }
   .swiper-button-prev:hover {
     transition: transform 0.8s ease;
@@ -70,9 +74,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .swiper-button-next {
-    padding : 10vh 2vw ;
+    padding : 12vh 2vw ;
     background-color: rgba(0, 0, 0, 0.4);
     opacity : 0;
+    position: absolute;
+    bottom: -1px;
+    top: 24px;
+    right: 0;
   } 
   .swiper-button-next:hover {
     transition: transform 0.8s ease;

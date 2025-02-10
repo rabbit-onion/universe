@@ -39,6 +39,10 @@ export const HomeWrap = styled.div`
     width: 50%;
     height: 100%;
   }
+  .device_mockup_img {
+    width: 50%;
+    height: 100%;
+  }
   .review_swiper_slides {
     display: flex;
     flex-direction: column;
@@ -55,6 +59,7 @@ export const HomeWrap = styled.div`
   .start_univ_logo {
     width: 46.3vw;
     height: 13vh;
+    object-fit: contain;
   }
 `;
 
