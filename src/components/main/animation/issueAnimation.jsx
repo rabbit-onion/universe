@@ -11,6 +11,7 @@ const IssueAnimation = () => {
           <div>
             <div className="black_ophalf">
               <p className="issue_title">펭귄 하이웨이</p>
+              <p className="issue_subtitle">2025년도 공개예정작</p>
             </div>
             <div className="issue_right_blur"></div>
             <img className="issueAnimation_img" src="../public/images/pattern/thunail.png"></img>

@@ -52,7 +52,7 @@ export const MainWrap = styled.div`
   }
 
   .user_content_wrap {
-    gap: 150px;
+    gap: 7.8vw;
     display: flex;
     flex-direction: row;
   }
@@ -62,21 +62,21 @@ export const MainWrap = styled.div`
     flex-direction: row;
   }
   .vertical_watching_content {
-    width: 340px;
-    height: 506px;
+    width: 15.7vw;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     border-radius: 25px;
   }
   .vertical_userwatching_content_img {
-    width: 340px;
-    height: 406px;
+    width: 100%;
+    height: 38vh;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
   }
   .vertical_userwatching_content_title_container {
-    width: 340px;
-    height: 90px;
+    width: 100%;
+    height: 9.8vh;
     background-color: white;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -109,22 +109,31 @@ export const MainWrap = styled.div`
     border-top-right-radius: 25px;
   }
   .hotpost_content_title {
-    width: 22.5vw;
-    height: 17.4vh;
+    width: 26.5vw;
+    height: 25.4vh;
     background-color: white;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     padding: 2vw;
+  }
+  .hotpost_content_maintitle {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 30px;
   }
   .hotpost_label_div {
     display: flex;
     gap: 10px;
   }
   label {
-    padding: 0.5vw;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
     background-color: #4d94ff;
     color: white;
-    border-radius: 10px;
+    border-radius: 7px;
+    font-size: 12px;
   }
   .issue_content_wrap {
     display: flex;
@@ -148,6 +157,13 @@ export const MainWrap = styled.div`
     font-size: 80px;
     font-weight: bold;
     color: white;
+    margin: 60px 50px 0px;
+  }
+  .issue_subtitle {
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+    margin: 0px 50px;
   }
   .issue_right_blur {
     position: absolute;
@@ -157,10 +173,38 @@ export const MainWrap = styled.div`
     right: 0;
     background-color: black;
     opacity: 0.4;
-    filter: blur(40px);
-
+    backdrop-filter: blur(5px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     z-index: 15;
+  }
+  .swiper-slide .hovered {
+    z-index: 10; /* 마우스 오버 시 z-index 증가 */
+  }
+  /* 앞쪽 div (초기 상태) */
+  .overlay-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 반투명 검정색 배경 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* 기본적으로 숨김 */
+    transform: scale(1); /* 초기 크기 */
+    transition: transform 0.5s ease-in-out, opacity 0.3s; /* 부드러운 전환 효과 */
+  }
+  .overlay-div img {
+    width: 18vw;
+    height: 24.2vh;
+  }
+  /* 마우스 오버 시 동작 */
+  .overlay-div.active {
+    opacity: 1; /* 보이도록 설정 */
+    transform: scale(1.3); /* 확대 효과 */
   }
 `;
