@@ -13,7 +13,12 @@ const IssueAnimation = () => {
               <p className="issue_title">펭귄 하이웨이</p>
               <p className="issue_subtitle">2025년도 공개예정작</p>
             </div>
-            <div className="issue_right_blur"></div>
+            <div className="issue_contain">
+              <div className="issue_right_blur">
+                <img className="issue_vertical_img" src="../public/images/pattern/vertical/bleach.jpg"></img>
+              </div>
+            </div>
+
             <img className="issueAnimation_img" src="../public/images/pattern/thunail.png"></img>
           </div>
         </div>

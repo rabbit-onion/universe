@@ -78,36 +78,12 @@ export const MainWrap = styled.div`
     display: flex;
     flex-direction: row;
   }
-  .vertical_watching_content {
-    width: 15.7vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    border-radius: 25px;
-  }
-  .vertical_userwatching_content_img {
-    width: 100%;
-    height: 38vh;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-  }
-  .vertical_userwatching_content_title_container {
-    width: 100%;
-    height: 9.8vh;
-    background-color: white;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-  }
-  .vertical_userwatching_content_title {
-    margin-left: 20px;
-  }
+
   .hotpost_content {
     width: 26.5vw;
     height: 61vh;
     border-radius: 25px;
+    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.1));
   }
   .hotpost_content_oplow {
     position: absolute;
@@ -184,16 +160,27 @@ export const MainWrap = styled.div`
   }
   .issue_right_blur {
     position: absolute;
-    width: 26vw;
+    width: 28vw;
     height: 87vh;
     top: 0;
     right: 0;
-    background-color: black;
-    opacity: 0.4;
-    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     z-index: 15;
+  }
+  .issue_vertical_img {
+    position: absolute;
+    height: 400px;
+    width: 270px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+  }
+  .issue_contain {
+    position: relative;
   }
   .swiper-slide .hovered {
     z-index: 10; /* 마우스 오버 시 z-index 증가 */
@@ -213,15 +200,58 @@ export const MainWrap = styled.div`
     align-items: center;
     opacity: 0; /* 기본적으로 숨김 */
     transform: scale(1); /* 초기 크기 */
-    transition: transform 0.5s ease-in-out, opacity 0.3s; /* 부드러운 전환 효과 */
+    transition: transform 0.2s ease-in-out, opacity 0.2s; /* 부드러운 전환 효과 */
   }
   .overlay-div img {
     width: 100%;
     height: 100%;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .overlay-div section {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    border-radius: 0px 0px 20px 20px;
   }
   /* 마우스 오버 시 동작 */
   .overlay-div.active {
     opacity: 1; /* 보이도록 설정 */
-    transform: scale(1.3); /* 확대 효과 */
+    transform: scale(1.2); /* 확대 효과 */
   }
+  .vertical_watching_content {
+    width: 15.7vw !important;
+    height: 50vh;
+  }
+`;
+export const VerticalUserWatching = styled.div`
+  width: 15.7vw !important;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.1));
+img {
+  width: 100%;
+  height: 38vh;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+  div {
+    width: 100%;
+  height: 9.8vh;
+  background-color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+
+  }
+  p {
+    font-size: 20px;
+    margin-left: 20px;
+}
+  }
+
 `;

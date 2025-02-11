@@ -17,8 +17,8 @@ const DateSlide = () => {
   return (
     <>
       <div className="inner div_top_margin">
+        <h2>유니버스 독점작</h2>
         <div className="button-group">
-          {/* Render buttons for each day */}
           {Object.keys(dateslideData).map((day) => (
             <button
               key={day}
@@ -30,12 +30,11 @@ const DateSlide = () => {
           ))}
         </div>
 
-        <h2>유니버스 독점작</h2>
         <div>
           <Swiper
             modules={[Navigation]}
             spaceBetween={15}
-            loop="true"
+            loop={true}
             loopFillGroupWithBlank={false}
             navigation
             breakpoints={{
