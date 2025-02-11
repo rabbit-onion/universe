@@ -11,11 +11,13 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Pretendard', sans-serif;
   }
+  html {
+    font-size: 15px;
+  }
   body {
     background-color :white;
-    font-size: 16px;
-    line-height: 1.6;
     font-family: 'Pretendard', sans-serif;
+    line-height: 1.5;
     color: #333;
     overflow-x : hidden;
   }
