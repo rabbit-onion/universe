@@ -35,22 +35,23 @@ const DateSlide = () => {
           <Swiper
             modules={[Navigation]}
             spaceBetween={15}
-            slidesPerGroup={5}
             loop="true"
+            loopFillGroupWithBlank={false}
             navigation
             breakpoints={{
-              // 모바일 (화면 너비 >= 320px)
               390: {
                 slidesPerView: 2.75,
+                slidesPerGroup: 2,
                 spaceBetween: 10,
               },
-              // 태블릿 (화면 너비 >= 768px)
               768: {
                 slidesPerView: 3.25,
+                slidesPerGroup: 3,
                 spaceBetween: 15,
               },
               1440: {
                 slidesPerView: 5.25,
+                slidesPerGroup: 5,
                 spaceBetween: 30,
               },
             }}
