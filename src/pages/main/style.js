@@ -3,6 +3,23 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 export const MainWrap = styled.div`
+  .button-group {
+    display: flex;
+    gap: 20px;
+  }
+  .button-group button {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 100px;
+    border: none;
+    background-color: #e2e2e2;
+    font-size: 20px;
+  }
+  .button-group button.active {
+    background-color: #007bff;
+    color: white;
+  }
   .slick-slide {
     width: 500px;
     height: 500px;

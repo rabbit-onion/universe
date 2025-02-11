@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { device } from './Device';
 const GlobalStyle = createGlobalStyle`
   ${reset}
   
@@ -49,7 +49,12 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     transition: transform 0.5s ease;
      z-index: -1; /* 기본 z-index */
-  }
+@media ${device.tablet} 
+{
+height : 15vh;
+width: 11vw;
+}
+}
 
   .swiper-slide img {
     border-radius : 10px;
