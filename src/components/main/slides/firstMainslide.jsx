@@ -71,7 +71,7 @@ const FirstMainslide = () => {
               >
                 <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
                   <img src={image.src} alt={image.alt} className="slide-image" />
-                  <p>This is some overlay content.</p>
+                  <section>This is some overlay content.</section>
                 </div>
                 <img src={image.src} alt={image.alt} className="slide-image" />
               </SwiperSlide>

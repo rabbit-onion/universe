@@ -26,7 +26,29 @@ const Mainslide = () => {
       <div className="inner div_top_margin">
         <h2>유니버스 독점작</h2>
         <div>
-          <Swiper modules={[Navigation]} spaceBetween={15} slidesPerView={5} slidesPerGroup={5} loop="true" navigation>
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={15}
+            slidesPerGroup={5}
+            loop="true"
+            navigation
+            breakpoints={{
+              // 모바일 (화면 너비 >= 320px)
+              390: {
+                slidesPerView: 2.75,
+                spaceBetween: 10,
+              },
+              // 태블릿 (화면 너비 >= 768px)
+              768: {
+                slidesPerView: 3.25,
+                spaceBetween: 15,
+              },
+              1440: {
+                slidesPerView: 5.25,
+                spaceBetween: 30,
+              },
+            }}
+          >
             {thumbnails.map((image, index) => (
               <SwiperSlide key={index}>
                 <img src={image.src} alt={image.alt} className="slide-image" />

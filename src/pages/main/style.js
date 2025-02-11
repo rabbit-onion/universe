@@ -205,8 +205,8 @@ export const MainWrap = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* 반투명 검정색 배경 */
-    color: white;
+    background-color: #ffffff; /* 반투명 검정색 배경 */
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,8 +216,8 @@ export const MainWrap = styled.div`
     transition: transform 0.5s ease-in-out, opacity 0.3s; /* 부드러운 전환 효과 */
   }
   .overlay-div img {
-    width: 18vw;
-    height: 24.2vh;
+    width: 100%;
+    height: 100%;
   }
   /* 마우스 오버 시 동작 */
   .overlay-div.active {
