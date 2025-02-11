@@ -45,13 +45,15 @@ export const HomeWrap = styled.div`
     line-height: normal;
     }
   .home_comm_section {
+  width : 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     position : absolute;
-    top:0;
-    left:0;
+    top:50%;
+    left:50%;
+        transform: translate(-50%, -50%);
 }
   }
   .mac_mockup_img {
