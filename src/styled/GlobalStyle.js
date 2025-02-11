@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { device } from './Device';
 const GlobalStyle = createGlobalStyle`
   ${reset}
   
@@ -42,14 +42,13 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
     font-size: 18px;
     width : 18vw;
-    height : 24.2vh;
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease;
      z-index: -1; /* 기본 z-index */
-  }
+
+}
 
   .swiper-slide img {
     border-radius : 10px;
@@ -58,11 +57,11 @@ const GlobalStyle = createGlobalStyle`
     object-fit: cover;
   }
   .swiper-button-prev {
-      padding: 12vh 2vw;
+    padding: 12vh 2vw;
     opacity : 0;
     background-color: rgba(0, 0, 0, 0.4);
     transition: transform 0.5s ease;
-        position: absolute;
+    position: absolute;
     bottom: -1px;
     top: 24px;
     left: 0;
@@ -96,6 +95,8 @@ const GlobalStyle = createGlobalStyle`
     height : 6vh; 
     background-color : #4D94FF;
     border-radius : 10px;
+    margin-top : 100px;
+    margin-bottom : 100px;
   } 
   .bottombanner_title_wrap {
     display: flex;
@@ -110,6 +111,9 @@ const GlobalStyle = createGlobalStyle`
   .div_top_margin {
     margin-top : 150px;
   }
+    .div_bottom_margin {
+    margin-bottom : 150px;
+    }
   .center_wrap {
     display: flex;
     flex-direction: column;

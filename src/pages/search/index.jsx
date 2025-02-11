@@ -1,5 +1,5 @@
 const Search = () => {
-  return <div></div>;
+  return <div>태그 검색</div>;
 };
 
 export default Search;

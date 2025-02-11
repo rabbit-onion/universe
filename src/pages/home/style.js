@@ -35,17 +35,25 @@ export const HomeWrap = styled.div`
     height: 80%;
     width: 100%;
   }
+    .home_comm_wrap {
+    position : relative;
+    }
     .uni_back_typo {
-    position : absolute;
     font-size : 500px;
     font-weight : 700;
     color : #333333;
+    line-height: normal;
     }
   .home_comm_section {
+  width : 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
+    position : absolute;
+    top:50%;
+    left:50%;
+        transform: translate(-50%, -50%);
 }
   }
   .mac_mockup_img {
@@ -59,7 +67,7 @@ export const HomeWrap = styled.div`
   .review_swiper_slides {
     display: flex;
     flex-direction: column;
-    width: 29.6vw;
+    width: 29.6vw !important;
     height: 26.6vh;
     background-color: #3e3e3e;
     color: white;
