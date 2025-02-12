@@ -79,26 +79,26 @@ export const PostTxtBox = styled.div`
 
 export const SubText = styled.p`
   justify-content: space-between;
-
   span {
     font-weight: 500;
     font-size: 11px;
     line-height: 13px;
     color: #252525;
   }
-  div {
+`;
+
+export const SubSmallTxt = styled.span`
+  display: flex;
+  gap: 5px;
+  span {
     display: flex;
-    gap: 5px;
-    span {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      font-size: 13px;
-      line-height: 16px;
-      img {
-        width: 8px;
-        height: 7px;
-      }
+    align-items: center;
+    gap: 2px;
+    font-size: 13px;
+    line-height: 16px;
+    img {
+      width: 8px;
+      height: 7px;
     }
   }
 `;

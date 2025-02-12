@@ -106,3 +106,19 @@ export const GotoBtn = styled.button`
 
 // =======================================
 // ContBoxLayout.jsx style
+
+export const SubTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 37px;
+  h3 {
+    margin-top: 0;
+  }
+  select {
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #676767;
+  }
+`;

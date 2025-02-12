@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Card, ImgBox, PostTxtBox, SubText } from './style';
+import { Card, ImgBox, PostTxtBox, SubSmallTxt, SubText } from './style';
 
 const MyPostsItem = () => {
   return (
@@ -9,7 +9,7 @@ const MyPostsItem = () => {
           <ImgBox>
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/myPostThumb.png"
-              alt="괴수 8호"
+              alt="내 게시글 러브 앤드 피스에요 썸네일"
             />
           </ImgBox>
         </Link>
@@ -20,22 +20,22 @@ const MyPostsItem = () => {
             </p>
             <SubText>
               <span>2025년 1월 28일 작성</span>
-              <div>
+              <SubSmallTxt>
                 <span>
                   <img
                     src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/heart.svg"
-                    alt="영상 상세정보 보기"
+                    alt="좋아요"
                   />
                   20
                 </span>
                 <span>
                   <img
                     src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/comment.svg"
-                    alt="영상 상세정보 보기"
+                    alt="댓글"
                   />
                   15
                 </span>
-              </div>
+              </SubSmallTxt>
             </SubText>
           </PostTxtBox>
         </Link>
