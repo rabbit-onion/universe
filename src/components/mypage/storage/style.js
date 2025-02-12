@@ -114,6 +114,9 @@ export const TxtBox = styled.div`
   }
 `;
 
+// =================================================
+// MyPostsItem.jsx style
+
 export const PostTxtBox = styled.div`
   display: flex;
   flex-direction: column;

@@ -3,6 +3,7 @@ import { CategoryTab, ContentsBox, StorageDesc, StorageInner } from './style';
 import RecentsList from './RecentsList';
 import LikedList from './LikedList';
 import MyPostsList from './MyPostsList';
+import DraftPostsList from './DraftPostsList';
 
 const MyStorage = () => {
   return (
@@ -32,9 +33,10 @@ const MyStorage = () => {
             {/* <RecentsList /> */}
             {/* <h3>찜한작품 (5)</h3> */}
             {/* <LikedList /> */}
-            <h3>나의 게시글 (3)</h3>
-            <MyPostsList />
-            {/* <DraftPostsList /> */}
+            {/* <h3>나의 게시글 (3)</h3> */}
+            {/* <MyPostsList /> */}
+            <h3>임시저장 (2)</h3>
+            <DraftPostsList />
           </ContentsBox>
         </StorageDesc>
       </StorageInner>
