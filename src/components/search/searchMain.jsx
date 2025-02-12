@@ -116,7 +116,6 @@ const SearchMain = () => {
               );
             })}
           </CheckBoxWrap>
-
           <CheckBoxWrap>
             {checkboxTagList.map((item) => {
               return (
