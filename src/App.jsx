@@ -16,7 +16,7 @@ import {
   Mypage,
 } from './pages';
 import ModalLayout from './common/ModalLayout';
-import { AuthLayout, FindId, FindPw, NonHeaderLayout, WritePost } from './components';
+import { AuthLayout, FindId, FindPw, NonHeaderLayout, PostsAll, WritePost } from './components';
 
 // import { ThemeProvider } from 'styled-components';
 // import { theme } from './styles/theme';
@@ -38,7 +38,11 @@ const App = () => {
             <Route path="storage" element={<Mypage />} />
             <Route path="box" element={<Mypage />} />
           </Route>
-          <Route path="/community" element={<Community />} />
+
+          <Route path="/community">
+            <Route index element={<Community />} />
+            <Route path="posts" element={<PostsAll />} />
+          </Route>
           <Route path="/write" element={<WritePost />} />
 
           {/* 최종 path는 작품ID로 들어갈듯 */}

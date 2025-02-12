@@ -40,3 +40,86 @@ export const Line = styled.div`
   margin-top: 42px;
   margin-bottom: 32px;
 `;
+
+export const AllWrap = styled.div`
+  width: 1920px;
+  height: 5405px;
+  background-color: #ffffff;
+`;
+
+export const Container = styled.div`
+  padding: 80px 120px;
+`;
+
+export const ButtonBox = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    width: 123px;
+    height: 46px;
+    border-radius: 27px;
+    background-color: #f5f5f5f5;
+    margin-left: 20px;
+  }
+`;
+
+export const ContentWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+export const ListWrap = styled.div`
+  p {
+    font-size: 20px;
+    font-family: 'Pretendard';
+    font-weight: 600;
+  }
+
+  li {
+    font-size: 24px;
+    font-family: 'Pretendard';
+  }
+`;
+export const CardWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 413px;
+  height: 334px;
+  background-color: pink;
+`;
+
+export const Card = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 25px;
+`;
+export const CardImage = styled.div`
+  width: 413px;
+  height: 266px;
+  border-radius: 30px;
+  overflow: hidden;
+`;
+
+export const Left = styled.div`
+  h1 {
+    font-size: 20px;
+    font-family: 'Pretendard';
+  }
+
+  p {
+    font-size: 15px;
+    font-family: 'Pretendard';
+  }
+`;
+export const Right = styled.div`
+  button {
+    font-size: 15px;
+    font-family: 'Pretendard';
+  }
+
+  p {
+    font-size: 15px;
+    font-family: 'Pretendard';
+  }
+`;

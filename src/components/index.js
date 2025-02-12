@@ -15,3 +15,4 @@ export { default as ProfilePassword } from './profile/ProfilePassword.jsx';
 export { default as FindId } from './login/FindId';
 export { default as FindPw } from './login/FindPw';
 export { default as WritePost } from './community/WritePost';
+export { default as PostsAll } from './community/PostsAll';
