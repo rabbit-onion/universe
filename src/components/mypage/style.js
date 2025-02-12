@@ -103,3 +103,6 @@ export const GotoBtn = styled.button`
     margin-right: 17px;
   }
 `;
+
+// =======================================
+// ContBoxLayout.jsx style
