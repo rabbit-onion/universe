@@ -35,7 +35,9 @@ const GlobalStyle = createGlobalStyle`
     font-size : 35px;
     font-weight : 600;
   }
-  
+    .inner {
+    padding-left: 5.2vw;
+  }
   .swiper {
     width: 100%;
     height: 100%;

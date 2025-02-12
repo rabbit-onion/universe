@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const TagWrap = styled.div`
   display: flex;
-  margin-left: 150px;
   gap: 50px;
 `;
 export const TagContentWrap = styled.div`
@@ -12,8 +11,8 @@ export const TagContentWrap = styled.div`
 export const CheckBoxWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  height: 100%;
+  gap: 10px;
+
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -22,6 +21,7 @@ export const CheckLabel = styled.label`
   display: flex;
   p {
     width: 100px;
+    font-size: 15px;
   }
 `;
 

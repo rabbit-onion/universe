@@ -72,7 +72,6 @@ const SearchMain = () => {
   ];
 
   const [checkedList, setCheckedList] = useState([]);
-
   const onCheckedElement = (checked, item) => {
     if (checked) {
       setCheckedList([...checkedList, item]);
@@ -88,12 +87,16 @@ const SearchMain = () => {
       checkedList.includes(image.year) ||
       checkedList.includes(image.stream)
   );
+  const onClear = () => {
+    setCheckedList([]);
+  };
 
   return (
     <>
-      <h2>태그 검색</h2>
       <TagWrap>
         <TagContentWrap>
+          <button onClick={() => onClear()}>전체 초기화</button>
+          <p>총 {filteredImages.length}개 입니다.</p>
           <CheckBoxWrap>
             {checkboxGenreList.map((item) => {
               return (

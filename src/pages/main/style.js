@@ -24,9 +24,7 @@ export const MainWrap = styled.div`
     width: 500px;
     height: 500px;
   }
-  .inner {
-    padding-left: 5.2vw;
-  }
+
   .center_wrap {
     display: flex;
     justify-content: center;
