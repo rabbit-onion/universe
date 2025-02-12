@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { CategoryTab, ContentsBox, StorageDesc, StorageInner } from './style';
 import RecentsList from './RecentsList';
 import LikedList from './LikedList';
+import MyPostsList from './MyPostsList';
 
 const MyStorage = () => {
   return (
@@ -28,10 +29,11 @@ const MyStorage = () => {
           </CategoryTab>
           <ContentsBox>
             {/* <h3>작품 (8)</h3> */}
-            <h3>찜한작품 (5)</h3>
             {/* <RecentsList /> */}
-            <LikedList />
-            {/* <MyPostsList /> */}
+            {/* <h3>찜한작품 (5)</h3> */}
+            {/* <LikedList /> */}
+            <h3>나의 게시글 (3)</h3>
+            <MyPostsList />
             {/* <DraftPostsList /> */}
           </ContentsBox>
         </StorageDesc>

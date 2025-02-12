@@ -35,6 +35,8 @@ export const ProfileInfoWrap = styled.div`
 export const StorageBoxWrap = styled.div`
   width: 1134px;
   max-width: 1134px;
+  height: 1202px;
+  max-height: 1202px;
   background: #ffffff;
   box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.3);
   border-radius: 18px;
