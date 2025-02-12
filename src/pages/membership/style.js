@@ -13,40 +13,31 @@ export const MembershipBox = styled.div`
 `;
 
 export const DivWrap = styled.div`
-  width: 500px;
-  min-height: 1765px;
-  border-radius: 20px;
-  background-color: #fff;
+  width: 750px;
+  height: 512px;
+  border-radius: 30px;
+  background-color: #1d1d1d;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 export const Section = styled.div`
-  width: 399px;
-  height: 212px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  border-bottom: 3px solid #bfbfbf;
   text-align: center;
   font-family: 'Pretendard';
-  font-style: normal;
-  font-weight: 600;
   font-size: 25px;
   line-height: 30px;
+  color: #ffffff;
 `;
 
 export const Ad = styled.div`
-  width: 319px;
-  height: 89px;
-  background-color: #efefef;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
-  color: #8e8e8e;
-  border-radius: 61px;
+  color: #0066ff;
   display: flex;
   justify-content: center;
   align-items: center;

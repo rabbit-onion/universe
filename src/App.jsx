@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './common/Layout';
 import { Home, Main, NotFile, Search, DailyAni, Community, Membership, Login, Join, Profile, Video } from './pages';
 import ModalLayout from './common/ModalLayout';
-import { AuthLayout, NonHeaderLayout } from './components';
+import { AuthLayout, FindId, FindPw, NonHeaderLayout, WritePost } from './components';
 
 // import { ThemeProvider } from 'styled-components';
 // import { theme } from './styles/theme';
@@ -19,9 +19,10 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/tagsearch" element={<Search />} />
           <Route path="/dailyani" element={<DailyAni />} />
-          <Route path="/community" element={<Community />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/write" element={<WritePost />} />
 
           {/* 최종 path는 작품ID로 들어갈듯 */}
           <Route path="/videoinfo" element={<ModalLayout />} />
@@ -30,6 +31,8 @@ const App = () => {
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
           <Route path="join" element={<Join />} />
+          <Route path="findid" element={<FindId />} />
+          <Route path="findpw" element={<FindPw />} />
         </Route>
 
         <Route path="/video" element={<NonHeaderLayout />}>
