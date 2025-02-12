@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import RecentsList from './RecentsList';
 import { CategoryTab, ContentsBox, StorageDesc, StorageInner } from './style';
+import RecentsList from './RecentsList';
+import LikedList from './LikedList';
 
 const MyStorage = () => {
   return (
@@ -26,9 +27,10 @@ const MyStorage = () => {
             <hr />
           </CategoryTab>
           <ContentsBox>
-            <h3>작품 (8)</h3>
-            <RecentsList />
-            {/* <LikedList /> */}
+            {/* <h3>작품 (8)</h3> */}
+            <h3>찜한작품 (5)</h3>
+            {/* <RecentsList /> */}
+            <LikedList />
             {/* <MyPostsList /> */}
             {/* <DraftPostsList /> */}
           </ContentsBox>

@@ -1,10 +1,10 @@
 import RecentsItem from './RecentsItem';
-import { RecentsItemWrap } from './style';
+import { ItemWrap } from './style';
 
 const RecentsList = () => {
   return (
     <>
-      <RecentsItemWrap>
+      <ItemWrap>
         <RecentsItem />
         <RecentsItem />
         <RecentsItem />
@@ -13,7 +13,7 @@ const RecentsList = () => {
         <RecentsItem />
         <RecentsItem />
         <RecentsItem />
-      </RecentsItemWrap>
+      </ItemWrap>
     </>
   );
 };

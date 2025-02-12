@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Card, IconBox, ImgBox, TxtBox } from './style';
 
-const RecentsItem = () => {
+const LikedItem = () => {
   return (
     <>
       <Card>
@@ -34,4 +34,4 @@ const RecentsItem = () => {
   );
 };
 
-export default RecentsItem;
+export default LikedItem;

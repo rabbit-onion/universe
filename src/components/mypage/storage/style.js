@@ -62,7 +62,7 @@ export const ContentsBox = styled.div`
 
 // ========================================
 // RecentsList.jsx style
-export const RecentsItemWrap = styled.div`
+export const ItemWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
@@ -73,11 +73,11 @@ export const RecentsItemWrap = styled.div`
 
 // ========================================
 // RecentsItem.jsx style
-export const RecentCard = styled.div`
+export const Card = styled.div`
   width: 340px;
 `;
 
-export const RecentImgBox = styled.div`
+export const ImgBox = styled.div`
   width: 340px;
   height: 223px;
   background: rgba(0, 0, 0, 0.54);
@@ -92,7 +92,7 @@ export const RecentImgBox = styled.div`
 
 export const IconBox = styled.div``;
 
-export const RecentTxt = styled.div`
+export const TxtBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
