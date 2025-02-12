@@ -1,5 +1,11 @@
+import SearchMain from '../../components/search/searchMain';
+
 const Search = () => {
-  return <div>태그 검색</div>;
+  return (
+    <>
+      <SearchMain />
+    </>
+  );
 };
 
 export default Search;
