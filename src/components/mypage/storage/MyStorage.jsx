@@ -9,18 +9,20 @@ const MyStorage = () => {
         <h2>저장소</h2>
         <StorageDesc>
           <CategoryTab>
-            <NavLink to="#">
-              <li>최근 본</li>
-            </NavLink>
-            <NavLink to="#">
-              <li>찜한작품</li>
-            </NavLink>
-            <NavLink to="#">
-              <li>나의 게시글</li>
-            </NavLink>
-            <NavLink to="#">
-              <li>임시저장</li>
-            </NavLink>
+            <ul>
+              <NavLink to="#">
+                <li>최근 본</li>
+              </NavLink>
+              <NavLink to="#">
+                <li>찜한작품</li>
+              </NavLink>
+              <NavLink to="#">
+                <li>나의 게시글</li>
+              </NavLink>
+              <NavLink to="#">
+                <li>임시저장</li>
+              </NavLink>
+            </ul>
             <hr />
           </CategoryTab>
           <ContentsBox>

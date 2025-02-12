@@ -8,25 +8,45 @@ export const StorageInner = styled.div`
 `;
 export const StorageDesc = styled.div``;
 
-export const CategoryTab = styled.ul`
+export const CategoryTab = styled.div`
   position: relative;
-  display: flex;
-  gap: 40px;
-  a {
-    li {
-      padding: 15px 2px;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 24px;
-      color: #676767;
-    }
-    // link to가 현재 페이지인 경우
-    &[aria-current='page'] {
+  ul {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    z-index: 2;
+    a {
       li {
-        border: none;
-        border-bottom: solid 7px #0068ff;
+        padding: 15px 2px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #676767;
+      }
+      // link to가 현재 페이지인 경우
+      &[aria-current='page'] {
+        li:after {
+          display: block;
+          content: '';
+          width: calc(100% + 2px);
+          height: 7px;
+          margin-top: 15px;
+          background-color: #0068ff;
+          border-radius: 7px;
+        }
       }
     }
+  }
+  hr {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ededed;
+    z-index: 1;
   }
 `;
 
