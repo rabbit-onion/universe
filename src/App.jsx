@@ -1,7 +1,20 @@
 import GlobalStyle from './styled/GlobalStyle';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './common/Layout';
-import { Home, Main, NotFile, Search, DailyAni, Community, Membership, Login, Join, Profile, Video } from './pages';
+import {
+  Home,
+  Main,
+  NotFile,
+  Search,
+  DailyAni,
+  Community,
+  Membership,
+  Login,
+  Join,
+  Profile,
+  Video,
+  Mypage,
+} from './pages';
 import ModalLayout from './common/ModalLayout';
 import { AuthLayout, FindId, FindPw, NonHeaderLayout, WritePost } from './components';
 
@@ -21,6 +34,10 @@ const App = () => {
           <Route path="/dailyani" element={<DailyAni />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/mypage" element={<Mypage />}>
+            <Route path="storage" element={<Mypage />} />
+            <Route path="box" element={<Mypage />} />
+          </Route>
           <Route path="/community" element={<Community />} />
           <Route path="/write" element={<WritePost />} />
 
