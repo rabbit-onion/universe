@@ -110,10 +110,7 @@ export const GotoBtn = styled.button`
 export const SubTitle = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 37px;
-  h3 {
-    margin-top: 0;
-  }
+  /* margin-top: 37px; */
   select {
     border: none;
     font-weight: 600;
