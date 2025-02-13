@@ -1,8 +1,8 @@
 import { EpisodeDesc, EpisodeInfo, EpisodeItemWrap, EpisodeNum, EpisodeTitle } from './style';
 
-const EpisodeItem = ({ still_path, episodeData }) => {
+const EpisodeItem = ({ still_path, episode }) => {
   const bgurl = 'https://image.tmdb.org/t/p/w500/';
-  const { episode_number, name, runtime, overview } = episodeData;
+  const { episode_number, name, runtime, overview } = episode;
 
   return (
     <>

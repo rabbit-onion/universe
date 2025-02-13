@@ -1,13 +1,15 @@
 import RecommendItem from './RecommendItem';
-import { ListOverlay } from './style';
+import { ListOverlay, RecItemWrap } from './style';
 
 const RecommendList = ({ videoData }) => {
   return (
     <>
-      {videoData.map((video) => (
-        <RecommendItem key={video.id} video={video} />
-      ))}
-      <ListOverlay />
+      <RecItemWrap>
+        {videoData.map((video) => (
+          <RecommendItem key={video.id} video={video} />
+        ))}
+        <ListOverlay />
+      </RecItemWrap>
     </>
   );
 };
