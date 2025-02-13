@@ -114,3 +114,64 @@ export const ReviewImgBox = styled.div`
     object-fit: cover;
   }
 `;
+
+// ======================================
+// CommentItem.jsx style
+
+export const CommentTxtBox = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  width: 70%;
+`;
+
+export const ProfilePic = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+`;
+
+export const CommentInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 90%;
+  height: 120px;
+`;
+
+export const InfoTop = styled.div`
+  margin-bottom: 27px;
+  color: #252525;
+  font-weight: 500;
+  h4 {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+`;
+export const InfoBottom = styled.div`
+  flex-grow: 1;
+  font-weight: 500;
+  align-content: end;
+  p {
+    font-size: 15px;
+    line-height: 18px;
+    color: #252525;
+    margin-bottom: 15px;
+  }
+  span {
+    font-size: 12px;
+    line-height: 14px;
+    color: #a6a6a6;
+  }
+`;
