@@ -16,7 +16,7 @@ import {
   Mypage,
 } from './pages';
 import ModalLayout from './common/ModalLayout';
-import { AuthLayout, FindId, FindPw, NonHeaderLayout, PostsAll, WritePost } from './components';
+import { AuthLayout, FindId, FindPw, NonHeaderLayout, PostsAll, ViewPost, WritePost } from './components';
 
 // import { ThemeProvider } from 'styled-components';
 // import { theme } from './styles/theme';
@@ -42,6 +42,7 @@ const App = () => {
           <Route path="/community">
             <Route index element={<Community />} />
             <Route path="posts" element={<PostsAll />} />
+            <Route path="viewpost" element={<ViewPost />} />
           </Route>
           <Route path="/write" element={<WritePost />} />
 
