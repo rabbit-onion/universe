@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+
 export const PlayingBtn = styled.button`
   width: 160px;
   height: 68px;
