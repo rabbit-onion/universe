@@ -93,11 +93,11 @@ export const CategoryTab = styled.div`
 `;
 
 export const ContentsBox = styled.div`
+  margin-top: 37px;
   h3 {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     color: #565656;
-    margin-top: 37px;
   }
 `;

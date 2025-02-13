@@ -1,13 +1,16 @@
-import { ItemWrap } from '../storage/style';
 import ReviewItem from './ReviewItem';
+import { ReviewItemWrap } from './style';
 
 const ReviewList = () => {
   return (
     <>
-      <ItemWrap>
+      <ReviewItemWrap>
         <ReviewItem />
+        <hr />
         <ReviewItem />
-      </ItemWrap>
+        <hr />
+        <ReviewItem />
+      </ReviewItemWrap>
     </>
   );
 };

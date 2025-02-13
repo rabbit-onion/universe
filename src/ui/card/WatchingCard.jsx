@@ -1,5 +1,4 @@
 // 마이페이지에 내가 본 작품 재생시간 보이는 부분
-import React from 'react';
 import styled from 'styled-components';
 import ProgressBar from '../ProgressBar';
 

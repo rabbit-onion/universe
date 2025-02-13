@@ -1,4 +1,4 @@
-import { DraftPostsList, LikedList, MyPostsList, RatingList, RecentsList, ReviewList } from '../mypage';
+import { CommentList, DraftPostsList, LikedList, MyPostsList, RatingList, RecentsList, ReviewList } from '../mypage';
 import { SubTitle } from './style';
 
 const ContBoxLayout = () => {
@@ -23,16 +23,22 @@ const ContBoxLayout = () => {
         </select>
       </SubTitle>
       <RatingList /> */}
-      <SubTitle>
+      {/* <SubTitle>
         <h3>리뷰 (3)</h3>
         <select name="" id="">
           <option value="recent">최신순</option>
           <option value="rate">인기순</option>
         </select>
       </SubTitle>
-      <ReviewList />
-      {/* <h3>나의 게시글 (3)</h3> */}
-      {/* <MyPostsList /> */}
+      <ReviewList /> */}
+      <SubTitle>
+        <h3>댓글 (1)</h3>
+        <select name="" id="">
+          <option value="recent">최신순</option>
+          <option value="rate">인기순</option>
+        </select>
+      </SubTitle>
+      <CommentList />
     </>
   );
 };

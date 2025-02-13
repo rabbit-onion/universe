@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const Day7Btn = styled.button`
@@ -19,10 +18,10 @@ export const Day7Btn = styled.button`
   border-radius: 64px;
 `;
 
-const DayBtn = () => {
+const DayBtn = ({ children }) => {
   return (
     <>
-      <Day7Btn>월</Day7Btn>
+      <Day7Btn>{children}</Day7Btn>
     </>
   );
 };

@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideo } from '../../../store/modules/getThunk';
 import {
-  ModalWrap,
   ModalTop,
   VideoWrap,
   Overlay,
@@ -17,12 +16,13 @@ import {
   EpisodeSec,
   EpisodeTop,
   SeasonSelect,
-  MoreBtn,
   RecContentSec,
   PvSec,
   PvCard,
   ModalFooter,
   ModalFooterDesc,
+  MoreBtn,
+  MoreBox,
 } from './style';
 import EpisodeList from './EpisodeList';
 import RecommendList from './RecommendList';
@@ -31,6 +31,9 @@ const VideoInfo = () => {
   const { monsterData } = useSelector((state) => state.videoR);
   const { videoData } = useSelector((state) => state.videoR);
   const dispatch = useDispatch();
+
+  const [visibleItem, setVisibleItem] = useState(8);
+  const [moreItem, setMoreItem] = useState(false);
 
   useEffect(() => {
     dispatch(getVideo());
@@ -57,6 +60,15 @@ const VideoInfo = () => {
     'rel=0',
     'playlist=' + videoId,
   ].join('&');
+
+  const handleViewEpisodeNum = () => {
+    setVisibleItem((prev) => prev + 8);
+    if (visibleItem >= seasons.episodes.length) {
+      setVisibleItem(8);
+    }
+  };
+
+  const viewEpisodes = seasons.episodes.slice(0, visibleItem);
 
   return (
     <>
@@ -152,11 +164,15 @@ const VideoInfo = () => {
               <option value="3">2기</option>
             </SeasonSelect>
           </EpisodeTop>
-          <EpisodeList id={id} name={name} seasons={seasons} backdrop_path={backdrop_path} />
-          <MoreBtn>
+
+          <EpisodeList id={id} name={name} viewEpisodes={viewEpisodes} backdrop_path={backdrop_path} />
+          <hr />
+
+          <MoreBtn onClick={handleViewEpisodeNum}>
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/downArrow.svg"
-              alt=""
+              alt={moreItem ? '더보기' : '접기'}
+              style={{ transform: moreItem ? 'none' : 'rotate(180deg)' }}
             />
           </MoreBtn>
         </EpisodeSec>
@@ -164,13 +180,15 @@ const VideoInfo = () => {
         <RecContentSec>
           <h2>함께 시청된 콘텐츠</h2>
           <RecommendList videoData={videoData} />
-          <hr />
-          <MoreBtn>
-            <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/downArrow.svg"
-              alt=""
-            />
-          </MoreBtn>
+          <MoreBox>
+            <hr />
+            <button>
+              <img
+                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/downArrow.svg"
+                alt=""
+              />
+            </button>
+          </MoreBox>
         </RecContentSec>
 
         <PvSec>
