@@ -5,8 +5,9 @@ const initialState = {
   videoData: [],
   loading: true,
   error: null,
-  currentData: null,
-  monsterData: null,
+  currentData: [],
+  monsterData: [],
+  relatedData: [],
 };
 
 const videoSlice = createSlice({

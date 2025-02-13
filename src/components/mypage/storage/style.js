@@ -1,48 +1,8 @@
 import styled from 'styled-components';
 
-// MyStorage.jsx style
-export const StorageInner = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 31px 36px 47px 41px;
-`;
-export const StorageDesc = styled.div``;
-
-export const CategoryTab = styled.ul`
-  position: relative;
-  display: flex;
-  gap: 40px;
-  a {
-    li {
-      padding: 15px 2px;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 24px;
-      color: #676767;
-    }
-    // link to가 현재 페이지인 경우
-    &[aria-current='page'] {
-      li {
-        border: none;
-        border-bottom: solid 7px #0068ff;
-      }
-    }
-  }
-`;
-
-export const ContentsBox = styled.div`
-  h3 {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #565656;
-    margin-top: 37px;
-  }
-`;
-
 // ========================================
 // RecentsList.jsx style
-export const RecentsItemWrap = styled.div`
+export const ItemWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
@@ -53,11 +13,11 @@ export const RecentsItemWrap = styled.div`
 
 // ========================================
 // RecentsItem.jsx style
-export const RecentCard = styled.div`
+export const Card = styled.div`
   width: 340px;
 `;
 
-export const RecentImgBox = styled.div`
+export const ImgBox = styled.div`
   width: 340px;
   height: 223px;
   background: rgba(0, 0, 0, 0.54);
@@ -72,7 +32,7 @@ export const RecentImgBox = styled.div`
 
 export const IconBox = styled.div``;
 
-export const RecentTxt = styled.div`
+export const TxtBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,5 +51,54 @@ export const RecentTxt = styled.div`
   img {
     width: 20px;
     height: 20px;
+  }
+`;
+
+// =================================================
+// MyPostsItem.jsx style
+
+export const PostTxtBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: flex-start;
+  width: calc(100% - 40px);
+  margin: auto;
+  padding-top: 18px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #252525;
+  p {
+    display: flex;
+    width: 100%;
+  }
+`;
+
+export const SubText = styled.p`
+  justify-content: space-between;
+  span {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #252525;
+  }
+`;
+
+export const SubSmallTxt = styled.span`
+  display: flex;
+  gap: 5px;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 13px;
+    line-height: 16px;
+    img {
+      width: 8px;
+      height: 7px;
+    }
   }
 `;

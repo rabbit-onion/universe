@@ -103,3 +103,19 @@ export const GotoBtn = styled.button`
     margin-right: 17px;
   }
 `;
+
+// =======================================
+// ContBoxLayout.jsx style
+
+export const SubTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 37px; */
+  select {
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #676767;
+  }
+`;

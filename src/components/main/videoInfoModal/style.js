@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+// ====================================
+//
 export const ModalWrap = styled.div`
   position: relative;
   width: 1440px;
@@ -145,13 +147,18 @@ export const ModalMain = styled.div`
 `;
 
 export const EpisodeSec = styled.div`
+  position: relative;
   padding: 37px 60px 74px 60px;
   width: 100%;
-  height: 1963px;
+  overflow: hidden;
   hr {
     border: none;
     height: 1px;
     background-color: #c5c5c5;
+    &:last-of-type {
+      height: 3px;
+      background-color: #7d7d7d;
+    }
   }
 `;
 
@@ -162,6 +169,9 @@ export const EpisodeTop = styled.div`
     margin-bottom: 0;
   }
 `;
+
+// =========================================
+// EpisodeItem.jsx style??
 
 export const EpisodeItemWrap = styled.div`
   display: flex;
@@ -234,15 +244,35 @@ export const MoreBtn = styled.button`
 `;
 
 export const RecContentSec = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 1388px;
   padding: 50px 60px 24px 60px;
   background: #f1f1f1;
+  overflow: hidden;
+`;
+
+export const MoreBox = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 171px;
+  padding-top: 42px;
+  padding-bottom: 24px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 1) 70%, transparent 100%);
   hr {
     border: none;
     height: 3px;
     background-color: #c5c5c5;
-    margin-bottom: 68px;
+  }
+  button {
+    display: block;
+    margin: auto;
+    margin-top: 68px;
+    background-color: transparent;
   }
 `;
 
@@ -289,8 +319,20 @@ export const RecCardBottom = styled.div`
   }
 `;
 
+// ============================================
+// RecommendList.jsx style
+
+export const RecItemWrap = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  height: 1144px;
+  padding: 0 13px;
+  /* overflow: hidden; */
+`;
+
 export const ListOverlay = styled.div`
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 4%, transparent 100%);
+  /* background: linear-gradient(to top, rgba(255, 255, 255, 1) 4%, transparent 100%); */
 `;
 
 export const PvSec = styled.div`

@@ -1,5 +1,16 @@
+import MyPostsItem from './MyPostsItem';
+import { ItemWrap } from './style';
+
 const MyPostsList = () => {
-  return <div></div>;
+  return (
+    <>
+      <ItemWrap>
+        <MyPostsItem />
+        <MyPostsItem />
+        <MyPostsItem />
+      </ItemWrap>
+    </>
+  );
 };
 
 export default MyPostsList;

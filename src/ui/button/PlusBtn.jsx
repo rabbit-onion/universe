@@ -1,5 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
+
 export const Plus = styled.button`
   width: 68px;
   height: 68px;

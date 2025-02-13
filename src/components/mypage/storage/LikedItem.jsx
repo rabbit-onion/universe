@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Card, IconBox, ImgBox, TxtBox } from './style';
 
-const RecentsItem = () => {
+const LikedItem = () => {
   return (
     <>
       <Card>
         <Link>
           <ImgBox>
             <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/monster8.webp"
-              alt="괴수 8호"
+              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/likedThumb.webp"
+              alt="체인소맨"
             />
             <IconBox>
               <img src="" alt="" />
@@ -20,8 +20,7 @@ const RecentsItem = () => {
         <Link>
           <TxtBox>
             <p>
-              <strong>괴수 8호</strong>
-              <strong>1기 11화</strong>
+              <strong>체인소맨</strong>
             </p>
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/info.svg"
@@ -34,4 +33,4 @@ const RecentsItem = () => {
   );
 };
 
-export default RecentsItem;
+export default LikedItem;

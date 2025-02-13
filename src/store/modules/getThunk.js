@@ -1,12 +1,14 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1) => {
-  const movieUrl = `https://api.themoviedb.org/3/discover/movie`;
-  const tvUrl = 'https://api.themoviedb.org/3/discover/tv';
-  const API_KEY = import.meta.env.VITE_APP_TMDB_KEY;
+const movieUrl = `https://api.themoviedb.org/3/discover/movie`;
+const tvUrl = 'https://api.themoviedb.org/3/discover/tv';
+const API_KEY = import.meta.env.VITE_APP_TMDB_KEY;
 
+// 전체 작품 정보 가져오기
+export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1) => {
   try {
+    // 장르가 애니메이션인 영화정보 가져오기
     const movieRes = await axios.get(movieUrl, {
       params: {
         api_key: API_KEY,
@@ -17,6 +19,7 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
       },
     });
 
+    // 장르가 애니메이션인 tv프로그램 정보 가져오기
     const tvRes = await axios.get(tvUrl, {
       params: {
         api_key: API_KEY,
@@ -27,7 +30,7 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
       },
     });
 
-    // tvRes의 기본정보 최적화
+    // tvRes의 기본정보 최적화(사용할 항목만 넣기)
     const tvShows = tvRes.data.results.map((show) => ({
       adult: show.adult,
       backdrop_path: show.backdrop_path,
@@ -45,7 +48,7 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
       vote_average: show.vote_average,
     }));
 
-    // 각 영화의 비디오 데이터 가져오기
+    // 각 영화의 비디오정보 가져오기
     const movieVideosPromises = movieRes.data.results.map((movie) =>
       axios.get(`https://api.themoviedb.org/3/movie/${movie.id}/videos`, {
         params: {
@@ -55,7 +58,7 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
       })
     );
 
-    // 각 TV 쇼의 비디오 데이터 가져오기
+    // 각 TV 쇼의 비디오정보 가져오기
     const tvVideosPromises = tvRes.data.results.map((show) =>
       axios.get(`https://api.themoviedb.org/3/tv/${show.id}/videos`, {
         params: {
@@ -134,6 +137,15 @@ export const getVideo = createAsyncThunk('video/getVideo', async (pageNumber = 1
         results: monsterWithSeason,
       },
     };
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+});
+
+// 특정 작품 정보, 연관작품 가져오기
+export const getSelectedVideo = createAsyncThunk('video/getSelectedVideo', async (pageNumber = 1) => {
+  try {
   } catch (error) {
     console.log(error);
     throw error;
