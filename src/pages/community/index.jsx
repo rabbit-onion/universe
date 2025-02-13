@@ -1,5 +1,12 @@
+import CommunityMain from '../../components/community/communityMain';
+
 const Community = () => {
-  return <div>com</div>;
+  return (
+    <div>
+      com
+      <CommunityMain />
+    </div>
+  );
 };
 
 export default Community;
