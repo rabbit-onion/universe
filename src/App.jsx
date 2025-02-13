@@ -16,7 +16,7 @@ import {
   Mypage,
 } from './pages';
 import ModalLayout from './common/ModalLayout';
-import { AuthLayout, NonHeaderLayout } from './components';
+import { AuthLayout, FindId, FindPw, NonHeaderLayout, PostsAll, ViewPost, WritePost } from './components';
 
 // import { ThemeProvider } from 'styled-components';
 // import { theme } from './styles/theme';
@@ -32,13 +32,19 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/tagsearch" element={<Search />} />
           <Route path="/dailyani" element={<DailyAni />} />
-          <Route path="/community" element={<Community />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/mypage" element={<Mypage />}>
             <Route path="storage" element={<Mypage />} />
             <Route path="box" element={<Mypage />} />
           </Route>
+
+          <Route path="/community">
+            <Route index element={<Community />} />
+            <Route path="posts" element={<PostsAll />} />
+            <Route path="viewpost" element={<ViewPost />} />
+          </Route>
+          <Route path="/write" element={<WritePost />} />
 
           {/* 최종 path는 작품ID로 들어갈듯 */}
           <Route path="/videoinfo" element={<ModalLayout />} />
@@ -47,6 +53,8 @@ const App = () => {
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
           <Route path="join" element={<Join />} />
+          <Route path="findid" element={<FindId />} />
+          <Route path="findpw" element={<FindPw />} />
         </Route>
 
         <Route path="/video" element={<NonHeaderLayout />}>
