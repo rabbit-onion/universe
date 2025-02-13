@@ -13,14 +13,16 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     font-size: 15px;
-  }
+
+}
   body {
     background-color :white;
     font-family: 'Pretendard', sans-serif;
     line-height: 1.5;
     color: #333;
     overflow-x : hidden;
-  }
+
+}
   a {
     text-decoration: none;
     color: #000;
@@ -33,7 +35,9 @@ const GlobalStyle = createGlobalStyle`
     font-size : 35px;
     font-weight : 600;
   }
-  
+    .inner {
+    padding-left: 5.2vw;
+  }
   .swiper {
     width: 100%;
     height: 100%;
