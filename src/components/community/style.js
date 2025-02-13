@@ -49,6 +49,11 @@ export const AllWrap = styled.div`
 
 export const Container = styled.div`
   padding: 80px 120px;
+  h2 {
+    font-family: 'Pretendard';
+    font-size: 50px;
+    font-weight: bold;
+  }
 `;
 
 export const ButtonBox = styled.div`
@@ -65,25 +70,35 @@ export const ButtonBox = styled.div`
 `;
 
 export const ContentWrap = styled.div`
+  margin-top: 28px;
   display: flex;
   justify-content: space-between;
 `;
 export const ListWrap = styled.div`
+  ul {
+    width: 221px;
+  }
   p {
     font-size: 20px;
     font-family: 'Pretendard';
     font-weight: 600;
   }
 
+  hr {
+    margin: 17px 0px 33px 0px;
+  }
+
   li {
     font-size: 24px;
     font-family: 'Pretendard';
+    margin-bottom: 28px;
   }
 `;
 export const CardWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   width: 413px;
   height: 334px;
   background-color: pink;
@@ -92,6 +107,7 @@ export const CardWrap = styled.div`
 export const Card = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding: 0px 25px;
 `;
 export const CardImage = styled.div`
@@ -105,6 +121,7 @@ export const Left = styled.div`
   h1 {
     font-size: 20px;
     font-family: 'Pretendard';
+    font-weight: 500;
   }
 
   p {
@@ -113,9 +130,10 @@ export const Left = styled.div`
   }
 `;
 export const Right = styled.div`
-  button {
+  span {
     font-size: 15px;
     font-family: 'Pretendard';
+    margin-right: 10px;
   }
 
   p {

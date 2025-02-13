@@ -38,8 +38,8 @@ const PostsAll = () => {
                   <p>오늘은 맑음</p>
                 </Left>
                 <Right>
-                  <button>346</button>
-                  <button>15</button>
+                  <span>346</span>
+                  <span>15</span>
                   <p>2025. 01. 18</p>
                 </Right>
               </Card>
