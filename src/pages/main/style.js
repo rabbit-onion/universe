@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { device } from '../../styled/Device';
 
 export const MainWrap = styled.div`
   .button-group {
@@ -89,41 +88,76 @@ export const MainWrap = styled.div`
     transform: scale(1.2);
   }
 
-  .vertical_watching_content {
-    width: 15.7vw !important;
-    height: 50vh;
+  .vertical_watching_content .swiper-button-prev {
+    height: 100%;
+    padding: 0 2vw;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease;
+    position: absolute;
+    bottom: -1px;
+    top: 22px;
+    left: 0;
+  }
+  .swiper-button-prev:hover {
+    transition: transform 0.8s ease;
+    opacity: 1;
+  }
+
+  .vertical_watching_content .swiper-button-next {
+    height: 100%;
+    padding: 0 2vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease;
+    position: absolute;
+    bottom: -1px;
+    top: 22px;
+    right: 0;
+  }
+  .swiper-button-next:hover {
+    transition: transform 0.8s ease;
+    opacity: 1;
   }
 `;
 
 export const VerticalUserWatching = styled.div`
-  width: 15.7vw !important;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.1));
-img {
-  width: 100%;
-  height: 38vh;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
+  @media ${device.desktop} {
+    width: 15.8vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.1));
+  }
+  @media ${device.laptopMX} {
+    width: 20.8vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.1));
+  }
+  @media ${device.tabletMX} {
+    width: 27.7vw;
+  }
+  img {
+    width: 100%;
+    height: 50vh;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
   div {
     width: 100%;
-  height: 9.8vh;
-  background-color: white;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  display: flex;
-  align-items: center;
-
+    padding: 20px;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    align-items: center;
   }
   p {
     font-size: 20px;
     margin-left: 20px;
-}
   }
-
 `;
 
 export const HotpostContent = styled.div`
