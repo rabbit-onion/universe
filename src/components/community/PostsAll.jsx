@@ -1,4 +1,16 @@
-import { AllWrap, ButtonBox, Card, CardImage, CardWrap, Container, ContentWrap, Left, ListWrap, Right } from './style';
+import {
+  AllWrap,
+  BottomAdd,
+  ButtonBox,
+  Card,
+  CardImage,
+  CardWrap,
+  Container,
+  ContentWrap,
+  Left,
+  ListWrap,
+  Right,
+} from './style';
 
 const PostsAll = () => {
   return (
@@ -13,7 +25,9 @@ const PostsAll = () => {
           <ContentWrap>
             <ListWrap>
               <ul>
-                <p>장르</p>
+                <p>
+                  장르 <span>전체 초기화</span>
+                </p>
                 <hr />
                 <li>로맨스</li>
                 <li>드라마</li>
@@ -46,6 +60,26 @@ const PostsAll = () => {
             </CardWrap>
           </ContentWrap>
         </Container>
+        <ul>
+          <li>&lt;&lt;</li>
+          <li>&lt;</li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>&gt;</li>
+          <li>&gt;&gt;</li>
+        </ul>
+        <BottomAdd>
+          <div>
+            <ul>
+              공지
+              <li>2025년 판권 종료되는 애니메이션 안내 </li>
+            </ul>
+          </div>
+        </BottomAdd>
       </AllWrap>
     </>
   );

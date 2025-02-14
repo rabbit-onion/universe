@@ -1,7 +1,9 @@
 import {
+  AtherBtn,
   AtherComment,
   AtherImg,
   AtherProfile,
+  BottomUtility,
   CommentArea,
   CommentAther,
   CommentBtn,
@@ -9,10 +11,13 @@ import {
   CommentForm,
   CommentWrap,
   HartCount,
+  PagiNation,
   ProfileImg,
   TagList,
+  UserLine,
   UserProfile,
   UserWrap,
+  UtilityButtons,
   ViewImg,
   ViewInner,
   ViewLine,
@@ -62,15 +67,36 @@ const ViewPost = () => {
             <p>136</p>
           </div>
         </HartCount>
-        <TagList>
-          <ul>
-            <li>#너에게닿기를</li>
-            <li>#시즌2</li>
-            <li>#미쳤다</li>
-            <li>#추천</li>
-            <li>#감동</li>
-          </ul>
-        </TagList>
+        <BottomUtility>
+          <TagList>
+            <ul>
+              <li>#너에게닿기를</li>
+              <li>#시즌2</li>
+              <li>#미쳤다</li>
+              <li>#추천</li>
+              <li>#감동</li>
+            </ul>
+          </TagList>
+          <UtilityButtons>
+            <ul>
+              <li>
+                <button>
+                  <img src="/public/images/pattern/Iconutility1.png" alt="" />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img src="/public/images/pattern/Iconutility2.png" alt="" />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img src="/public/images/pattern/Iconutility3.png" alt="" />
+                </button>
+              </li>
+            </ul>
+          </UtilityButtons>
+        </BottomUtility>
         <CommentArea>
           <UserProfile>
             <UserWrap>
@@ -83,7 +109,10 @@ const ViewPost = () => {
               <button>팔로우</button>
             </div>
           </UserProfile>
-          <hr />
+          <UserLine>
+            <hr />
+          </UserLine>
+
           <CommentWrap>
             <CommentCount>
               <p>00개의 댓글</p>
@@ -111,13 +140,23 @@ const ViewPost = () => {
                 정주행 들어갑니다!
               </p>
             </AtherComment>
-            <div>
-              <button>답글달기</button>
+            <AtherBtn>
+              <button> ( + ) 답글달기</button>
               <button>하트34</button>
-            </div>
+            </AtherBtn>
             <hr />
           </CommentAther>
         </CommentArea>
+        <PagiNation>
+          <ul>
+            <li>&lt;&lt;</li>
+            <li>&lt;</li>
+            <li>1</li>
+            <li>2</li>
+            <li>&gt;</li>
+            <li>&gt;&gt;</li>
+          </ul>
+        </PagiNation>
       </ViewInner>
     </>
   );
