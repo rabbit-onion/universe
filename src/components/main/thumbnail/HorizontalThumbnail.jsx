@@ -1,13 +1,12 @@
 import React from 'react';
+import { MainThumbnailWrap, WhiteBlur } from '../../../pages/main/style';
 
 const HorizontalThumbnail = () => {
   return (
-    <div>
-      <div className="main_thumbnail_wrap">
-        <img className="mainthumbnail" src="../public/images/pattern/thunail.png"></img>
-        <div className="white_blur"> </div>
-      </div>
-    </div>
+    <MainThumbnailWrap>
+      <img src="../public/images/pattern/thunail.png"></img>
+      <WhiteBlur />
+    </MainThumbnailWrap>
   );
 };
 
