@@ -43,8 +43,8 @@ const App = () => {
             <Route index element={<Community />} />
             <Route path="posts" element={<PostsAll />} />
             <Route path="viewpost" element={<ViewPost />} />
+            <Route path="write" element={<WritePost />} />
           </Route>
-          <Route path="/write" element={<WritePost />} />
 
           {/* 최종 path는 작품ID로 들어갈듯 */}
           <Route path="/videoinfo" element={<ModalLayout />} />

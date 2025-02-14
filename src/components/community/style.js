@@ -1,46 +1,118 @@
 import styled from 'styled-components';
 
 export const WriteWrap = styled.div`
-  width: 1920px;
-  height: 1080px;
-  background-color: #f5f5f5;
-  margin-left: 120px;
-  margin-top: 100px;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 120px;
 `;
 
 export const WritBox = styled.div`
-  width: 1068px;
-  height: 1080px;
-  background-color: #fff;
+  flex-grow: 1;
+  margin-top: 105px;
 `;
 
 export const TitleBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  h1 {
-    font-family: 'Pretendard';
-    font-size: 20px;
+  hr {
+    width: 51px;
+    height: 7px;
+    margin-right: 100%;
+    border: none;
+    border-radius: 7px;
+    background-color: #0068ff;
   }
-
-  h2 {
-    font-family: 'Pretendard';
-    font-size: 40px;
-    margin-bottom: 0;
-    font-weight: bold;
+  textarea {
+    border: none;
+    padding: 5px;
+    &:focus {
+      outline: none;
+    }
   }
 `;
 
-export const Line = styled.div`
-  width: 60px;
-  height: 7px;
-  background-color: #0068ff;
-  border-radius: 7px;
-  margin-top: 42px;
+export const Title = styled.textarea`
+  width: 90%;
+  height: auto;
   margin-bottom: 32px;
+  resize: none;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
 `;
 
+export const SubTitle = styled.textarea`
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  resize: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+`;
+
+export const EditorContainer = styled.div`
+  width: 100%;
+  max-width: 1200px;
+
+  // 에디터 내부 스타일 오버라이드
+  .toastui-editor-defaultUI {
+    width: 100% !important;
+    border: none !important;
+
+    &-toolbar {
+      background-color: transparent;
+      border: none;
+      padding: 0 25px 0 0;
+    }
+    // 에디터 내용 영역 스타일 오버라이드
+    .ProseMirror {
+      width: 760px;
+      padding: 20px;
+      padding-bottom: 200px;
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 600px;
+      white-space: normal;
+    }
+    .toastui-editor-toolbar-icons {
+      &:hover {
+        background-color: #e9ecef;
+      }
+      &[aria-pressed='true'] {
+        background-color: #333;
+      }
+      &.active {
+        background-color: #333;
+      }
+    }
+  }
+`;
+
+export const PreviewBox = styled.div`
+  width: 852px;
+  height: auto;
+  background-color: #f5f5f5;
+  padding: 50px;
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  div {
+    margin-top: 20px;
+    padding-bottom: 100px;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+`;
+
+// ==========================================
 // 전체 게시글
 export const AllWrap = styled.div`
   width: 1920px;

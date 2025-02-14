@@ -27,7 +27,7 @@ const Mypage = () => {
               <h2>보관함</h2>
               <Desc>
                 <CategoryTab>
-                  {/* <ul>
+                  <ul>
                     <NavLink to="#">
                       <li>최근 본</li>
                     </NavLink>
@@ -40,8 +40,8 @@ const Mypage = () => {
                     <NavLink to="#">
                       <li>임시저장</li>
                     </NavLink>
-                  </ul> */}
-                  <ul>
+                  </ul>
+                  {/* <ul>
                     <NavLink to="#">
                       <li>별점</li>
                     </NavLink>
@@ -51,7 +51,7 @@ const Mypage = () => {
                     <NavLink to="#">
                       <li>댓글</li>
                     </NavLink>
-                  </ul>
+                  </ul> */}
                   <hr />
                 </CategoryTab>
                 <ContentsBox>
