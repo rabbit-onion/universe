@@ -5,7 +5,7 @@ export const CommunityWrap = styled.div`
   height: 100%;
 `;
 
-export const CommnuniyBanner = styled.div`
+export const CommunityBanner = styled.div`
   width: 100vw;
   height: 80vh;
   img {

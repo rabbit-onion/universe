@@ -35,7 +35,6 @@ const DateSlide = () => {
             modules={[Navigation]}
             spaceBetween={15}
             loop={true}
-            loopFillGroupWithBlank={false}
             navigation
             breakpoints={{
               390: {
