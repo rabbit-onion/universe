@@ -163,9 +163,9 @@ export const ProfilePic = styled.div`
 `;
 
 export const MenuBox = styled.div`
-  display: none;
+  /* display: none; */
   position: absolute;
-  top: 100%;
+  top: 200%;
   right: 0;
   width: 300px;
   height: 494px;

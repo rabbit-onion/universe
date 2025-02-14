@@ -33,18 +33,21 @@ const VideoInfo = () => {
   const dispatch = useDispatch();
 
   const [visibleItem, setVisibleItem] = useState(8);
-  const [moreItem, setMoreItem] = useState(false);
+  const [moreItem, setMoreItem] = useState(true);
 
   useEffect(() => {
     dispatch(getVideo());
   }, []);
 
-  if (!monsterData || !videoData || monsterData.length === 0 || videoData.length === 0) {
-    return <div>Loading . . . </div>;
-  }
+  useEffect(() => {
+    if (visibleItem > monsterData?.seasons?.episodes.length) {
+      setVisibleItem(8);
+      setMoreItem(false);
+    }
+  }, [monsterData]);
 
-  if (!monsterData.seasons || !videoData) {
-    return <div>Loading . . .</div>;
+  if (!monsterData || !videoData || !monsterData.seasons) {
+    return <div>Loading . . . </div>;
   }
 
   const { genres, id, name, overview, production_companies, seasons, backdrop_path, type } = monsterData;
@@ -65,6 +68,7 @@ const VideoInfo = () => {
     setVisibleItem((prev) => prev + 8);
     if (visibleItem >= seasons.episodes.length) {
       setVisibleItem(8);
+      setMoreItem(false);
     }
   };
 
@@ -132,7 +136,7 @@ const VideoInfo = () => {
                   <strong>제작</strong>
                   <p>
                     {production_companies.map((item, idx) => (
-                      <span key={item.id}>{item.name}</span>
+                      <span key={item.id}>"{item.name}" </span>
                     ))}
                   </p>
                 </div>
@@ -140,10 +144,7 @@ const VideoInfo = () => {
                   <strong>시리즈 특징 </strong>
                   <p>
                     {genres.map((item, idx) => (
-                      <span key={item.id}>
-                        {item.name}
-                        <br />
-                      </span>
+                      <span key={item.id}>"{item.name}" </span>
                     ))}
                   </p>
                 </div>
@@ -168,13 +169,15 @@ const VideoInfo = () => {
           <EpisodeList id={id} name={name} viewEpisodes={viewEpisodes} backdrop_path={backdrop_path} />
           <hr />
 
-          <MoreBtn onClick={handleViewEpisodeNum}>
-            <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/downArrow.svg"
-              alt={moreItem ? '더보기' : '접기'}
-              style={{ transform: moreItem ? 'none' : 'rotate(180deg)' }}
-            />
-          </MoreBtn>
+          {seasons.episodes.length > 8 && (
+            <MoreBtn onClick={handleViewEpisodeNum}>
+              <img
+                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/downArrow.svg"
+                alt={moreItem ? '더보기' : '접기'}
+                style={{ transform: moreItem ? 'none' : 'rotate(180deg)' }}
+              />
+            </MoreBtn>
+          )}
         </EpisodeSec>
 
         <RecContentSec>
