@@ -12,18 +12,7 @@ export const HomeWrap = styled.div`
   .new_animation_wrap {
     position: relative;
   }
-  .new_animation_thumb {
-    width: 43.5vw;
-    height: 50vh;
-    border-radius: 30px;
-  }
-  .new_animation_thumb_sec {
-    position: absolute;
-    width: 76vw;
-    height: 43.5vh;
-    z-index: -1;
-    transform: translateX(15%);
-  }
+
   .swiper-container .swiper-wrapper {
     transition-timing-function: linear !important;
     position: relative;
@@ -35,30 +24,14 @@ export const HomeWrap = styled.div`
     height: 80%;
     width: 100%;
   }
-    .home_comm_wrap {
-    position : relative;
-    }
-    .uni_back_typo {
-    font-size : 500px;
-    font-weight : 700;
-    color : #333333;
-    line-height: normal;
-    }
-  .home_comm_section {
-  width : 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    position : absolute;
-    top:50%;
-    left:50%;
-        transform: translate(-50%, -50%);
-}
+  .home_comm_wrap {
+    position: relative;
   }
-  .mac_mockup_img {
-    width: 50%;
-    height: 100%;
+  .uni_back_typo {
+    font-size: 500px;
+    font-weight: 700;
+    color: #333333;
+    line-height: normal;
   }
   .device_mockup_img {
     width: 50%;
@@ -73,35 +46,31 @@ export const HomeWrap = styled.div`
     color: white;
     border-radius: 20px;
   }
-
   .review_doc {
     font-size: 16px;
   }
-  .start_univ_logo {
-    width: 46.3vw;
-    height: 13vh;
-    object-fit: contain;
-  }
-  .left_ani_pic {
-    width: 100%;
-    transform: translate(-50%, -50%);
-    opacity: 0.4;
-    border-radius: 20px;
-  }
-  .right_ani_pic {
-    width: 100%;
-    transform: translate(50%, -50%);
-    opacity: 0.4;
-    border-radius: 20px;
-  }
-  .main_ani_pic {
-    display: block;
-    height: 100%;
-    width: 100%;
-    border-radius: 20px;
-  }
 `;
 
+export const CommunitySection = styled.section`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    width: 50%;
+    height: 100%;
+  }
+`;
+export const StartLogo = styled.img`
+  width: 46.3vw;
+  height: 13vh;
+  object-fit: contain;
+`;
 export const ReviewTitle = styled.h1`
   font-size: 20px;
 `;
@@ -124,14 +93,32 @@ export const LeftAniPic = styled.div`
   position: absolute;
   top: 52%;
   width: 76%;
+  img {
+    width: 100%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    border-radius: 20px;
+  }
 `;
 export const RightAniPic = styled.div`
   position: absolute;
   top: 52%;
   left: 24%;
   width: 76%;
+  img {
+    width: 100%;
+    transform: translate(50%, -50%);
+    opacity: 0.4;
+    border-radius: 20px;
+  }
 `;
 
 export const MainAniPic = styled.div`
   position: relative;
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+  }
 `;

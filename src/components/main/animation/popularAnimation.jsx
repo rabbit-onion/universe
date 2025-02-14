@@ -25,6 +25,7 @@ const PopularAnimation = () => {
     <div className="inner div_top_margin">
       <h2>실시간 인기 애니메이션</h2>
       <Swiper
+        className="vertical_watching_content"
         modules={[Navigation]}
         spaceBetween={15}
         slidesPerGroup={5}
@@ -39,9 +40,9 @@ const PopularAnimation = () => {
           },
 
           768: {
-            slidesPerView: 2.5,
-            slidesPerGroup: 2,
-            spaceBetween: 300,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 100,
             loopFillGroupWithBlank: false,
           },
           1440: {
@@ -53,8 +54,8 @@ const PopularAnimation = () => {
         }}
       >
         {thumbnails.map((image, index) => (
-          <SwiperSlide key={index} className="vertical_watching_content">
-            <img src={image.src} alt={image.alt} className="vertical_watching_content_img" />
+          <SwiperSlide key={index}>
+            <img src={image.src} alt={image.alt} />
           </SwiperSlide>
         ))}
       </Swiper>

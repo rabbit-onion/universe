@@ -63,14 +63,17 @@ const GlobalStyle = createGlobalStyle`
     object-fit: cover;
   }
   .swiper-button-prev {
-    padding: 12vh 2vw;
+  height : 100%;
+    padding: 0 2vw;
     opacity : 0;
     background-color: rgba(0, 0, 0, 0.4);
     transition: transform 0.5s ease;
     position: absolute;
     bottom: -1px;
-    top: 24px;
+    top: 22px;
     left: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
   .swiper-button-prev:hover {
     transition: transform 0.8s ease;
@@ -81,13 +84,16 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .swiper-button-next {
-    padding : 12vh 2vw ;
+  height : 100%;
+    padding : 0 2vw ;
     background-color: rgba(0, 0, 0, 0.4);
     opacity : 0;
     position: absolute;
     bottom: -1px;
-    top: 24px;
+    top: 22px;
     right: 0;
+    //  border-top-right-radius: 20px;
+    // border-bottom-right-radius: 20px;
   } 
   .swiper-button-next:hover {
     transition: transform 0.8s ease;

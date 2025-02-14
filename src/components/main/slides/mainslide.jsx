@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import animationData from '../../../assets/api/animationdata';
 
 const Mainslide = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -39,6 +40,13 @@ const Mainslide = () => {
     clearTimeout(timeoutRef.current); // 타이머 취소
     setHoveredIndex(null); // 상태 초기화
   };
+  // function getRandomItems(array, count) {
+  //   const shuffled = [...array].sort(() => Math.random() - 0.5); // 배열을 랜덤으로 섞음
+  //   return shuffled.slice(0, Math.min(count, array.length)); // 앞에서 count 개수만큼 반환
+  // }
+  // const onlyItems = animationData.filter((item) => item.only === true);
+
+  // const randomOnlyItems = getRandomItems(onlyItems, Math.min(onlyItems.length, 3));
 
   return (
     <>

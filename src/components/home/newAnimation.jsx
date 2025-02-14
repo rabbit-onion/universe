@@ -10,17 +10,17 @@ const NewAnimation = () => {
       <AniSection>
         <LeftAniPic>
           <picture>
-            <img className="left_ani_pic" src="../public/images/pattern/horizon/jusul.webp"></img>
+            <img src="../public/images/pattern/horizon/jusul.webp"></img>
           </picture>
         </LeftAniPic>
         <RightAniPic>
           <picture>
-            <img className="right_ani_pic" src="../public/images/pattern/horizon/monster8.webp"></img>
+            <img src="../public/images/pattern/horizon/monster8.webp"></img>
           </picture>
         </RightAniPic>
         <MainAniPic>
           <picture>
-            <img className="main_ani_pic" src="../public/images/pattern/horizon/onepiece.webp"></img>
+            <img src="../public/images/pattern/horizon/onepiece.webp"></img>
           </picture>
         </MainAniPic>
       </AniSection>
