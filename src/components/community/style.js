@@ -43,17 +43,51 @@ export const Line = styled.div`
 
 // 전체 게시글
 export const AllWrap = styled.div`
+  position: relative;
+  display: block;
+  padding: 80px 120px;
   width: 1920px;
   height: 5405px;
   background-color: #ffffff;
+
+  ul {
+    list-style: none;
+  }
 `;
 
 export const Container = styled.div`
-  padding: 80px 120px;
   h2 {
     font-family: 'Pretendard';
     font-size: 50px;
     font-weight: bold;
+  }
+`;
+
+export const BottomAdd = styled.div`
+  position: absolute;
+  bottom: 71px;
+  div {
+    display: flex;
+    width: 1680px;
+    height: 76px;
+    background-color: #4d94ff;
+    border-radius: 10px;
+    padding: 23px 43px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  li {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 30px;
   }
 `;
 
@@ -62,6 +96,8 @@ export const ButtonBox = styled.div`
   justify-content: flex-end;
 
   button {
+    font-size: 20px;
+    font-weight: 500;
     width: 123px;
     height: 46px;
     border-radius: 27px;
@@ -80,6 +116,9 @@ export const ListWrap = styled.div`
     width: 221px;
   }
   p {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     font-size: 20px;
     font-family: 'Pretendard';
     font-weight: 600;
@@ -87,12 +126,17 @@ export const ListWrap = styled.div`
 
   hr {
     margin: 17px 0px 33px 0px;
+    background-color: #a1a1a1;
   }
 
   li {
     font-size: 24px;
     font-family: 'Pretendard';
     margin-bottom: 28px;
+  }
+
+  span {
+    font-size: 13px;
   }
 `;
 export const CardWrap = styled.div`
@@ -145,12 +189,13 @@ export const Right = styled.div`
 
 // 게시글 상세 부분
 export const ViewInner = styled.div`
-  padding: 197px 121px;
+  padding: 117px 121px;
 `;
 
 export const ViewTitle = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 59px;
 
   h2 {
     font-size: 32px;
@@ -173,12 +218,39 @@ export const ViewTitle = styled.div`
     color: #252525;
   }
 `;
-export const ViewLine = styled.div``;
+export const ViewLine = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Pretendard';
+    color: #252525;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Pretendard';
+    color: #a1a1a1;
+  }
+
+  hr {
+    width: 60%;
+    height: 1px;
+    border: none;
+    background-color: #a1a1a1;
+    flex-grow: 1;
+  }
+`;
 
 export const ViewText = styled.div`
   p {
     font-size: 20px;
     font-family: 'Pretendard';
+    line-height: 60px;
     color: #252525;
   }
 `;
@@ -211,6 +283,12 @@ export const HartCount = styled.div`
   }
 `;
 
+export const BottomUtility = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const TagList = styled.div`
   ul {
     display: flex;
@@ -227,6 +305,20 @@ export const TagList = styled.div`
     margin-right: 8px;
     border-radius: 50px;
     line-height: 1.25;
+  }
+`;
+
+export const UtilityButtons = styled.div`
+  ul {
+    display: flex;
+  }
+
+  li {
+    height: 18px;
+  }
+
+  button {
+    background-color: transparent;
   }
 `;
 
@@ -249,6 +341,18 @@ export const UserProfile = styled.div`
     font-size: 20px;
     font-weight: 600;
     color: #0066ff;
+  }
+`;
+
+export const UserLine = styled.div`
+  margin-bottom: 45px;
+
+  hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: #a1a1a1;
+    flex-grow: 1;
   }
 `;
 
@@ -322,7 +426,31 @@ export const CommentBtn = styled.div`
   }
 `;
 
-export const CommentAther = styled.div``;
+export const CommentAther = styled.div`
+  hr {
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    background-color: #a1a1a1;
+    border: none;
+  }
+`;
+
+export const AtherBtn = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    background-color: #ffffff;
+    font-family: 'Pretendard';
+    font-size: 12px;
+    font-weight: 500;
+    color: #0066ff;
+    margin-left: 59px;
+    padding: 0px;
+  }
+`;
+
 export const AtherProfile = styled.div`
   display: flex;
   align-items: flex-start;
@@ -357,4 +485,20 @@ export const AtherImg = styled.div`
 
 export const AtherComment = styled.div`
   padding: 21px 58px;
+`;
+
+export const PagiNation = styled.div`
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 98px;
+  }
+
+  li {
+    font-family: 'Pretendard';
+    font-size: 30px;
+    font-weight: 600;
+    color: #666666;
+  }
 `;
