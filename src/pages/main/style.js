@@ -98,6 +98,8 @@ export const MainWrap = styled.div`
     bottom: -1px;
     top: 22px;
     left: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   .swiper-button-prev:hover {
     transition: transform 0.8s ease;
@@ -113,6 +115,8 @@ export const MainWrap = styled.div`
     bottom: -1px;
     top: 22px;
     right: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
   .swiper-button-next:hover {
     transition: transform 0.8s ease;

@@ -1,4 +1,4 @@
-import CommunityMain from '../../components/community/communityMain';
+import CommunityMain from '../../components/community/communitymain/communityMain';
 
 const Community = () => {
   return (

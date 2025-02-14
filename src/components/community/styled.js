@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const CommunityWrap = styled.div`
-  display: flex;
+  width: 100%;
+  height: 100%;
 `;
 
 export const CommnuniyBanner = styled.div`

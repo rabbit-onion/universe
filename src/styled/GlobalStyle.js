@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     object-fit: cover;
   }
-  .swiper-button-prev {\
+  .swiper-button-prev {
   height : 100%;
     padding: 0 2vw;
     opacity : 0;
@@ -72,6 +72,8 @@ const GlobalStyle = createGlobalStyle`
     bottom: -1px;
     top: 22px;
     left: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
   .swiper-button-prev:hover {
     transition: transform 0.8s ease;
@@ -90,6 +92,8 @@ const GlobalStyle = createGlobalStyle`
     bottom: -1px;
     top: 22px;
     right: 0;
+    //  border-top-right-radius: 20px;
+    // border-bottom-right-radius: 20px;
   } 
   .swiper-button-next:hover {
     transition: transform 0.8s ease;
