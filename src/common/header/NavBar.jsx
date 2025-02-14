@@ -16,6 +16,18 @@ import SearchContList from './SearchContList';
 
 const NavBar = () => {
   const [clicked, setClicked] = useState(false);
+  const [searching, setSearching] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSearching(true);
+  };
+
+  const handleBlur = () => {
+    if (!searching) {
+      setClicked(false);
+    }
+  };
 
   return (
     <>
@@ -38,7 +50,7 @@ const NavBar = () => {
         <NavRight>
           {clicked ? (
             <SearchBox>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <img
                   src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
                   alt=""
@@ -46,7 +58,14 @@ const NavBar = () => {
                 <label htmlFor="search" className="hide">
                   검색어
                 </label>
-                <input type="search" name="search" id="search" placeholder="제목, 제작사, 감독으로 검색(초성)" />
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  placeholder="제목, 제작사, 감독으로 검색(초성)"
+                  autoFocus="true"
+                  onBlur={handleBlur}
+                />
               </form>
 
               <SearchContBox>
@@ -79,7 +98,14 @@ const NavBar = () => {
                 alt=""
               />
             </ProfileIcons>
-            <MenuBox></MenuBox>
+            <MenuBox>
+              <div>
+                <div className="pic"></div>
+                <div className="txt"></div>
+              </div>
+              <div></div>
+              <div></div>
+            </MenuBox>
           </ProfileBox>
         </NavRight>
       </NavBarWrap>

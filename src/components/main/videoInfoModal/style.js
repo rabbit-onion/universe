@@ -104,7 +104,7 @@ export const FlexBox = styled.div`
     letter-spacing: -0.02em;
     white-space: pre-wrap;
     flex-grow: 1;
-    padding-right: 250px;
+    padding-right: 165px;
   }
 `;
 
