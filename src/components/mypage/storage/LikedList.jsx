@@ -4,6 +4,8 @@ import { ItemWrap } from './style';
 const LikedList = () => {
   return (
     <>
+      <h3>찜한작품 (5)</h3>
+
       <ItemWrap>
         <LikedItem />
         <LikedItem />

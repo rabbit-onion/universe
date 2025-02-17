@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { GotoBtn, MyBoxInfo, ProfileDesc, ProfileImg, ProfileImgWrap, ProfileInner, UserInfo } from './style';
 
 const ProfileInfo = () => {
+  const location = useLocation();
+  const currentPath = location.pathname.split('/')[2];
+
   return (
     <>
       <ProfileInner>
@@ -32,19 +35,19 @@ const ProfileInfo = () => {
           </UserInfo>
 
           <MyBoxInfo>
-            <Link>
+            <Link to="/mypage/box/ratings">
               <li>
                 <span>2</span>
                 <strong>별점</strong>
               </li>
             </Link>
-            <Link>
+            <Link to="/mypage/box/reviews">
               <li>
                 <span>3</span>
                 <strong>리뷰</strong>
               </li>
             </Link>
-            <Link>
+            <Link to="/mypage/box/comments">
               <li>
                 <span>1</span>
                 <strong>댓글</strong>
@@ -52,13 +55,13 @@ const ProfileInfo = () => {
             </Link>
           </MyBoxInfo>
 
-          <Link to="/">
+          <Link to={`/mypage/${currentPath === 'storage' ? 'box/ratings' : 'storage/recent'}`}>
             <GotoBtn>
               <img
                 src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/storageIcon.svg"
                 alt=""
               />
-              보관함
+              {currentPath === 'storage' ? '저장소' : '보관함'}
             </GotoBtn>
           </Link>
         </ProfileDesc>

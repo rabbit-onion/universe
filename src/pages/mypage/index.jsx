@@ -1,18 +1,12 @@
 import React from 'react';
-import { ContBoxLayout, ProfileInfo } from '../../components';
-import {
-  CategoryTab,
-  ContentsBox,
-  Desc,
-  Inner,
-  MyPageInner,
-  MyPageWrap,
-  ProfileInfoWrap,
-  StorageBoxWrap,
-} from './style';
-import { NavLink } from 'react-router-dom';
+import { ProfileInfo } from '../../components';
+import { Inner, MyPageInner, MyPageWrap, ProfileInfoWrap, StorageBoxWrap } from './style';
+import { Outlet, useLocation } from 'react-router-dom';
 
 const Mypage = () => {
+  const location = useLocation();
+  const currentPath = location.pathname.split('/')[2];
+
   return (
     <>
       <MyPageWrap>
@@ -21,43 +15,13 @@ const Mypage = () => {
           <ProfileInfoWrap>
             <ProfileInfo />
           </ProfileInfoWrap>
+
           <StorageBoxWrap>
             <Inner>
-              {/* <h2>저장소</h2> */}
-              <h2>보관함</h2>
-              <Desc>
-                <CategoryTab>
-                  <ul>
-                    <NavLink to="#">
-                      <li>최근 본</li>
-                    </NavLink>
-                    <NavLink to="#">
-                      <li>찜한작품</li>
-                    </NavLink>
-                    <NavLink to="#">
-                      <li>나의 게시글</li>
-                    </NavLink>
-                    <NavLink to="#">
-                      <li>임시저장</li>
-                    </NavLink>
-                  </ul>
-                  {/* <ul>
-                    <NavLink to="#">
-                      <li>별점</li>
-                    </NavLink>
-                    <NavLink to="#">
-                      <li>리뷰</li>
-                    </NavLink>
-                    <NavLink to="#">
-                      <li>댓글</li>
-                    </NavLink>
-                  </ul> */}
-                  <hr />
-                </CategoryTab>
-                <ContentsBox>
-                  <ContBoxLayout />
-                </ContentsBox>
-              </Desc>
+              {currentPath === 'storage' ? <h2>보관함</h2> : <h2>저장소</h2>}
+              <div>
+                <Outlet />
+              </div>
             </Inner>
           </StorageBoxWrap>
         </MyPageInner>
