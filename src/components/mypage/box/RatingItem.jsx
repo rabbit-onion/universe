@@ -2,7 +2,11 @@ import { Link } from 'react-router-dom';
 import { Card } from '../storage/style';
 import { ImgBox, TxtBox } from './style';
 
-const RatingItem = () => {
+const RatingItem = ({ rating: ratingData }) => {
+  const { id, tmdbId, title, rating, reviewContent, date, thumbnail } = ratingData;
+  // const starArr = new Array(rating);
+  // const nonStarArr = new Array(5 - rating);
+
   return (
     <>
       <Card>
@@ -10,17 +14,25 @@ const RatingItem = () => {
           <ImgBox>
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/kamisama.webp"
-              alt="나의 별점 오늘부터 신령님 썸네일"
+              alt={`${title} 썸네일`}
             />
           </ImgBox>
 
           <TxtBox>
             <p>
-              <strong>오늘부터 신령님</strong>
-              <span>2024년 12월 5일 평가함</span>
+              <strong>{title}</strong>
+              <span>{date} 평가함</span>
             </p>
 
             <div>
+              {/* {starArr.map((_, index) => (
+                <img
+                  key={index}
+                  src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/star.svg"
+                  alt=""
+                />
+              ))} */}
+
               <img
                 src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/star.svg"
                 alt=""
@@ -38,9 +50,17 @@ const RatingItem = () => {
                 alt=""
               />
               <img
-                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/star-default.svg"
+                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/star.svg"
                 alt=""
               />
+
+              {/* {nonStarArr.map((_, index) => (
+                <img
+                  key={index}
+                  src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/star-default.svg"
+                  alt=""
+                />
+              ))} */}
             </div>
           </TxtBox>
         </Link>

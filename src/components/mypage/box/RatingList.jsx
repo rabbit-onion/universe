@@ -1,8 +1,11 @@
+import { userActivityMockData } from '../../../assets/api/userActivityMockData';
 import { ItemWrap } from '../storage/style';
 import RatingItem from './RatingItem';
 import { SubTitle } from './style';
 
 const RatingList = () => {
+  const ratingsData = userActivityMockData.ratings;
+
   return (
     <>
       <SubTitle>
@@ -14,8 +17,9 @@ const RatingList = () => {
       </SubTitle>
 
       <ItemWrap>
-        <RatingItem />
-        <RatingItem />
+        {ratingsData.map((rating) => (
+          <RatingItem key={rating.id} rating={rating} />
+        ))}
       </ItemWrap>
     </>
   );

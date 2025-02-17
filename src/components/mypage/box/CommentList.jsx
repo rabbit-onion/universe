@@ -1,7 +1,10 @@
+import { userActivityMockData } from '../../../assets/api/userActivityMockData';
 import CommentItem from './CommentItem';
 import { ReviewItemWrap, SubTitle } from './style';
 
 const CommentList = () => {
+  const commentsData = userActivityMockData.comments;
+
   return (
     <>
       <SubTitle>
@@ -13,7 +16,9 @@ const CommentList = () => {
       </SubTitle>
 
       <ReviewItemWrap>
-        <CommentItem />
+        {commentsData.map((comment) => (
+          <CommentItem key={comment.id} comment={comment} />
+        ))}
       </ReviewItemWrap>
     </>
   );

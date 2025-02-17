@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { CommentInfo, CommentTxtBox, InfoBottom, InfoTop, ProfilePic, ReviewCard, ReviewImgBox } from './style';
 
-const CommentItem = () => {
+const CommentItem = ({ comment }) => {
+  const { id, tmdbId, title, commentContent, date, episodeInfo, thumbnail, likes } = comment;
+
   return (
     <>
       <ReviewCard>
@@ -15,12 +17,12 @@ const CommentItem = () => {
             </ProfilePic>
             <CommentInfo>
               <InfoTop>
-                <h4>괴수 8호</h4>
-                <h5>3화 리벤지매치</h5>
+                <h4>{title}</h4>
+                <h5>{episodeInfo} 리벤지매치</h5>
               </InfoTop>
               <InfoBottom>
-                <p>와 소름이 쫙 돋음; 작화 미친거 아님?</p>
-                <span>2025년 1월 25일 작성함</span>
+                <p>{commentContent}</p>
+                <span>{date} 작성함</span>
               </InfoBottom>
             </CommentInfo>
           </CommentTxtBox>
