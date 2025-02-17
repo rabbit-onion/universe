@@ -9,6 +9,7 @@ import {
   ContentWrap,
   Left,
   ListWrap,
+  PaginationAll,
   Right,
 } from './style';
 
@@ -60,18 +61,20 @@ const PostsAll = () => {
             </CardWrap>
           </ContentWrap>
         </Container>
-        <ul>
-          <li>&lt;&lt;</li>
-          <li>&lt;</li>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>&gt;</li>
-          <li>&gt;&gt;</li>
-        </ul>
+        <PaginationAll>
+          <ul>
+            <li>&lt;&lt;</li>
+            <li>&lt;</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>&gt;</li>
+            <li>&gt;&gt;</li>
+          </ul>
+        </PaginationAll>
         <BottomAdd>
           <div>
             <ul>
