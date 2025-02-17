@@ -1,41 +1,19 @@
 import React from 'react';
-import { CommunityBanner, CommunityWrap } from '../styled';
+import { CommunityBanner, CommunityWrap, HotpostButtonGroup } from '../styled';
+import { hotpostmainData } from '../../../assets/api/hotpostmaindata';
+import { useDispatch, useSelector } from 'react-redux';
+import { hotpostActions } from '../../../store/modules/hotpostSlice';
 
 const CommunityMain = () => {
-  const menuType = [
-    { id: 1, name: '전체' },
-    { id: 2, name: '애니메이션 리뷰' },
-    { id: 3, name: '애니메이션 추천' },
-    { id: 4, name: '잡담' },
-  ];
-
-  const HotPost = [
-    {
-      id: 1,
-      src: '../public/images/pattern/thunail.png',
-      title: '오늘 본 애니노래 완전 취저',
-      tag: '#오늘 #애니 #추천 #ㅈㄱㄴ #노래미침 #사카모토입니다만',
-    },
-
-    {
-      id: 2,
-      src: '../public/images/pattern/thunail.png',
-      title: '너에게닿기를 쿠루미 미쳣음,,',
-      tag: '#너에게닿기를2기 #쿠루미 #넘이쁨 #덕질',
-    },
-    {
-      id: 3,
-      src: '../public/images/pattern/thunail.png',
-      title: '아니 오늘 신작애니 보신분',
-      tag: '#신작 #애니 #어이없음 #후기 #스포주의',
-    },
-    {
-      id: 4,
-      src: '../public/images/pattern/thunail.png',
-      title: '결말 미쳣나봐 진짜 하,,',
-      tag: '#결말 #스포주의 #뒷통수 #한대',
-    },
-  ];
+  // const menuType = [
+  //   { id: 1, name: '전체' },
+  //   { id: 2, name: '애니메이션리뷰' },
+  //   { id: 3, name: '애니메이션추천' },
+  //   { id: 4, name: '잡담' },
+  // ];
+  const { hotpostmainData, currentMenu } = useSelector((state) => state.hotpostR);
+  const dispatch = useDispatch();
+  const currentMenuData = hotpostmainData[currentMenu];
   return (
     <CommunityWrap>
       <CommunityBanner>
@@ -44,16 +22,28 @@ const CommunityMain = () => {
       <div className="div_top_margin inner">
         <h2>오늘의 HOT 게시글 </h2>
         <h3>덕후 심장을 울린 게시글 </h3>
+        <HotpostButtonGroup>
+          {Object.keys(hotpostmainData).map((menu) => (
+            <>
+              <button
+                type="button"
+                key={menu}
+                value={menu}
+                onClick={() => dispatch(hotpostActions.onMenuChange(menu))}
+                className={currentMenu === menu ? 'active' : ''}
+              >
+                {menu}
+              </button>
+            </>
+          ))}
+        </HotpostButtonGroup>
+        {currentMenuData.map((item, index) => {
+          <img src={item.src} key={index}></img>;
+        })}
+        <div className="button_contain">
+          <button>게시물 전체보기</button>
+        </div>
       </div>
-      {menuType.map((item) => {
-        return (
-          <>
-            <div key={item.id}>
-              <input type="button" value={item.name}></input>
-            </div>
-          </>
-        );
-      })}
     </CommunityWrap>
   );
 };

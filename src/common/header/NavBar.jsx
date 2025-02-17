@@ -98,14 +98,14 @@ const NavBar = () => {
                 alt=""
               />
             </ProfileIcons>
-            <MenuBox>
+            {/* <MenuBox>
               <div>
                 <div className="pic"></div>
                 <div className="txt"></div>
               </div>
               <div></div>
               <div></div>
-            </MenuBox>
+            </MenuBox>    */}
           </ProfileBox>
         </NavRight>
       </NavBarWrap>
