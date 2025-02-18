@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Card, IconBox, ImgBox, TxtBox } from './style';
+import { userActivityMockData } from '../../../assets/api/userActivityMockData';
 
-const LikedItem = () => {
+const LikedItem = ({ liked }) => {
+  const { id, tmdbId, title, thumbnail, addedDate } = liked;
+
   return (
     <>
       <Card>
@@ -9,7 +12,7 @@ const LikedItem = () => {
           <ImgBox>
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/likedThumb.webp"
-              alt="체인소맨"
+              alt={title}
             />
             <IconBox>
               <img src="" alt="" />
@@ -20,7 +23,7 @@ const LikedItem = () => {
         <Link>
           <TxtBox>
             <p>
-              <strong>체인소맨</strong>
+              <strong>{title}</strong>
             </p>
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/info.svg"

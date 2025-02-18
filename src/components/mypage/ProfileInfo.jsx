@@ -1,9 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 import { GotoBtn, MyBoxInfo, ProfileDesc, ProfileImg, ProfileImgWrap, ProfileInner, UserInfo } from './style';
+import { userActivityMockData } from '../../assets/api/userActivityMockData.js';
 
 const ProfileInfo = () => {
   const location = useLocation();
   const currentPath = location.pathname.split('/')[2];
+
+  const userActivityData = userActivityMockData;
 
   return (
     <>
@@ -37,19 +40,19 @@ const ProfileInfo = () => {
           <MyBoxInfo>
             <Link to="/mypage/box/ratings">
               <li>
-                <span>2</span>
+                <span>{userActivityData.ratings.length}</span>
                 <strong>별점</strong>
               </li>
             </Link>
             <Link to="/mypage/box/reviews">
               <li>
-                <span>3</span>
+                <span>{userActivityData.reviews.length}</span>
                 <strong>리뷰</strong>
               </li>
             </Link>
             <Link to="/mypage/box/comments">
               <li>
-                <span>1</span>
+                <span>{userActivityData.comments.length}</span>
                 <strong>댓글</strong>
               </li>
             </Link>

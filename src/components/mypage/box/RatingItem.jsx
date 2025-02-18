@@ -3,7 +3,7 @@ import { Card } from '../storage/style';
 import { ImgBox, TxtBox } from './style';
 
 const RatingItem = ({ rating: ratingData }) => {
-  const { id, tmdbId, title, rating, reviewContent, date, thumbnail } = ratingData;
+  const { id, tmdbId, title, rating, date, thumbnail } = ratingData;
   // const starArr = new Array(rating);
   // const nonStarArr = new Array(5 - rating);
 

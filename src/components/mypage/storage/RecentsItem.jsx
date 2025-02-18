@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Card, IconBox, ImgBox, TxtBox } from './style';
 
-const RecentsItem = () => {
+const RecentsItem = ({ recent }) => {
+  const { id, tmdbId, title, episodeInfo, thumbnail, lastWatched } = recent;
+
   return (
     <>
       <Card>
@@ -9,7 +11,7 @@ const RecentsItem = () => {
           <ImgBox>
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/monster8.webp"
-              alt="괴수 8호"
+              alt={title}
             />
             <IconBox>
               <img src="" alt="" />
@@ -20,8 +22,8 @@ const RecentsItem = () => {
         <Link>
           <TxtBox>
             <p>
-              <strong>괴수 8호</strong>
-              <strong>1기 11화</strong>
+              <strong>{title}</strong>
+              <strong>{episodeInfo}</strong>
             </p>
             <img
               src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/icons/info.svg"

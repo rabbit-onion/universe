@@ -9,7 +9,7 @@ const RatingList = () => {
   return (
     <>
       <SubTitle>
-        <h3>별점 (2)</h3>
+        <h3>별점 ({ratingsData.length})</h3>
         <select name="" id="">
           <option value="recent">최신순</option>
           <option value="rate">별점순</option>
