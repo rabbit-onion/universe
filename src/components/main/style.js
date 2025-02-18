@@ -73,3 +73,21 @@ export const HotpostContentTitle = styled.div`
     }
   }
 `;
+
+export const DateButtonGroup = styled.div`
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+  button {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: none;
+    background-color: #e2e2e2;
+    font-size: 20px;
+  }
+  button.active {
+    background-color: #007bff;
+    color: white;
+  }
+`;

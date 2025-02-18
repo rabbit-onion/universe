@@ -25,7 +25,8 @@ const CommunityMain = () => {
       </CommunityBanner>
       <CommunityWrap>
         <section>
-          <h2>오늘의 HOT 게시글 </h2>
+          <h2>오늘의</h2>
+          <h2>HOT 게시글</h2>
           <h3>덕후 심장을 울린 게시글 </h3>
         </section>
         <CommunitySwiperWrap>

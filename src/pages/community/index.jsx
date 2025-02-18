@@ -3,16 +3,17 @@ import PostForGenre from '../../components/community/communitymain/postForGenre'
 import RecentlyPost from '../../components/community/communitymain/recentlyPost';
 import Pagination from '../../components/pagination/pagination';
 import BottomBanner from '../../components/banner/bottomBanner';
+import { CommunityContainer } from './style';
 
 const Community = () => {
   return (
-    <div>
+    <CommunityContainer>
       <CommunityMain />
       <PostForGenre />
       <RecentlyPost />
       <Pagination />
       <BottomBanner />
-    </div>
+    </CommunityContainer>
   );
 };
 

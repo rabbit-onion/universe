@@ -29,12 +29,7 @@ const GlobalStyle = createGlobalStyle`
   }
   li { list-style: none }
   img { vertical-align: top; }
-  
-  h2 {
-    margin-bottom : 20px;
-    font-size : 35px;
-    font-weight : 600;
-  }
+
     .inner {
     padding-left: 5.2vw;
   }

@@ -20,6 +20,10 @@ export const CommunityWrap = styled.div`
     height: 29.8vh;
     border-radius: 20px;
   }
+
+  section {
+    margin-bottom: 30px;
+  }
 `;
 
 export const CommunityBanner = styled.div`
@@ -44,33 +48,21 @@ export const HotpostButtonGroup = styled.div`
   button {
     background-color: white;
     border: none;
-    writing-mode: vertical-lr;
-    height: 30px;
+    height: 50px;
+    font-size: 25px;
+    color: #8a8787;
+    text-align: left;
   }
   .active {
-    background-color: blue;
-    color: white;
-    .menu-button::before {
-      background-color: white;
-    }
+    font-weight: bold;
+    color: black;
+    transform: translateX(20px);
   }
+
   .menu-button {
     position: relative; /* 버튼을 기준으로 ::before를 배치 */
     margin: 10px 0; /* 버튼 간격 */
-    padding-left: 50px; /* 버튼과 선 사이 간격 */
     z-index: 1; /* 버튼이 선 위에 위치하도록 설정 */
-  }
-
-  .menu-button::before {
-    content: '';
-    position: absolute;
-    top: 50%; /* 버튼의 세로 중심에 선 배치 */
-    left: 0; /* 버튼의 왼쪽 시작점에서 선 시작 */
-    transform: translateY(-50%); /* 세로 중심 정렬 */
-    width: 45px; /* 가로선 길이 */
-    height: 1px; /* 선 두께 */
-    background-color: black; /* 선 색상 */
-    z-index: -1; /* 선을 버튼 뒤로 배치 */
   }
 `;
 

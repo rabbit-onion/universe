@@ -2,27 +2,6 @@ import styled from 'styled-components';
 import { device } from '../../styled/Device';
 
 export const MainWrap = styled.div`
-  .button-group {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-  }
-
-  .button-group button {
-    width: 60px;
-    height: 60px;
-
-    border-radius: 100px;
-    border: none;
-    background-color: #e2e2e2;
-    font-size: 20px;
-  }
-
-  .button-group button.active {
-    background-color: #007bff;
-    color: white;
-  }
-
   .center_wrap {
     display: flex;
     justify-content: center;
