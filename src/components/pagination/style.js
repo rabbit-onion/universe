@@ -5,9 +5,10 @@ export const PaginationWrap = styled.div`
     margin-top: 30px;
     text-align: center;
     button {
-      width: 30px;
+      font-size: 30px;
+      width: 50px;
       height: 30px;
-      border: 1px solid #666;
+      border: none;
       margin-right: 5px;
       background: #fff;
       /* &:first-child {
@@ -17,9 +18,8 @@ export const PaginationWrap = styled.div`
                 border: none;
             } */
       &.on {
-        border-color: tomato;
-        background: tomato;
-        color: #fff;
+        color: #0066ff;
+        font-weight: bold;
       }
     }
   }

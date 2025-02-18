@@ -2,6 +2,7 @@ import CommunityMain from '../../components/community/communitymain/communityMai
 import PostForGenre from '../../components/community/communitymain/postForGenre';
 import RecentlyPost from '../../components/community/communitymain/recentlyPost';
 import Pagination from '../../components/pagination/pagination';
+import BottomBanner from '../../components/banner/bottomBanner';
 
 const Community = () => {
   return (
@@ -10,6 +11,7 @@ const Community = () => {
       <PostForGenre />
       <RecentlyPost />
       <Pagination />
+      <BottomBanner />
     </div>
   );
 };

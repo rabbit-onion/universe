@@ -16,8 +16,9 @@ export const CommunityWrap = styled.div`
     }
   }
   img {
-    width: 200px !important;
-    height: 150px;
+    width: 16.3vw;
+    height: 29.8vh;
+    border-radius: 20px;
   }
 `;
 

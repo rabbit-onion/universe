@@ -3,7 +3,6 @@ import { CommunityBanner, CommunitySwiperWrap, CommunityWrap, HotpostButtonGroup
 import { hotpostmainData } from '../../../assets/api/hotpostmaindata';
 import { useDispatch, useSelector } from 'react-redux';
 import { hotpostActions } from '../../../store/modules/hotpostSlice';
-import Divider from '@mui/material/Divider';
 
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,7 +21,7 @@ const CommunityMain = () => {
   return (
     <>
       <CommunityBanner>
-        <img src="../public/images/pattern/horizon/chihiro.webp"></img>
+        <img src="../public/images/pattern/community_banner.png"></img>
       </CommunityBanner>
       <CommunityWrap>
         <section>
