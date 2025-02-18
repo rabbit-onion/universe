@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,7 +11,21 @@ import { dateslideActions } from '../../../store/modules/dateslideSlice';
 
 const DateSlide = () => {
   const { dateslideData, currentDate } = useSelector((state) => state.dateslideR);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const timeoutRef = useRef(null); // 타이머를 저장할 ref
   const dispatch = useDispatch();
+  // 마우스 오버 핸들러
+  const handleMouseEnter = (index) => {
+    timeoutRef.current = setTimeout(() => {
+      setHoveredIndex(index); // 딜레이 후 상태 업데이트
+    }, 500); // 500ms 딜레이
+  };
+
+  // 마우스 아웃 핸들러
+  const handleMouseLeave = () => {
+    clearTimeout(timeoutRef.current); // 타이머 취소
+    setHoveredIndex(null); // 상태 초기화
+  };
 
   const currentData = dateslideData[currentDate];
   return (
@@ -55,7 +69,16 @@ const DateSlide = () => {
             }}
           >
             {currentData.map((image, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide
+                key={index}
+                onMouseEnter={() => handleMouseEnter(index)} // 마우스 오버 핸들러 호출
+                onMouseLeave={handleMouseLeave} // 마우스 아웃 핸들러 호출
+                className={`swiper-slide ${hoveredIndex === index ? 'hovered' : ''}`}
+              >
+                <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
+                  <img src={image.src} alt={image.alt} className="slide-image" />
+                  <section>{image.title}</section>
+                </div>
                 <img src={image.src} alt={image.alt} className="slide-image" />
               </SwiperSlide>
             ))}

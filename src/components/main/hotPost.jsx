@@ -1,5 +1,5 @@
 import React from 'react';
-import { HotpostContent, HotpostContentCover, HotpostContentTitle } from '../../pages/main/style';
+import { HotpostContent, HotpostContentCover, HotpostContentTitle } from './style';
 import postsdata from '../../assets/api/postsdata';
 
 const HotPost = () => {
