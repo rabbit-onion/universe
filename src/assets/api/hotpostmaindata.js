@@ -27,7 +27,7 @@ export const hotpostmainData = {
     },
   ],
 
-  애니메이션리뷰: [
+  '애니메이션 리뷰': [
     {
       id: 1,
       src: '../public/images/pattern/thunail.png',
@@ -38,7 +38,7 @@ export const hotpostmainData = {
 
     {
       id: 2,
-      src: '../public/images/pattern/thunail.png',
+      src: '../public/images/pattern/horizon/blackmaid.webp',
       title: '너에게닿기를 쿠루미 미쳣음,,',
       tag: '#너에게닿기를2기 #쿠루미 #넘이쁨 #덕질',
       doc: '아니 너에게닿기를 시즌2가 그냥 미쳤어 내 심장을 뛰게 만든다 너네 꼭 결혼까지해라...',
@@ -59,7 +59,7 @@ export const hotpostmainData = {
     },
   ],
 
-  애니메이션추천: [
+  '애니메이션 추천': [
     {
       id: 1,
       src: '../public/images/pattern/thunail.png',
@@ -77,7 +77,7 @@ export const hotpostmainData = {
     },
     {
       id: 3,
-      src: '../public/images/pattern/thunail.png',
+      src: '../public/images/pattern/horizon/blade.webp',
       title: '아니 오늘 신작애니 보신분',
       tag: '#신작 #애니 #어이없음 #후기 #스포주의',
       doc: '아니 너에게닿기를 시즌2가 그냥 미쳤어 내 심장을 뛰게 만든다 너네 꼭 결혼까지해라...',
