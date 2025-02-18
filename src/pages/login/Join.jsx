@@ -39,12 +39,14 @@ const Join = () => {
     setIsNone(false);
   };
 
+  // 어째서 이메일이 계속 있다고 나오는가
   const chkEmailDuplicate = () => {
     const existUserDatas = JSON.parse(localStorage.getItem('user')) || [];
-
     if (formData.email) {
-      if (existUserDatas.some((data) => data.email === formData.email)) {
-        setError(true);
+      if (existUserDatas) {
+        if (existUserDatas.some((data) => data.email === formData.email)) {
+          setError(true);
+        }
       }
     } else {
       setIsNone(true);
@@ -93,7 +95,7 @@ const Join = () => {
                     중복확인
                   </button>
                 </EmailInput>
-                {/* {error && <p>이미 존재하는 이메일입니다.</p>} */}
+                {error && <p>이미 존재하는 이메일입니다.</p>}
                 {isNone && <p>이메일은 필수 항목입니다.</p>}
               </li>
               <li>
