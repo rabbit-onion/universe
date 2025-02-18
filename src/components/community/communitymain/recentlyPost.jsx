@@ -16,6 +16,35 @@ const RecentlyPost = () => {
   return (
     <RecentlyPostContainer>
       <h2>최근 게시물</h2>
+      <select>
+        <option value="all" selected>
+          전체
+        </option>
+        <option value="1l" selected>
+          1
+        </option>
+        <option value="2" selected>
+          2
+        </option>
+        <option value="3" selected>
+          3
+        </option>
+      </select>
+      <select>
+        <option value="all" selected>
+          전체
+        </option>
+        <option value="1l" selected>
+          1
+        </option>
+        <option value="2" selected>
+          2
+        </option>
+        <option value="3" selected>
+          3
+        </option>
+      </select>
+      <button>글쓰기</button>
       {currentPost.map((item) => {
         return (
           <>

@@ -84,6 +84,10 @@ export const RecentlyPostContainer = styled.div`
   margin-top: 150px;
   padding-left: 5.2vw;
   padding-right: 5.2vw;
+  select {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 `;
 export const RecentlyPostWrap = styled.div`
   display: flex;
@@ -93,6 +97,7 @@ export const RecentlyPostWrap = styled.div`
 export const RecentlyThumbnail = styled.img`
   height: 21.2vh;
   width: 16.7vw;
+  border-radius: 10px;
 `;
 
 export const RecentlyPostDocSec = styled.section`
