@@ -123,11 +123,10 @@ export const SnsLoginBtns = styled.div`
 
 export const JoinBox = styled.div`
   position: absolute;
-  top: calc((100vh - 873px) / 2);
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   width: 606px;
-  height: 873px;
   background: #121212;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
   border-radius: 50px;
@@ -152,17 +151,19 @@ export const JoinCont = styled.div`
   }
 `;
 
+export const PwHint = styled.p``;
+
 export const JoinInputArea = styled.ul`
   margin-bottom: 31px;
   li {
     display: flex;
     flex-direction: column;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     label {
       font-weight: 600;
       font-size: 15px;
       line-height: 18px;
-      margin-bottom: 11px;
+      /* margin-bottom: 10px; */
       span {
         color: #0068ff;
         margin-left: 1px;
@@ -170,13 +171,10 @@ export const JoinInputArea = styled.ul`
     }
     button {
       width: 85px;
-      height: 43px;
       background: #0068ff;
       border-radius: 21.5px;
-      padding: 12px 16px;
-      font-weight: 500;
+      padding: 10px 16px;
       font-size: 15px;
-      line-height: 18px;
       color: #fff;
     }
     input::placeholder {
@@ -189,15 +187,19 @@ export const JoinInputArea = styled.ul`
   }
   input {
     width: 366px;
-    height: 39px;
     align-self: center;
-    padding: 12.5px 0;
+    padding: 10px 0;
     border: none;
     border-bottom: 1px solid #959595;
     background-color: transparent;
     color: #fff;
+    font-size: 14px;
     &::-webkit-search-cancel-button {
       color: white;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid #fff;
     }
   }
   p {
@@ -205,19 +207,24 @@ export const JoinInputArea = styled.ul`
     margin: auto;
     margin-top: 11px;
     font-size: 11px;
+    color: red;
+  }
+  ${PwHint} {
     color: #878181;
   }
 `;
 
 export const EmailInput = styled.div`
-  padding-left: 29px;
+  display: flex;
+  justify-content: space-between;
+  gap: 29px;
   input {
-    width: 269px;
-    margin-right: 29px;
+    width: 70%;
   }
 `;
 
 export const JoinChkboxArea = styled.ul`
+  padding: 0 2px;
   li {
     display: flex;
     align-items: center;
@@ -226,19 +233,21 @@ export const JoinChkboxArea = styled.ul`
   }
   input[type='checkbox'] {
     appearance: none;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border: 1px solid #acacac;
     border-radius: 2px;
   }
   input[type='checkbox']:checked {
     background-color: #0066ff;
+    background-image: url('https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/check-white.svg');
+    background-size: cover;
   }
   label {
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 13px;
+    line-height: 1;
     color: #acacac;
     span {
       color: #0066ff;
