@@ -45,7 +45,7 @@ const PostsAll = () => {
             </ListWrap>
             <CardWrap>
               <CardImage>
-                <img src="/public/images/pattern/horizon/doit.jpg" alt="" />
+                <img src="/public/images/pattern/horizon/allpost.png" alt="" />
               </CardImage>
               <Card>
                 <Left>

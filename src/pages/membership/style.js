@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styled/Device';
 
 export const MembershipWrap = styled.div`
   background-color: #0a0a0a;
@@ -6,6 +7,11 @@ export const MembershipWrap = styled.div`
   justify-content: center;
   align-items: center;
   height: 1972px;
+
+  @media (max-width: 768px) {
+    height: 1743px;
+    width: 768px;
+  }
 `;
 
 export const MembershipBox = styled.div`
@@ -16,6 +22,18 @@ export const MembershipBox = styled.div`
     font-weight: bold;
     font-family: 'Pretendard';
     color: #ffffff;
+  }
+
+  @media ${device.tabletMX} {
+    height: 1743px;
+    width: 768px;
+
+    h2 {
+      font-size: 25px;
+      font-weight: bold;
+      font-family: 'Pretendard';
+      color: #ffffff;
+    }
   }
 `;
 
@@ -28,6 +46,14 @@ export const DivWrap = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding-left: 55px;
+
+  @media ${device.tabletMX} {
+    width: 606px;
+    height: 414px;
+    border-radius: 30px;
+
+    margin: 0px 40px;
+  }
 `;
 
 export const Section = styled.div`
@@ -40,6 +66,10 @@ export const Section = styled.div`
   font-size: 25px;
   line-height: 30px;
   color: #ffffff;
+
+  @media ${device.tabletMX} {
+    font-size: 18px;
+  }
 `;
 
 export const Ad = styled.div`
@@ -50,15 +80,24 @@ export const Ad = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 73px;
+
+  @media ${device.tabletMX} {
+    font-size: 30px;
+  }
 `;
 
 export const List = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 20px;
   padding: 0;
   list-style: none;
   gap: 60px;
+
+  @media ${device.tabletMX} {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
 `;
 
 export const ContInner = styled.div`
@@ -67,6 +106,13 @@ export const ContInner = styled.div`
   h2 {
     margin-bottom: 65px;
   }
+
+  @media ${device.tabletMX} {
+    padding: 0 40px;
+    h2 {
+      margin-bottom: 71px;
+    }
+  }
 `;
 
 export const MembershipAd = styled.div`
@@ -74,6 +120,19 @@ export const MembershipAd = styled.div`
   height: 482px;
   background-color: #4d94ff;
   margin-bottom: 98px;
+
+  @media ${device.tabletMX} {
+    width: 768px;
+    height: 319px;
+    background-color: #4d94ff;
+    margin-bottom: 41px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;
 
 export const TextBox = styled.div`
@@ -94,10 +153,28 @@ export const TextBox = styled.div`
     font-family: 'Pretendard';
     color: #ffffff;
   }
+
+  @media ${device.tabletMX} {
+    margin-bottom: 55px;
+
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
 `;
 
 export const DivBox = styled.div`
   justify-content: center;
+
+  @media ${device.tabletMX} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const PayBox = styled.div`
@@ -109,7 +186,6 @@ export const PayBox = styled.div`
     height: 82px;
     border-radius: 55px;
     background-color: #0066ff;
-    margin-bottom: 86px;
     display: flex;
     justify-content: center;
     color: #ffffff;
@@ -120,7 +196,20 @@ export const PayBox = styled.div`
     font-weight: 700;
     line-height: 36px;
 
+    margin-bottom: 86px;
     margin-top: 94px;
+  }
+
+  @media ${device.tabletMX} {
+    button {
+      width: 265px;
+      height: 43px;
+      border-radius: 38px;
+      font-size: 16px;
+
+      margin-bottom: 60px;
+      margin-top: 49px;
+    }
   }
 `;
 
@@ -140,5 +229,15 @@ export const ShortcutBox = styled.div`
     font-weight: bold;
     display: flex;
     justify-content: center;
+  }
+
+  @media ${device.tabletMX} {
+    button {
+      width: 688px;
+      height: 30px;
+      border-radius: 7px;
+      font-size: 10px;
+      font-weight: 600;
+    }
   }
 `;
