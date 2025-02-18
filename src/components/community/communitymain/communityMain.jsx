@@ -15,8 +15,10 @@ import 'swiper/css/scrollbar';
 
 const CommunityMain = () => {
   const { hotpostmainData, currentMenu } = useSelector((state) => state.hotpostR);
+
   const dispatch = useDispatch();
   const currentMenuData = hotpostmainData[currentMenu];
+
   return (
     <>
       <CommunityBanner>
