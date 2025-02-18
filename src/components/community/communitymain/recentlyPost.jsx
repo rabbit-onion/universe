@@ -1,10 +1,10 @@
 import React from 'react';
 import postsdata from '../../../assets/api/postsdata';
-import { RecentlyPostDocSec, RecentlyPostWrap, RecentlyThumbnail } from '../styled';
+import { RecentlyPostContainer, RecentlyPostDocSec, RecentlyPostWrap, RecentlyThumbnail } from '../styled';
 
 const RecentlyPost = () => {
   return (
-    <div className="div_top_margin ">
+    <RecentlyPostContainer>
       <h2>최근 게시물</h2>
       {postsdata.map((item) => {
         return (
@@ -24,7 +24,7 @@ const RecentlyPost = () => {
           </>
         );
       })}
-    </div>
+    </RecentlyPostContainer>
   );
 };
 

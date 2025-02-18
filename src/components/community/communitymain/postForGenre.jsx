@@ -7,6 +7,8 @@ const PostForGenre = () => {
     { src: '../public/images/pattern/genre_sf.png' },
     { src: '../public/images/pattern/genre_fantasy.png' },
     { src: '../public/images/pattern/genre_romance.png' },
+    { src: '../public/images/pattern/genre_romance.png' },
+    { src: '../public/images/pattern/genre_romance.png' },
   ];
   return (
     <div>
