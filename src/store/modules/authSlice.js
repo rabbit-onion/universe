@@ -39,26 +39,13 @@ const authSlice = createSlice({
       state.error = null;
       localStorage.removeItem('user');
     },
-    // 회원가입 시작
-    registerStart: (state) => {
-      state.loading = true;
-      state.error = null;
-    },
     // 회원가입 성공
-    registerSuccess: (state, action) => {
+    register: (state, action) => {
       state.loading = false;
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;
-      // LocalStorage에 사용자 정보 저장
       localStorage.setItem('user', JSON.stringify(action.payload));
-    },
-    // 회원가입 실패
-    registerFailure: (state, action) => {
-      state.loading = false;
-      state.user = null;
-      state.isAuthenticated = false;
-      state.error = action.payload;
     },
   },
 });

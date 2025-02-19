@@ -152,6 +152,7 @@ export const JoinCont = styled.div`
 `;
 
 export const PwHint = styled.p``;
+export const IsValid = styled.p``;
 
 export const JoinInputArea = styled.ul`
   margin-bottom: 31px;
@@ -211,6 +212,9 @@ export const JoinInputArea = styled.ul`
   }
   ${PwHint} {
     color: #878181;
+  }
+  ${IsValid} {
+    color: lime;
   }
 `;
 
