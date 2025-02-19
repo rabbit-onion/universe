@@ -163,7 +163,7 @@ export const ProfilePic = styled.div`
 `;
 
 export const MenuBox = styled.div`
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 200%;
   right: 0;

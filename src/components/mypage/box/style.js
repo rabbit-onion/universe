@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 
+// 공통 스타일
+export const SubTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  select {
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #676767;
+  }
+`;
+
+// =========================================
 // RatingItem.jsx style
 export const ImgBox = styled.div`
   display: flex;

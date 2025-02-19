@@ -1,45 +1,130 @@
 import { Link } from 'react-router-dom';
-import { EmailInput, JoinBox, JoinChkboxArea, JoinCont, JoinInputArea, SubmitBtn, ToLogin } from './style';
+import { EmailInput, JoinBox, JoinChkboxArea, JoinCont, JoinInputArea, PwHint, SubmitBtn, ToLogin } from './style';
+import AddressSearch from '../../common/address/AddressSearch';
+import { useRef, useState } from 'react';
 
 const Join = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    pw: '',
+    pwConfirm: '',
+    address: '',
+    recommenderId: '',
+  });
+  const [error, setError] = useState({
+    name: '',
+    email: '',
+    pw: '',
+    pwConfirm: '',
+    address: '',
+    recommenderId: '',
+  });
+  const [isNone, setIsNone] = useState(false);
+
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+
+  // 주소 검색이 완료되었을 때 호출되는 함수
+  const handleAddressComplete = (data) => {
+    console.log('받은 주소 데이터:', data); // 데이터가 제대로 전달되는지 확인
+  };
+
+  const handleOnChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleOnFocus = () => {
+    setIsNone(false);
+  };
+
+  // 어째서 이메일이 계속 있다고 나오는가
+  const chkEmailDuplicate = () => {
+    const existUserDatas = JSON.parse(localStorage.getItem('user')) || [];
+    if (formData.email) {
+      if (existUserDatas) {
+        if (existUserDatas.some((data) => data.email === formData.email)) {
+          setError(true);
+        }
+      }
+    } else {
+      setIsNone(true);
+    }
+  };
+
   return (
     <>
       <JoinBox>
         <JoinCont>
           <h1>회원가입</h1>
-          <form action="">
+          <form>
             <JoinInputArea>
               <li>
                 <label htmlFor="name">
                   이름 <span>*</span>
                 </label>
-                <input type="text" name="name" id="name" placeholder="이름을 입력해주세요" />
+                <input
+                  type="text"
+                  ref={nameRef}
+                  name="name"
+                  id="name"
+                  value={formData.name}
+                  placeholder="이름을 입력해주세요"
+                  onChange={handleOnChange}
+                  onFocus={handleOnFocus}
+                />
+                {/* {isNone && <p>이름은 필수 항목입니다.</p>} */}
               </li>
               <li>
                 <label htmlFor="email">
                   이메일 <span>*</span>
                 </label>
                 <EmailInput>
-                  <input type="email" name="email" id="email" placeholder="example@email.com" />
-                  <button>중복확인</button>
+                  <input
+                    type="email"
+                    ref={emailRef}
+                    name="email"
+                    id="email"
+                    value={formData.email}
+                    placeholder="example@email.com"
+                    onChange={handleOnChange}
+                    onFocus={handleOnFocus}
+                  />
+                  <button type="button" onClick={chkEmailDuplicate}>
+                    중복확인
+                  </button>
                 </EmailInput>
+                {error && <p>이미 존재하는 이메일입니다.</p>}
+                {isNone && <p>이메일은 필수 항목입니다.</p>}
               </li>
               <li>
-                <label htmlFor="pw">
+                <label htmlFor="password">
                   비밀번호 <span>*</span>
                 </label>
-                <input type="password" name="pw" id="pw" placeholder="비밀번호를 입력해주세요" />
-                <p>영문, 숫자, 특수문자 조합 최소 8자리</p>
+                <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요" />
+                <PwHint>영문, 숫자, 특수문자 조합 최소 8자리</PwHint>
               </li>
               <li>
-                <label htmlFor="pwConfirm">
+                <label htmlFor="passwordConfirm">
                   비밀번호 확인 <span>*</span>
                 </label>
-                <input type="password" name="pwConfirm" id="pwConfirm" placeholder="비밀번호를 입력해주세요" />
+                <input
+                  type="password"
+                  name="passwordConfirm"
+                  id="passwordConfirm"
+                  placeholder="비밀번호를 입력해주세요"
+                />
               </li>
               <li>
-                <label htmlFor="recInfo">추천인 정보</label>
-                <input type="text" name="recInfo" id="recInfo" placeholder="추천인 정보를 입력해주세요" />
+                <label htmlFor="address">
+                  주소 <span>*</span>
+                </label>
+                <AddressSearch onAddressComplete={handleAddressComplete} />
+              </li>
+              <li>
+                <label htmlFor="recommenderId">추천인 정보</label>
+                <input type="text" name="recommenderId" id="recommenderId" placeholder="추천인 정보를 입력해주세요" />
               </li>
             </JoinInputArea>
 

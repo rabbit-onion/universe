@@ -16,7 +16,26 @@ import {
   Mypage,
 } from './pages';
 import ModalLayout from './common/ModalLayout';
-import { AuthLayout, FindId, FindPw, NonHeaderLayout, PostsAll, ViewPost, WritePost } from './components';
+import {
+  AuthLayout,
+  FindId,
+  FindPw,
+  Mybox,
+  NonHeaderLayout,
+  PostsAll,
+  Storage,
+  ViewPost,
+  WritePost,
+} from './components';
+import {
+  CommentList,
+  DraftPostsList,
+  LikedList,
+  MyPostsList,
+  RatingList,
+  RecentsList,
+  ReviewList,
+} from './components/mypage';
 
 // import { ThemeProvider } from 'styled-components';
 // import { theme } from './styles/theme';
@@ -35,8 +54,17 @@ const App = () => {
           <Route path="/membership" element={<Membership />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/mypage" element={<Mypage />}>
-            <Route path="storage" element={<Mypage />} />
-            <Route path="box" element={<Mypage />} />
+            <Route path="storage" element={<Storage />}>
+              <Route path="recent" element={<RecentsList />} />
+              <Route path="liked" element={<LikedList />} />
+              <Route path="myposts" element={<MyPostsList />} />
+              <Route path="mydrafts" element={<DraftPostsList />} />
+            </Route>
+            <Route path="box" element={<Mybox />}>
+              <Route path="ratings" element={<RatingList />} />
+              <Route path="reviews" element={<ReviewList />} />
+              <Route path="comments" element={<CommentList />} />
+            </Route>
           </Route>
 
           <Route path="/community">

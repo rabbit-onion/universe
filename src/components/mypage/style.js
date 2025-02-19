@@ -1,5 +1,59 @@
 import styled from 'styled-components';
 
+// Storage, Mybox.jsx style
+export const CategoryTab = styled.div`
+  position: relative;
+  ul {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    z-index: 2;
+    a {
+      li {
+        padding: 15px 2px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: #676767;
+      }
+      // link to가 현재 페이지인 경우
+      &[aria-current='page'] {
+        li:after {
+          display: block;
+          content: '';
+          width: calc(100% + 2px);
+          height: 7px;
+          margin-top: 15px;
+          background-color: #0068ff;
+          border-radius: 7px;
+        }
+      }
+    }
+  }
+  hr {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ededed;
+    z-index: 1;
+  }
+`;
+
+export const ContentsBox = styled.div`
+  margin-top: 37px;
+  h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #565656;
+  }
+`;
+
+// ==========================================
 // ProfileInfo.jsx style
 export const ProfileInner = styled.div`
   display: flex;
@@ -101,21 +155,5 @@ export const GotoBtn = styled.button`
     width: 22px;
     height: auto;
     margin-right: 17px;
-  }
-`;
-
-// =======================================
-// ContBoxLayout.jsx style
-
-export const SubTitle = styled.div`
-  display: flex;
-  justify-content: space-between;
-  /* margin-top: 37px; */
-  select {
-    border: none;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 18px;
-    color: #676767;
   }
 `;
