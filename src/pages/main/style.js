@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import { device } from '../../styled/Device';
 
 export const MainWrap = styled.div`
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
   .center_wrap {
     display: flex;
     justify-content: center;

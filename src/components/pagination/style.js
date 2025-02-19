@@ -5,7 +5,7 @@ export const PaginationWrap = styled.div`
     margin-top: 30px;
     text-align: center;
     button {
-      font-size: 30px;
+      font-size: 25px;
       width: 50px;
       height: 30px;
       border: none;

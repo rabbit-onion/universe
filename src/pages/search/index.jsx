@@ -1,12 +1,13 @@
 import SearchMain from '../../components/search/searchMain';
+import { SearchWrap } from './style';
 
 const Search = () => {
   return (
     <>
-      <div className="inner div_top_margin">
-        <h2>태그 검색</h2>
+      <SearchWrap>
+        <h1>태그 검색</h1>
         <SearchMain />
-      </div>
+      </SearchWrap>
     </>
   );
 };

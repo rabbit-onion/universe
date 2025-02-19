@@ -2,7 +2,7 @@
 
 // 배열에 태그를 추가한 뒤 그 태그에 맞는 필터를 가능하게 해준다
 import React, { useState } from 'react';
-import { CheckBoxWrap, CheckLabel, ImgWrap, TagContentWrap, TagWrap } from './style';
+import { CheckBoxWrap, CheckLabel, ImgWrap, TagButtonWrap, TagContentWrap, TagWrap } from './style';
 import animationData from '../../assets/api/animationdata';
 import {
   checkboxStreamList,
@@ -34,11 +34,18 @@ const SearchMain = () => {
 
   return (
     <>
+      <TagButtonWrap>
+        <div>
+          <h2>필터</h2>
+          <button onClick={() => onClear()}>전체 초기화</button>
+        </div>
+        <p>총 {filteredImages.length}개 입니다.</p>
+      </TagButtonWrap>
       <TagWrap>
         <TagContentWrap>
-          <button onClick={() => onClear()}>전체 초기화</button>
-          <p>총 {filteredImages.length}개 입니다.</p>
           <CheckBoxWrap>
+            <hr></hr>
+            <h2>장르</h2>
             {checkboxGenreList.map((item) => {
               return (
                 <>
@@ -58,6 +65,8 @@ const SearchMain = () => {
             })}
           </CheckBoxWrap>
           <CheckBoxWrap>
+            <hr></hr>
+            <h2>태그</h2>
             {checkboxTagList.map((item) => {
               return (
                 <>
@@ -77,6 +86,8 @@ const SearchMain = () => {
             })}
           </CheckBoxWrap>
           <CheckBoxWrap>
+            <hr></hr>
+            <h2>년도</h2>
             {checkboxYearList.map((item) => {
               return (
                 <>
@@ -96,6 +107,8 @@ const SearchMain = () => {
             })}
           </CheckBoxWrap>
           <CheckBoxWrap>
+            <hr></hr>
+            <h2>방영</h2>
             {checkboxStreamList.map((item) => {
               return (
                 <>

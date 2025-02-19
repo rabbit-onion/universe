@@ -4,15 +4,17 @@ export const CommunityWrap = styled.div`
   width: 100%;
   height: 100%;
   padding-left: 5.2vw;
-  margin-top: 150px;
+  margin-top: 100px;
   .button_contain {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
     button {
       background-color: #0066ff;
+      font-size: 15px;
       color: white;
       padding: 10px 30px;
-      border-radius: ;
+      border-radius: 40px;
     }
   }
   img {
@@ -42,27 +44,45 @@ export const CommunitySwiperWrap = styled.div`
 
 export const HotpostButtonGroup = styled.div`
   display: flex;
-  gap: 20px;
   flex-direction: column;
   background-color: white;
   button {
     background-color: white;
     border: none;
+    width: 100%;
     height: 50px;
-    font-size: 25px;
+    padding: 0 25px;
+    font-size: 24px;
     color: #8a8787;
     text-align: left;
+    transition: transform 0.3s ease;
   }
   .active {
     font-weight: bold;
     color: black;
     transform: translateX(20px);
+    hr {
+      transform: translateX(20px);
+      opacity: 1;
+    }
   }
-
   .menu-button {
-    position: relative; /* 버튼을 기준으로 ::before를 배치 */
-    margin: 10px 0; /* 버튼 간격 */
+    position: relative;
+    margin: 5px 0;
     z-index: 1; /* 버튼이 선 위에 위치하도록 설정 */
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  hr {
+    position: absolute;
+    left: -210px;
+    width: 200px;
+    height: 2px;
+    border: 1px solid #0066ff;
+    opacity: 0;
+    transition: transform 0.5s ease;
   }
 `;
 
@@ -87,6 +107,26 @@ export const RecentlyPostContainer = styled.div`
   select {
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 100px;
+    padding: 5px;
+    color: #505050;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 27px;
+  }
+`;
+export const RecentlyPostSelectWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  div {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    button {
+      margin: 20px 5px;
+      padding: 0px 20px;
+    }
   }
 `;
 export const RecentlyPostWrap = styled.div`

@@ -73,7 +73,22 @@ export const HotpostContentTitle = styled.div`
     }
   }
 `;
-
+export const PopularAnimationWrap = styled.div`
+  margin-top: 150px;
+  padding-left: 5.2vw;
+  .swiper-slide {
+    align-items: flex-end;
+    position: relative;
+  }
+  .popular_num_img {
+    position: absolute;
+    left: -20%;
+    width: 150px;
+    height: 150px;
+    border-radius: 0;
+    object-fit: contain;
+  }
+`;
 export const DateButtonGroup = styled.div`
   display: flex;
   gap: 20px;
