@@ -9,6 +9,7 @@ import {
 } from '../styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { pagenationActions } from '../../../store/modules/paginationSlice';
+import LikePost from './likePost';
 
 const RecentlyPost = () => {
   const { postsPerPage, currPage } = useSelector((state) => state.pagenationR);
@@ -54,6 +55,7 @@ const RecentlyPost = () => {
                 </div>
                 <h2>{item.title}</h2>
                 <p>{item.doc}</p>
+                <LikePost key={item.id} item={item} />
               </RecentlyPostDocSec>
               <RecentlyThumbnail src={item.src}></RecentlyThumbnail>
             </RecentlyPostWrap>

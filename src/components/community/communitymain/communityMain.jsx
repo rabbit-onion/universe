@@ -1,11 +1,8 @@
 import React from 'react';
 import { CommunityBanner, CommunitySwiperWrap, CommunityWrap, HotpostButtonGroup } from '../styled';
-import { hotpostmainData } from '../../../assets/api/hotpostmaindata';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { hotpostActions } from '../../../store/modules/hotpostSlice';
-
-import { Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

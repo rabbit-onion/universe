@@ -128,6 +128,7 @@ const SearchMain = () => {
             })}
           </CheckBoxWrap>
         </TagContentWrap>
+
         <ImgWrap>
           {filteredImages.map((image, index) => (
             <div key={index}>
