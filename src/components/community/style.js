@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styled/Device';
 
 export const WriteWrap = styled.div`
   display: flex;
@@ -118,13 +119,8 @@ export const AllWrap = styled.div`
   position: relative;
   display: block;
   padding: 80px 120px;
-  width: 1920px;
   height: 5405px;
   background-color: #ffffff;
-
-  ul {
-    list-style: none;
-  }
 `;
 
 export const Container = styled.div`
@@ -134,7 +130,20 @@ export const Container = styled.div`
     font-weight: bold;
   }
 `;
+export const PaginationAll = styled.div`
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    font-weight: 500;
+    justify-content: center;
+  }
 
+  @media ${device.laptopMX} {
+    display: none;
+  }
+`;
 export const BottomAdd = styled.div`
   position: absolute;
   bottom: 71px;
@@ -194,6 +203,7 @@ export const ListWrap = styled.div`
     font-size: 20px;
     font-family: 'Pretendard';
     font-weight: 600;
+    align-items: center;
   }
 
   hr {
@@ -205,10 +215,16 @@ export const ListWrap = styled.div`
     font-size: 24px;
     font-family: 'Pretendard';
     margin-bottom: 28px;
+    list-style: none;
   }
-
   span {
     font-size: 13px;
+    color: #595959;
+    font-weight: 500;
+  }
+
+  @media ${device.laptopMX} {
+    display: none;
   }
 `;
 export const CardWrap = styled.div`
@@ -262,6 +278,9 @@ export const Right = styled.div`
 // 게시글 상세 부분
 export const ViewInner = styled.div`
   padding: 117px 121px;
+  @media ${device.tabletMX} {
+    padding: 40px 24px;
+  }
 `;
 
 export const ViewTitle = styled.div`
@@ -288,6 +307,29 @@ export const ViewTitle = styled.div`
     font-weight: 500;
     font-family: 'Pretendard';
     color: #252525;
+  }
+
+  @media ${device.tabletMX} {
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Pretendard';
+      color: #0066ff;
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Pretendard';
+      color: #252525;
+    }
+
+    p {
+      font-size: 8px;
+      font-weight: 500;
+      font-family: 'Pretendard';
+      color: #252525;
+    }
   }
 `;
 export const ViewLine = styled.div`
@@ -316,6 +358,30 @@ export const ViewLine = styled.div`
     background-color: #a1a1a1;
     flex-grow: 1;
   }
+  @media ${device.tabletMX} {
+    gap: 9px;
+    h1 {
+      font-size: 10px;
+      font-weight: 500;
+      font-family: 'Pretendard';
+      color: #252525;
+    }
+
+    p {
+      font-size: 10px;
+      font-weight: 500;
+      font-family: 'Pretendard';
+      color: #a1a1a1;
+    }
+
+    hr {
+      width: 60%;
+      height: 1px;
+      border: none;
+      background-color: #a1a1a1;
+      flex-grow: 1;
+    }
+  }
 `;
 
 export const ViewText = styled.div`
@@ -325,10 +391,17 @@ export const ViewText = styled.div`
     line-height: 60px;
     color: #252525;
   }
+
+  @media ${device.tabletMX} {
+    p {
+      font-size: 10px;
+      font-family: 'Pretendard';
+      line-height: 30px;
+      color: #252525;
+    }
+  }
 `;
 export const ViewImg = styled.div`
-  width: 1680px;
-  height: 842px;
   background-color: pink;
   margin: 65px 0px;
   overflow: hidden;
@@ -336,6 +409,12 @@ export const ViewImg = styled.div`
   img {
     width: 100%;
     height: auto;
+  }
+
+  @media ${device.tabletMX} {
+    background-color: pink;
+    margin: 22px 0px;
+    overflow: hidden;
   }
 `;
 
@@ -352,6 +431,23 @@ export const HartCount = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  @media ${device.tabletMX} {
+    margin: 48px 0px;
+    div {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: 2px solid #4d94ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    p {
+      font-size: 7px;
+    }
   }
 `;
 
@@ -377,6 +473,20 @@ export const TagList = styled.div`
     margin-right: 8px;
     border-radius: 50px;
     line-height: 1.25;
+  }
+
+  @media (max-width: 768px) {
+    li {
+      height: 29px;
+      background-color: #f5f5f5;
+      font-size: 10px;
+      color: #5c5b5b;
+      font-family: 'Pretendard';
+      padding: 8px;
+      margin-right: 4px;
+      border-radius: 30px;
+      line-height: 1.25;
+    }
   }
 `;
 
@@ -414,10 +524,25 @@ export const UserProfile = styled.div`
     font-weight: 600;
     color: #0066ff;
   }
+
+  @media ${device.tabletMX} {
+    margin: 16px 0px;
+    button {
+      width: 57px;
+      height: 24px;
+      border-radius: 57px;
+      background-color: #ffffff;
+      border: 1px solid #0066ff;
+      font-family: 'Pretendard';
+      font-size: 10px;
+      font-weight: 600;
+      color: #0066ff;
+    }
+  }
 `;
 
 export const UserLine = styled.div`
-  margin-bottom: 45px;
+  margin-bottom: 20px;
 
   hr {
     width: 100%;
@@ -425,6 +550,10 @@ export const UserLine = styled.div`
     border: none;
     background-color: #a1a1a1;
     flex-grow: 1;
+  }
+
+  @media ${device.tabletMX} {
+    margin-bottom: 15px;
   }
 `;
 
@@ -438,6 +567,15 @@ export const UserWrap = styled.div`
     font-size: 25px;
     font-weight: 500;
   }
+
+  @media ${device.tabletMX} {
+    p {
+      margin: 13px;
+      font-family: 'Pretendard';
+      font-size: 10px;
+      font-weight: 500;
+    }
+  }
 `;
 
 export const ProfileImg = styled.div`
@@ -449,6 +587,12 @@ export const ProfileImg = styled.div`
   img {
     width: 100%;
     height: auto;
+  }
+
+  @media ${device.tabletMX} {
+    width: 42px;
+    height: 42px;
+    border-radius: 45px;
   }
 `;
 
@@ -462,14 +606,21 @@ export const CommentCount = styled.div`
     font-weight: 500;
     color: #252525;
   }
+
+  @media ${device.tabletMX} {
+    p {
+      font-family: 'Pretendard';
+      font-size: 10px;
+      font-weight: 500;
+      color: #252525;
+    }
+  }
 `;
 
 export const CommentForm = styled.div`
   margin: 25px 0px;
 
   div {
-    width: 1680px;
-    height: 188px;
     border-radius: 17px;
     border: 1px solid #0066ff;
     font-family: 'Pretendard';
@@ -478,6 +629,23 @@ export const CommentForm = styled.div`
     color: #7c7c7c;
 
     padding: 22px 25px;
+  }
+
+  @media ${device.tabletMX} {
+    margin: 15px 0px;
+
+    div {
+      width: 340px;
+      height: 44px;
+      border-radius: 6px;
+      border: 1px solid #0066ff;
+      font-family: 'Pretendard';
+      font-size: 8px;
+      font-weight: 500;
+      color: #7c7c7c;
+
+      padding: 22px 25px;
+    }
   }
 `;
 
@@ -495,6 +663,20 @@ export const CommentBtn = styled.div`
     font-size: 20px;
     font-weight: 600;
     color: #ffffff;
+  }
+
+  @media ${device.tabletMX} {
+    button {
+      width: 57px;
+      height: 24px;
+      border-radius: 5px;
+      background-color: #0066ff;
+      border: 1px solid #ffffff;
+      font-family: 'Pretendard';
+      font-size: 10px;
+      font-weight: 600;
+      color: #ffffff;
+    }
   }
 `;
 
@@ -521,6 +703,18 @@ export const AtherBtn = styled.div`
     margin-left: 59px;
     padding: 0px;
   }
+
+  @media ${device.tabletMX} {
+    button {
+      background-color: #ffffff;
+      font-family: 'Pretendard';
+      font-size: 10px;
+      font-weight: 500;
+      color: #0066ff;
+      margin-left: 30px;
+      padding: 0px;
+    }
+  }
 `;
 
 export const AtherProfile = styled.div`
@@ -541,6 +735,16 @@ export const AtherProfile = styled.div`
     font-weight: 500;
     color: #666666;
   }
+
+  @media ${device.tabletMX} {
+    h2 {
+      font-size: 10px;
+    }
+
+    p {
+      font-size: 8px;
+    }
+  }
 `;
 export const AtherImg = styled.div`
   width: 43px;
@@ -553,10 +757,24 @@ export const AtherImg = styled.div`
     width: 100%;
     height: auto;
   }
+
+  @media ${device.tabletMX} {
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-right: 6px;
+  }
 `;
 
 export const AtherComment = styled.div`
+  font-size: 18px;
   padding: 21px 58px;
+  @media ${device.tabletMX} {
+    padding: 8px 31px;
+
+    font-size: 9px;
+  }
 `;
 
 export const PagiNation = styled.div`
@@ -572,5 +790,21 @@ export const PagiNation = styled.div`
     font-size: 30px;
     font-weight: 600;
     color: #666666;
+  }
+
+  @media ${device.tabletMX} {
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 38px;
+    }
+
+    li {
+      font-family: 'Pretendard';
+      font-size: 13px;
+      font-weight: 500;
+      color: #666666;
+    }
   }
 `;
