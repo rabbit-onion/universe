@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { BiSolidFastForwardCircle } from 'react-icons/bi';
 
 const initialState = {
   user: JSON.parse(localStorage.getItem('user')) || null,

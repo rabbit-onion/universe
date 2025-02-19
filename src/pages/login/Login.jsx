@@ -11,7 +11,7 @@ const Login = () => {
               alt=""
             />
           </h1>
-          <form action="">
+          <form>
             <TypingArea>
               <label htmlFor="idOrEmail" className="hide">
                 이메일 주소 또는 아이디
