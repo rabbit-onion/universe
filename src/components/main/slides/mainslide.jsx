@@ -6,7 +6,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import animationData from '../../../assets/api/animationdata';
 
 const Mainslide = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
