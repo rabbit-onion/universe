@@ -16,17 +16,7 @@ import {
   Mypage,
 } from './pages';
 import ModalLayout from './common/ModalLayout';
-import {
-  AuthLayout,
-  FindId,
-  FindPw,
-  Mybox,
-  NonHeaderLayout,
-  PostsAll,
-  Storage,
-  ViewPost,
-  WritePost,
-} from './components';
+import { AuthLayout, FindId, FindPw, Mybox, NonHeaderLayout, Storage, ViewPost, WritePost } from './components';
 import {
   CommentList,
   DraftPostsList,
@@ -36,6 +26,7 @@ import {
   RecentsList,
   ReviewList,
 } from './components/mypage';
+import PostsAll from './components/community/postAll/PostsAll';
 
 // import { ThemeProvider } from 'styled-components';
 // import { theme } from './styles/theme';

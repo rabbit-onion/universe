@@ -9,8 +9,7 @@ export const MembershipWrap = styled.div`
   height: 1972px;
 
   @media (max-width: 768px) {
-    height: 1743px;
-    width: 768px;
+    height: 1663px;
   }
 `;
 
@@ -67,7 +66,7 @@ export const Section = styled.div`
   line-height: 30px;
   color: #ffffff;
 
-  @media ${device.tabletMX} {
+  @media ${device.laptopMX} {
     font-size: 18px;
   }
 `;
@@ -81,7 +80,7 @@ export const Ad = styled.div`
   align-items: center;
   margin-top: 73px;
 
-  @media ${device.tabletMX} {
+  @media ${device.laptopMX} {
     font-size: 30px;
   }
 `;
@@ -93,7 +92,7 @@ export const List = styled.ul`
   list-style: none;
   gap: 60px;
 
-  @media ${device.tabletMX} {
+  @media ${device.laptopMX} {
     display: flex;
     flex-direction: column;
     gap: 34px;
@@ -107,7 +106,7 @@ export const ContInner = styled.div`
     margin-bottom: 65px;
   }
 
-  @media ${device.tabletMX} {
+  @media ${device.laptopMX} {
     padding: 0 40px;
     h2 {
       margin-bottom: 71px;
@@ -121,7 +120,7 @@ export const MembershipAd = styled.div`
   background-color: #4d94ff;
   margin-bottom: 98px;
 
-  @media ${device.tabletMX} {
+  @media ${device.laptopMX} {
     width: 768px;
     height: 319px;
     background-color: #4d94ff;
@@ -154,7 +153,7 @@ export const TextBox = styled.div`
     color: #ffffff;
   }
 
-  @media ${device.tabletMX} {
+  @media ${device.laptopMX} {
     margin-bottom: 55px;
 
     h1 {
@@ -171,7 +170,7 @@ export const TextBox = styled.div`
 export const DivBox = styled.div`
   justify-content: center;
 
-  @media ${device.tabletMX} {
+  @media ${device.laptopMX} {
     display: flex;
     flex-direction: column;
   }
@@ -200,7 +199,7 @@ export const PayBox = styled.div`
     margin-top: 94px;
   }
 
-  @media ${device.tabletMX} {
+  @media ${device.laptopMX} {
     button {
       width: 265px;
       height: 43px;
@@ -231,7 +230,7 @@ export const ShortcutBox = styled.div`
     justify-content: center;
   }
 
-  @media ${device.tabletMX} {
+  @media ${device.laptopMX} {
     button {
       width: 688px;
       height: 30px;
