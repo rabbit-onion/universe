@@ -31,24 +31,90 @@ const Membership = () => {
             <List>
               <li>
                 <DivWrap>
-                  <Ad>스탠다드</Ad>
-                  <Section>광고 없이 감상</Section>
-                  <Section>프로필 1인 동시재생 1회선</Section>
-                  <Section>최신화 시청</Section>
-                  <Section>다운로드 지원</Section>
-                  <Section>FHD 화질 지원</Section>
-                  <Section>TV 앱 지원</Section>
+                  <div>
+                    <Ad>스텐다드</Ad>
+                    <span>월 9,900원</span>
+                  </div>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      광고 없이 감상
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      프로필 1인 동시재생 1회선
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      최신화 시청
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      다운로드 지원
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      FHD 화질 지원
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      TV 앱 지원
+                    </div>
+                  </Section>
                 </DivWrap>
               </li>
               <li>
                 <DivWrap>
-                  <Ad>프리미엄</Ad>
-                  <Section>광고 없이 감상</Section>
-                  <Section>프로필 4인 동시재생 4회선</Section>
-                  <Section>최신화 시청</Section>
-                  <Section>다운로드 지원</Section>
-                  <Section>FHD 화질 지원</Section>
-                  <Section>TV 앱 지원</Section>
+                  <div>
+                    <Ad>프리미엄</Ad>
+                    <span>월 14,900원</span>
+                  </div>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      광고 없이 감상
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      프로필 4인 동시재생 4회선
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      최신화 시청
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      다운로드 지원
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      FHD 화질 지원
+                    </div>
+                  </Section>
+                  <Section>
+                    <div>
+                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      TV 앱 지원
+                    </div>
+                  </Section>
                 </DivWrap>
               </li>
             </List>

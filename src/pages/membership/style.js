@@ -45,6 +45,13 @@ export const DivWrap = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding-left: 55px;
+  gap: 24px;
+
+  span {
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+  }
 
   @media ${device.tabletMX} {
     width: 606px;
@@ -66,6 +73,14 @@ export const Section = styled.div`
   line-height: 30px;
   color: #ffffff;
 
+  div {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+  img {
+    height: 12px;
+  }
   @media ${device.laptopMX} {
     font-size: 18px;
   }
@@ -78,7 +93,7 @@ export const Ad = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 73px;
+  margin-top: 40px;
 
   @media ${device.laptopMX} {
     font-size: 30px;
@@ -120,6 +135,10 @@ export const MembershipAd = styled.div`
   background-color: #4d94ff;
   margin-bottom: 98px;
 
+  img {
+    width: 100%;
+    height: auto;
+  }
   @media ${device.laptopMX} {
     width: 768px;
     height: 319px;

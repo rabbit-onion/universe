@@ -63,7 +63,9 @@ const ViewPost = () => {
         </ViewText>
         <HartCount>
           <div>
-            <em>하트</em>
+            <em>
+              <img src="/public/images/pattern/hartcountIcon.svg" alt="" />
+            </em>
             <p>136</p>
           </div>
         </HartCount>
@@ -141,8 +143,14 @@ const ViewPost = () => {
               </p>
             </AtherComment>
             <AtherBtn>
-              <button> ( + ) 답글달기</button>
-              <button>하트34</button>
+              <div>
+                <img src="/public/images/pattern/plusIcon.svg" alt="" />
+                <button>답글달기</button>
+              </div>
+              <div>
+                <img src="/public/images/pattern/heartIcon.svg" alt="" />
+                <button>34</button>
+              </div>
             </AtherBtn>
             <hr />
           </CommentAther>

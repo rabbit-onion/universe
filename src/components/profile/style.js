@@ -1,3 +1,4 @@
+import { style } from 'framer-motion/client';
 import styled from 'styled-components';
 
 export const Comment = styled.div`
@@ -6,6 +7,7 @@ export const Comment = styled.div`
   font-weight: bold;
   color: #ffffff;
   text-align: center;
+  margin-top: 207px;
 `;
 
 export const Comments = styled.div`
@@ -16,6 +18,17 @@ export const Comments = styled.div`
   margin-top: 20px;
 `;
 
+export const UserChoice = styled.div`
+  display: flex;
+  gap: 50px;
+`;
+
+export const PlusWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+`;
 export const Plus = styled.div`
   display: flex;
   justify-content: center;
@@ -26,7 +39,13 @@ export const Plus = styled.div`
   background-color: #0066ff;
   border-radius: 30px;
 
-  margin-top: 128px;
+  margin-top: 133px;
+`;
+
+export const ProfileName = styled.div`
+  font-size: 30px;
+  font-weight: 600;
+  color: #989898;
 `;
 
 export const ProfileBox = styled.div`
@@ -65,7 +84,7 @@ export const Edit = styled.div`
   font-weight: bold;
   color: #ffffff;
 
-  margin-top: 175px;
+  margin: 133px 0px 201px 0px;
 `;
 export const OptionWrap = styled.div`
   display: flex; /* ✅ 가로 정렬 */

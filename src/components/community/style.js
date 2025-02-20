@@ -311,18 +311,15 @@ export const CardWrap = styled.div`
 
   width: 413px;
   height: 334px;
-  background-color: pink;
 
   @media ${device.laptopMX} {
     width: 222px;
     height: 182px;
-    background-color: pink;
   }
 
   /* @media ${device.tabletMX} {
     width: 164px;
     height: 182px;
-    background-color: pink;
   } */
 `;
 
@@ -378,10 +375,14 @@ export const Left = styled.div`
   }
 `;
 export const Right = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
   span {
     font-size: 15px;
     font-family: 'Pretendard';
-    margin-right: 10px;
+    gap: 10px;
   }
 
   p {
@@ -392,12 +393,22 @@ export const Right = styled.div`
   @media ${device.laptopMX} {
     span {
       font-size: 8px;
-      margin-right: 10px;
     }
 
     p {
       font-size: 8px;
     }
+  }
+`;
+
+export const Reaction = styled.div`
+  display: flex;
+  gap: 10px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
   }
 `;
 
@@ -557,6 +568,10 @@ export const HartCount = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  p {
+    color: #4d94ff;
   }
 
   @media ${device.tabletMX} {
@@ -819,15 +834,21 @@ export const CommentAther = styled.div`
 export const AtherBtn = styled.div`
   display: flex;
   justify-content: space-between;
-
+  div {
+    display: flex;
+    margin-left: 59px;
+    align-items: center;
+  }
   button {
     background-color: #ffffff;
     font-family: 'Pretendard';
     font-size: 12px;
     font-weight: 500;
     color: #0066ff;
-    margin-left: 59px;
-    padding: 0px;
+  }
+
+  div:nth-child(2) button {
+    color: #252525;
   }
 
   @media ${device.tabletMX} {
@@ -837,8 +858,6 @@ export const AtherBtn = styled.div`
       font-size: 10px;
       font-weight: 500;
       color: #0066ff;
-      margin-left: 30px;
-      padding: 0px;
     }
   }
 `;

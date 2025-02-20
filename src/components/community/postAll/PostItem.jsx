@@ -1,4 +1,4 @@
-import { Card, CardImage, CardWrap, Left, Right } from '../style';
+import { Card, CardImage, CardWrap, Left, Reaction, Right } from '../style';
 
 const PostItem = () => {
   return (
@@ -13,8 +13,16 @@ const PostItem = () => {
             <p>오늘은 맑음</p>
           </Left>
           <Right>
-            <span>346</span>
-            <span>15</span>
+            <Reaction>
+              <div>
+                <img src="/public/images/pattern/reactionhartIcon.svg" alt="" />
+                <span>346</span>
+              </div>
+              <div>
+                <img src="/public/images/pattern/reactionmessageIcon.svg" alt="" />
+                <span>15</span>
+              </div>
+            </Reaction>
             <p>2025. 01. 18</p>
           </Right>
         </Card>
