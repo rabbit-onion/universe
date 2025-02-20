@@ -1,9 +1,10 @@
 import { IoClose } from 'react-icons/io5';
 import styled from 'styled-components';
 import VideoInfo from '../components/main/videoInfoModal/VideoInfo';
+import { useNavigate } from 'react-router-dom';
 
 export const Dimmed = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -39,11 +40,24 @@ export const CloseBtn = styled.button`
 `;
 
 const ModalLayout = () => {
+  const navigate = useNavigate();
+
+  const handleClose = () => {
+    navigate(-1);
+  };
+
+  // Dimmed 영역 클릭시 모달 닫기
+  const handleDimmedClick = (e) => {
+    if (e.target === e.currentTarget) {
+      handleClose();
+    }
+  };
+
   return (
     <Dimmed>
       <ModalWrap>
         <VideoInfo />
-        <CloseBtn>
+        <CloseBtn onClick={handleClose}>
           <IoClose size={60} color="white" />
         </CloseBtn>
       </ModalWrap>
