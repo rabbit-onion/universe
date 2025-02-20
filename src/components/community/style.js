@@ -121,6 +121,15 @@ export const AllWrap = styled.div`
   padding: 80px 120px;
   height: 5405px;
   background-color: #ffffff;
+  @media ${device.laptopMX} {
+    padding: 40px 48px;
+    height: 2255px;
+  }
+
+  @media ${device.tabletMX} {
+    padding: 25px 25px;
+    height: 2255px;
+  }
 `;
 
 export const Container = styled.div`
@@ -129,7 +138,20 @@ export const Container = styled.div`
     font-size: 50px;
     font-weight: bold;
   }
+
+  @media ${device.laptopMX} {
+    h2 {
+      font-size: 30px;
+    }
+  }
 `;
+
+export const ContentTitle = styled.div`
+  @media ${device.laptopMX} {
+    margin-left: 15px;
+  }
+`;
+
 export const PaginationAll = styled.div`
   ul {
     list-style: none;
@@ -170,6 +192,44 @@ export const BottomAdd = styled.div`
     color: #ffffff;
     margin-left: 30px;
   }
+
+  @media ${device.laptopMX} {
+    bottom: 2%;
+    div {
+      display: flex;
+      width: 665px;
+      height: 31px;
+      border-radius: 8px;
+      padding: 8px 13px;
+    }
+    ul {
+      font-size: 12px;
+    }
+
+    li {
+      font-size: 8px;
+      margin-left: 19px;
+    }
+  }
+
+  @media ${device.tabletMX} {
+    bottom: 2%;
+    div {
+      display: flex;
+      width: 340px;
+      height: 16px;
+      border-radius: 2px;
+      padding: 5px 7px;
+    }
+    ul {
+      font-size: 5px;
+    }
+
+    li {
+      font-size: 4px;
+      margin-left: 19px;
+    }
+  }
 `;
 
 export const ButtonBox = styled.div`
@@ -184,6 +244,10 @@ export const ButtonBox = styled.div`
     border-radius: 27px;
     background-color: #f5f5f5f5;
     margin-left: 20px;
+  }
+
+  @media ${device.laptopMX} {
+    display: none;
   }
 `;
 
@@ -227,6 +291,19 @@ export const ListWrap = styled.div`
     display: none;
   }
 `;
+
+export const PostCard = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 68px 39px;
+
+  @media ${device.laptopMX} {
+    gap: 35px 11px;
+  }
+`;
+
 export const CardWrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -235,6 +312,18 @@ export const CardWrap = styled.div`
   width: 413px;
   height: 334px;
   background-color: pink;
+
+  @media ${device.laptopMX} {
+    width: 222px;
+    height: 182px;
+    background-color: pink;
+  }
+
+  /* @media ${device.tabletMX} {
+    width: 164px;
+    height: 182px;
+    background-color: pink;
+  } */
 `;
 
 export const Card = styled.div`
@@ -242,12 +331,27 @@ export const Card = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   padding: 0px 25px;
+
+  @media ${device.laptopMX} {
+    padding: 0px 12px;
+  }
 `;
 export const CardImage = styled.div`
   width: 413px;
   height: 266px;
   border-radius: 30px;
   overflow: hidden;
+
+  @media ${device.laptopMX} {
+    width: 222px;
+    height: 145px;
+    border-radius: 14px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;
 
 export const Left = styled.div`
@@ -261,6 +365,17 @@ export const Left = styled.div`
     font-size: 15px;
     font-family: 'Pretendard';
   }
+
+  @media ${device.laptopMX} {
+    h1 {
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 9px;
+    }
+  }
 `;
 export const Right = styled.div`
   span {
@@ -272,6 +387,17 @@ export const Right = styled.div`
   p {
     font-size: 15px;
     font-family: 'Pretendard';
+  }
+
+  @media ${device.laptopMX} {
+    span {
+      font-size: 8px;
+      margin-right: 10px;
+    }
+
+    p {
+      font-size: 8px;
+    }
   }
 `;
 

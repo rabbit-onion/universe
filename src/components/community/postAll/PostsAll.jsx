@@ -1,24 +1,14 @@
-import {
-  AllWrap,
-  BottomAdd,
-  ButtonBox,
-  Card,
-  CardImage,
-  CardWrap,
-  Container,
-  ContentWrap,
-  Left,
-  ListWrap,
-  PaginationAll,
-  Right,
-} from './style';
+import { AllWrap, BottomAdd, ButtonBox, Container, ContentTitle, ContentWrap, ListWrap, PaginationAll } from '../style';
+import PostList from './PostList';
 
 const PostsAll = () => {
   return (
     <>
       <AllWrap>
         <Container>
-          <h2>전체게시글</h2>
+          <ContentTitle>
+            <h2>전체게시글</h2>
+          </ContentTitle>
           <ButtonBox>
             <button>최신순</button>
             <button>글쓰기</button>
@@ -43,22 +33,7 @@ const PostsAll = () => {
                 <li>SF</li>
               </ul>
             </ListWrap>
-            <CardWrap>
-              <CardImage>
-                <img src="/public/images/pattern/horizon/allpost.png" alt="" />
-              </CardImage>
-              <Card>
-                <Left>
-                  <h1>너에게 닿기를 시즌2 후기</h1>
-                  <p>오늘은 맑음</p>
-                </Left>
-                <Right>
-                  <span>346</span>
-                  <span>15</span>
-                  <p>2025. 01. 18</p>
-                </Right>
-              </Card>
-            </CardWrap>
+            <PostList />
           </ContentWrap>
         </Container>
         <PaginationAll>
