@@ -3,6 +3,8 @@ import axios from 'axios';
 
 const movieUrl = `https://api.themoviedb.org/3/discover/movie`;
 const tvUrl = 'https://api.themoviedb.org/3/discover/tv';
+const searchMovieUrl = 'https://api.themoviedb.org/3/search/movie';
+const searchTvUrl = 'https://api.themoviedb.org/3/search/tv';
 const API_KEY = import.meta.env.VITE_APP_TMDB_KEY;
 
 // 전체 작품 정보 가져오기
@@ -149,5 +151,67 @@ export const getSelectedVideo = createAsyncThunk('video/getSelectedVideo', async
   } catch (error) {
     console.log(error);
     throw error;
+  }
+});
+
+// ==============================================================
+// 실시간 검색 데이터
+export const searchVideos = createAsyncThunk('video/searchVideos', async (searchQuery, { signal }) => {
+  try {
+    if (!searchQuery.trim()) {
+      return {
+        movies: { results: [] },
+        tvShows: { results: [] },
+      };
+    }
+
+    // 영화와 TV 프로그램 검색을 동시에 실행
+    const [movieRes, tvRes] = await Promise.all([
+      axios.get(searchMovieUrl, {
+        params: {
+          api_key: API_KEY,
+          language: 'ko-KR',
+          query: searchQuery,
+          with_genres: '16', // 애니메이션으로 필터링
+          include_adult: true,
+        },
+        signal, // 이전 요청 취소를 위한 signal
+      }),
+      axios.get(searchTvUrl, {
+        params: {
+          api_key: API_KEY,
+          language: 'ko-KR',
+          query: searchQuery,
+          with_genres: '16',
+          include_adult: true,
+        },
+        signal,
+      }),
+    ]);
+
+    // 장르 ID가 16(애니메이션)인 작품만 필터링
+    const filteredMovies = movieRes.data.results.filter((movie) => movie.genre_ids && movie.genre_ids.includes(16));
+
+    const filteredTvShows = tvRes.data.results.filter((show) => show.genre_ids && show.genre_ids.includes(16));
+
+    return {
+      movies: {
+        results: filteredMovies,
+        totalPages: movieRes.data.total_pages,
+        totalResults: filteredMovies.length, // 필터링된 결과의 개수로 수정
+      },
+      tvShows: {
+        results: filteredTvShows,
+        totalPages: tvRes.data.total_pages,
+        totalResults: filteredTvShows.length, // 필터링된 결과의 개수로 수정
+      },
+    };
+  } catch (error) {
+    if (axios.isCancel(error)) {
+      console.log('Request canceled:', error.message);
+    } else {
+      console.error('Search error:', error);
+      throw error;
+    }
   }
 });

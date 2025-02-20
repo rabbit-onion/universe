@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getVideo } from './getThunk';
+import { getVideo, searchVideos } from './getThunk';
 
 const initialState = {
   videoData: [],
@@ -8,6 +8,7 @@ const initialState = {
   currentData: [],
   monsterData: [],
   relatedData: [],
+  searchResults: [],
 };
 
 const videoSlice = createSlice({
@@ -26,7 +27,14 @@ const videoSlice = createSlice({
         state.videoData = [...tvShowsData, ...movieData];
         state.monsterData = monster.results;
       })
-      .addCase(getVideo.rejected, (state, action) => {});
+      .addCase(getVideo.rejected, (state, action) => {})
+      .addCase(searchVideos.pending, (state, action) => {})
+      .addCase(searchVideos.fulfilled, (state, action) => {
+        const searchedMovies = action.payload.movies.results;
+        const searchedTv = action.payload.tvShows.results;
+        state.searchResults = [...searchedTv, ...searchedMovies];
+      })
+      .addCase(searchVideos.rejected, (state, action) => {});
   },
 });
 

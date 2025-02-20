@@ -4,7 +4,7 @@ export const HeaderWrap = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,12 +107,12 @@ export const SearchContBox = styled.div`
   top: 52px;
   left: 0;
   width: 261px;
-  height: 332px;
   background: #ffffff;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  padding: 18px 20px;
-  > strong {
+  padding: 10px 20px;
+  z-index: 1;
+  .nowTitle {
     font-weight: 600;
     font-size: 12px;
     line-height: 14px;
@@ -127,6 +127,8 @@ export const SearchContBox = styled.div`
     li {
       display: flex;
       margin-bottom: 14px;
+      cursor: pointer;
+      z-index: 2;
       span {
         display: block;
         width: 24px;

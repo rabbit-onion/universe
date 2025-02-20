@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import {
-  MenuBox,
   NavBarWrap,
   NavLeft,
   NavRight,
@@ -11,21 +10,48 @@ import {
   SearchBtn,
   SearchContBox,
 } from './style';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import SearchContList from './SearchContList';
+import { searchVideos } from '../../store/modules/getThunk';
 
 const NavBar = () => {
+  const dispatch = useDispatch();
   const [clicked, setClicked] = useState(false);
-  const [searching, setSearching] = useState(false);
+  const [searchTxt, setSearchTxt] = useState(null);
+  const searchBarRef = useRef(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSearching(true);
-  };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
+        // 참조된 영역이 클릭된 요소를 포함하지 않으면 외부 클릭으로 간주
+        setSearchTxt(null);
+        setClicked(false);
+      }
+    };
 
-  const handleBlur = () => {
-    if (!searching) {
-      setClicked(false);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    if (searchTxt) {
+      // AbortController 생성 (이전 요청 취소용)
+      const controller = new AbortController();
+
+      dispatch(searchVideos(searchTxt, controller.signal));
+
+      // 컴포넌트 언마운트나 searchTerm 변경시 이전 요청 취소
+      return () => controller.abort();
+    }
+  }, [searchTxt]);
+
+  const changeInput = (e) => {
+    const { value } = e.target;
+    if (!value || value === '') {
+      setSearchTxt(null);
+    } else {
+      setSearchTxt(value);
     }
   };
 
@@ -37,9 +63,6 @@ const NavBar = () => {
             <Link to="/tagSearch">태그검색</Link>
           </li>
           <li>
-            <Link to="/dailyAni">요일별 애니</Link>
-          </li>
-          <li>
             <Link to="/community">커뮤니티</Link>
           </li>
           <li>
@@ -49,8 +72,8 @@ const NavBar = () => {
 
         <NavRight>
           {clicked ? (
-            <SearchBox>
-              <form onSubmit={handleSubmit}>
+            <SearchBox ref={searchBarRef}>
+              <form>
                 <img
                   src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
                   alt=""
@@ -62,14 +85,15 @@ const NavBar = () => {
                   type="search"
                   name="search"
                   id="search"
-                  placeholder="제목, 제작사, 감독으로 검색(초성)"
+                  placeholder="제목으로 검색"
                   autoFocus="true"
-                  onBlur={handleBlur}
+                  onChange={changeInput}
+                  // onBlur={handleBlur}
                 />
               </form>
 
               <SearchContBox>
-                <SearchContList />
+                <SearchContList searchTxt={searchTxt} />
               </SearchContBox>
             </SearchBox>
           ) : (
