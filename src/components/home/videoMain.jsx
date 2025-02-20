@@ -1,13 +1,18 @@
 import React from 'react';
+import { VideoMainWrap } from './styled';
+import { BlackBlur } from './styled';
 
 const VideoMain = () => {
   return (
     <div>
-      <div className="video_main_wrap ">
-        <img className="video_thumbnail" src="../public/images/pattern/thunail.png" alt="" />
-        <h2>동시 방영 신작부터 역대 인기작까지 한번에</h2>
+      <VideoMainWrap>
+        <video src="../public/video/membership_video.mp4" autoPlay muted loop></video>
+        <h2>
+          동시 방영 신작부터 <br></br>역대 인기작까지 한번에
+        </h2>
+        {/* <button className="membership_button">멤버쉽 시작하기</button> */}
         <div className="black_blur"> </div>
-      </div>
+      </VideoMainWrap>
     </div>
   );
 };

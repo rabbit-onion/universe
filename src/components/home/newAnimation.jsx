@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AniSection, LeftAniPic, MainAniPic, RightAniPic } from '../../pages/home/style';
+import { AniSection, LeftAniPic, MainAniPic, RightAniPic } from './styled';
 
 const NewAnimation = () => {
   return (

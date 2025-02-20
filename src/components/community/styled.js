@@ -26,6 +26,41 @@ export const CommunityWrap = styled.div`
   section {
     margin-bottom: 30px;
   }
+  .overlay-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out, opacity 0.2s;
+  }
+
+  .overlay-div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .overlay-div section {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .overlay-div.active {
+    opacity: 1;
+  }
 `;
 
 export const CommunityBanner = styled.div`
@@ -84,6 +119,15 @@ export const HotpostButtonGroup = styled.div`
     opacity: 0;
     transition: transform 0.5s ease;
   }
+`;
+export const HotpostContentCover = styled.div`
+  position: absolute;
+  width: 16.3vw;
+  height: 29.8vh;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 5;
+  border-radius: 25px;
 `;
 
 export const GenrePostWrap = styled.div`

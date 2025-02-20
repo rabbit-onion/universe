@@ -1,19 +1,35 @@
-import React from 'react';
-import { CommunityBanner, CommunitySwiperWrap, CommunityWrap, HotpostButtonGroup } from '../styled';
+import React, { useState, useRef } from 'react';
+import {
+  CommunityBanner,
+  CommunitySwiperWrap,
+  CommunityWrap,
+  HotpostButtonGroup,
+  HotpostContentCover,
+} from '../styled';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { hotpostActions } from '../../../store/modules/hotpostSlice';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
 const CommunityMain = () => {
   const { hotpostmainData, currentMenu } = useSelector((state) => state.hotpostR);
 
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const timeoutRef = useRef(null); // 타이머를 저장할 ref
+
   const dispatch = useDispatch();
   const currentMenuData = hotpostmainData[currentMenu];
+
+  const handleMouseEnter = (index) => {
+    timeoutRef.current = setTimeout(() => {
+      setHoveredIndex(index); // 딜레이 후 상태 업데이트
+    }, 500); // 500ms 딜레이
+  };
+
+  // 마우스 아웃 핸들러
+  const handleMouseLeave = () => {
+    clearTimeout(timeoutRef.current); // 타이머 취소
+    setHoveredIndex(null); // 상태 초기화
+  };
 
   return (
     <>
@@ -46,11 +62,26 @@ const CommunityMain = () => {
             ))}
           </HotpostButtonGroup>
 
-          {currentMenuData.map((image, index) => (
-            <div key={index}>
-              <img src={image.src} alt={image.alt} />
-            </div>
-          ))}
+          {currentMenuData.map((image, index) => {
+            return (
+              <>
+                {' '}
+                <div
+                  key={index}
+                  onMouseEnter={() => handleMouseEnter(index)} // 마우스 오버 핸들러 호출
+                  onMouseLeave={handleMouseLeave} // 마우스 아웃 핸들러 호출
+                  className={` ${hoveredIndex === index ? 'hovered' : ''}`} // 조건부 클래스 추가
+                >
+                  <HotpostContentCover />
+                  <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
+                    <img src={image.src} alt={image.alt} />
+                    <section>{image.title}</section>
+                  </div>
+                  <img src={image.src} alt={image.alt} />
+                </div>
+              </>
+            );
+          })}
         </CommunitySwiperWrap>
         <div className="button_contain">
           <button>게시물 전체보기</button>
