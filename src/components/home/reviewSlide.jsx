@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { ReviewName, ReviewTitle } from '../../pages/home/style';
+import { ReviewName, ReviewTitle } from './styled';
 
 const ReviewSlide = () => {
   return (

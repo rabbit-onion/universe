@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommunitySection } from '../../pages/home/style';
+import { CommunitySection } from './styled';
 import { motion } from 'framer-motion';
 
 const CommunityAds = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StartLogo } from '../../pages/home/style';
+import { StartLogo } from './styled';
 import { motion } from 'framer-motion';
 
 const StartUniverse = () => {

@@ -85,6 +85,15 @@ export const HotpostButtonGroup = styled.div`
     transition: transform 0.5s ease;
   }
 `;
+export const HotpostContentCover = styled.div`
+  position: absolute;
+  width: 16.3vw;
+  height: 29.8vh;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 5;
+  border-radius: 25px;
+`;
 
 export const GenrePostWrap = styled.div`
   background-color: #f5f5f5;

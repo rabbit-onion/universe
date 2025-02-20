@@ -1,5 +1,11 @@
 import React from 'react';
-import { CommunityBanner, CommunitySwiperWrap, CommunityWrap, HotpostButtonGroup } from '../styled';
+import {
+  CommunityBanner,
+  CommunitySwiperWrap,
+  CommunityWrap,
+  HotpostButtonGroup,
+  HotpostContentCover,
+} from '../styled';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { hotpostActions } from '../../../store/modules/hotpostSlice';
@@ -46,11 +52,17 @@ const CommunityMain = () => {
             ))}
           </HotpostButtonGroup>
 
-          {currentMenuData.map((image, index) => (
-            <div key={index}>
-              <img src={image.src} alt={image.alt} />
-            </div>
-          ))}
+          {currentMenuData.map((image, index) => {
+            return (
+              <>
+                {' '}
+                <div key={index}>
+                  <HotpostContentCover />
+                  <img src={image.src} alt={image.alt} />
+                </div>
+              </>
+            );
+          })}
         </CommunitySwiperWrap>
         <div className="button_contain">
           <button>게시물 전체보기</button>

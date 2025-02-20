@@ -3,6 +3,7 @@ export const DarkMode = styled.body`
   background-color: #141414;
 `;
 export const HomeWrap = styled.div`
+  overflow: hidden;
   h2,
   h3,
   h4,
@@ -10,9 +11,13 @@ export const HomeWrap = styled.div`
     color: white;
   }
   h2 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
     margin-bottom: 50px;
+  }
+  h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
   }
   .new_animation_wrap {
     position: relative;
@@ -22,9 +27,7 @@ export const HomeWrap = styled.div`
     transition-timing-function: linear !important;
     position: relative;
   }
-  .video_main_wrap {
-    position: relative;
-  }
+
   .video_thumbnail {
     height: 80%;
     width: 100%;
@@ -60,77 +63,5 @@ export const HomeWrap = styled.div`
     color: white;
     border-radius: 40px;
     font-size: 20px;
-  }
-`;
-
-export const CommunitySection = styled.section`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  img {
-    width: 50%;
-    height: 100%;
-  }
-`;
-export const StartLogo = styled.img`
-  width: 46.3vw;
-  height: 13vh;
-  object-fit: contain;
-`;
-export const ReviewTitle = styled.h1`
-  font-size: 20px;
-`;
-
-export const ReviewName = styled.h2`
-  font-size: 12px;
-  margin-bottom: 10px;
-`;
-
-export const AniSection = styled.section`
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 38rem;
-  top: 4.15rem;
-  margin-bottom: 10rem;
-  display: block;
-`;
-export const LeftAniPic = styled.div`
-  position: absolute;
-  top: 52%;
-  width: 76%;
-  img {
-    width: 100%;
-    transform: translate(-50%, -50%);
-    opacity: 0.4;
-    border-radius: 20px;
-  }
-`;
-export const RightAniPic = styled.div`
-  position: absolute;
-  top: 52%;
-  left: 24%;
-  width: 76%;
-  img {
-    width: 100%;
-    transform: translate(50%, -50%);
-    opacity: 0.4;
-    border-radius: 20px;
-  }
-`;
-
-export const MainAniPic = styled.div`
-  position: relative;
-  img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    border-radius: 20px;
   }
 `;

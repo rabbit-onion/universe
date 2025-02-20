@@ -47,7 +47,13 @@ const animationData = [
     tag: '게임',
     only: true,
   },
-  { src: '../public/images/pattern/horizon/evangelion.webp', alt: 'thumbnail 4', tag: '동물', only: false },
+  {
+    src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/evangelion.webp',
+    alt: 'thumbnail 4',
+    genre: '모험',
+    tag: '먼치킨',
+    only: false,
+  },
   {
     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/frieren.webp',
     alt: 'thumbnail 1',
@@ -77,7 +83,7 @@ const animationData = [
     only: false,
   },
   {
-    src: '../public/images/pattern/horizon/hell.webp',
+    src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/hell.webp',
     alt: 'thumbnail 1',
     genre: '로맨스',
     tag: '가족',
