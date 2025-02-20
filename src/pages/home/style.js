@@ -9,6 +9,11 @@ export const HomeWrap = styled.div`
   h5 {
     color: white;
   }
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
   .new_animation_wrap {
     position: relative;
   }

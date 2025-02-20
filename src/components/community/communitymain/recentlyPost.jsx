@@ -1,8 +1,15 @@
 import React, { useEffect } from 'react';
 import postsdata from '../../../assets/api/postsdata';
-import { RecentlyPostContainer, RecentlyPostDocSec, RecentlyPostWrap, RecentlyThumbnail } from '../styled';
+import {
+  RecentlyPostContainer,
+  RecentlyPostDocSec,
+  RecentlyPostSelectWrap,
+  RecentlyPostWrap,
+  RecentlyThumbnail,
+} from '../styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { pagenationActions } from '../../../store/modules/paginationSlice';
+import LikePost from './likePost';
 
 const RecentlyPost = () => {
   const { postsPerPage, currPage } = useSelector((state) => state.pagenationR);
@@ -16,35 +23,27 @@ const RecentlyPost = () => {
   return (
     <RecentlyPostContainer>
       <h2>최근 게시물</h2>
-      <select>
-        <option value="all" selected>
-          전체
-        </option>
-        <option value="1l" selected>
-          1
-        </option>
-        <option value="2" selected>
-          2
-        </option>
-        <option value="3" selected>
-          3
-        </option>
-      </select>
-      <select>
-        <option value="all" selected>
-          전체
-        </option>
-        <option value="1l" selected>
-          1
-        </option>
-        <option value="2" selected>
-          2
-        </option>
-        <option value="3" selected>
-          3
-        </option>
-      </select>
-      <button>글쓰기</button>
+      <RecentlyPostSelectWrap>
+        <select>
+          <option value="all" selected>
+            전체
+          </option>
+          <option value="1l">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <div>
+          <select>
+            <option value="all" selected>
+              최신순
+            </option>
+            <option value="1l">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <button>글쓰기</button>
+        </div>
+      </RecentlyPostSelectWrap>
       {currentPost.map((item) => {
         return (
           <>
@@ -56,6 +55,7 @@ const RecentlyPost = () => {
                 </div>
                 <h2>{item.title}</h2>
                 <p>{item.doc}</p>
+                <LikePost key={item.id} item={item} />
               </RecentlyPostDocSec>
               <RecentlyThumbnail src={item.src}></RecentlyThumbnail>
             </RecentlyPostWrap>

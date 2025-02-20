@@ -1,11 +1,8 @@
 import React from 'react';
 import { CommunityBanner, CommunitySwiperWrap, CommunityWrap, HotpostButtonGroup } from '../styled';
-import { hotpostmainData } from '../../../assets/api/hotpostmaindata';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { hotpostActions } from '../../../store/modules/hotpostSlice';
-
-import { Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -33,14 +30,18 @@ const CommunityMain = () => {
           <HotpostButtonGroup>
             {Object.keys(hotpostmainData).map((menu) => (
               <>
-                <button
-                  type="button"
-                  key={menu}
-                  onClick={() => dispatch(hotpostActions.onMenuChange(menu))}
-                  className={`menu-button ${currentMenu === menu ? 'active' : ''}`}
-                >
-                  {menu}
-                </button>
+                <div>
+                  {' '}
+                  <button
+                    type="button"
+                    key={menu}
+                    onClick={() => dispatch(hotpostActions.onMenuChange(menu))}
+                    className={`menu-button ${currentMenu === menu ? 'active' : ''}`}
+                  >
+                    <hr></hr>
+                    {menu}
+                  </button>
+                </div>
               </>
             ))}
           </HotpostButtonGroup>

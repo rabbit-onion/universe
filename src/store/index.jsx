@@ -3,6 +3,7 @@ import videoR from './modules/videoSlice';
 import dateslideR from './modules/dateslideSlice';
 import hotpostR from './modules/hotpostSlice';
 import pagenationR from './modules/paginationSlice';
+import postR from './modules/postSlice';
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
     dateslideR,
     hotpostR,
     pagenationR,
+    postR,
   },
 });
