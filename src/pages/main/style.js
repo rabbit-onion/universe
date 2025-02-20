@@ -237,6 +237,19 @@ export const IssueContain = styled.div`
     transform: translate(-50%, -50%);
     border-radius: 30px;
   }
+  button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    width: 14vw;
+    height: 6vh;
+    border: 2px solid #0066ff;
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+  }
   @media ${device.laptopMX} {
     div {
       width: 32vw;

@@ -38,7 +38,7 @@ export default [
   },
   {
     id: 5,
-    src: '../public/images/pattern/thunail.png',
+    src: '../public/images/pattern/horizon/allpost.png',
     title: '결말 미쳣나봐 진짜 하,,',
     tag: '#결말 #스포주의 #뒷통수 #한대',
     doc: '아니 너에게닿기를 시즌2가 그냥 미쳤어 내 심장을 뛰게 만든다 너네 꼭 결혼까지해라...',

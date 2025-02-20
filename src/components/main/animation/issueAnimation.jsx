@@ -17,6 +17,7 @@ const IssueAnimation = () => {
             <IssueContain>
               <div>
                 <img src="../public/images/pattern/vertical/bleach.jpg"></img>
+                <button>공식 예고편 보러가기</button>
               </div>
             </IssueContain>
             <IssueAnimationImg src="../public/images/pattern/thunail.png" />

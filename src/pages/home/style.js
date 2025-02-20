@@ -54,6 +54,13 @@ export const HomeWrap = styled.div`
   .review_doc {
     font-size: 16px;
   }
+  .membership_button {
+    padding: 2vh 4vw;
+    background-color: #0066ff;
+    color: white;
+    border-radius: 40px;
+    font-size: 20px;
+  }
 `;
 
 export const CommunitySection = styled.section`

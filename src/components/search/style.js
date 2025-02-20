@@ -4,8 +4,17 @@ export const TagButtonWrap = styled.div`
   gap: 22px;
   width: 100%;
   margin-bottom: 25px;
+  align-itmes: true;
   div {
     display: flex;
+    justify-content: space-between;
+    width: 250px;
+    button {
+      background-color: transparent;
+    }
+  }
+  p {
+    margin-left: 6.2vw;
   }
 `;
 export const TagWrap = styled.div`

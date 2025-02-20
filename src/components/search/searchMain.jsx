@@ -39,7 +39,7 @@ const SearchMain = () => {
           <h2>필터</h2>
           <button onClick={() => onClear()}>전체 초기화</button>
         </div>
-        <p>총 {filteredImages.length}개 입니다.</p>
+        <p>총 {filteredImages.length}개의 작품이 검색되었어요 !</p>
       </TagButtonWrap>
       <TagWrap>
         <TagContentWrap>
