@@ -56,6 +56,9 @@ export const TypingArea = styled.div`
       line-height: 24px;
       color: #707070;
     }
+    &:focus {
+      outline: none;
+    }
   }
 `;
 
@@ -71,10 +74,14 @@ export const ChkboxArea = styled.div`
     border-radius: 4px;
     background-color: transparent;
     margin-right: 12px;
+    &:checked {
+      background-color: #0066ff;
+      background-image: url('https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/check-white.svg');
+      background-size: cover;
+      border-color: #fff;
+    }
   }
-  input[type='checkbox']:checked {
-    background-color: #0066ff;
-  }
+
   label {
     font-weight: 500;
     font-size: 20px;
@@ -152,6 +159,7 @@ export const JoinCont = styled.div`
 `;
 
 export const PwHint = styled.p``;
+export const IsValid = styled.p``;
 
 export const JoinInputArea = styled.ul`
   margin-bottom: 31px;
@@ -212,6 +220,9 @@ export const JoinInputArea = styled.ul`
   ${PwHint} {
     color: #878181;
   }
+  ${IsValid} {
+    color: lime;
+  }
 `;
 
 export const EmailInput = styled.div`
@@ -242,6 +253,7 @@ export const JoinChkboxArea = styled.ul`
     background-color: #0066ff;
     background-image: url('https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/check-white.svg');
     background-size: cover;
+    border-color: #fff;
   }
   label {
     font-style: normal;
