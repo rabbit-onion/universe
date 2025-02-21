@@ -51,7 +51,7 @@ export const CommunityWrap = styled.div`
 
   .overlay-div section {
     width: 100%;
-    height: 100%;
+    height: 50%;
     background-color: white;
     padding: 20px;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
