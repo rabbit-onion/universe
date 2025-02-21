@@ -226,7 +226,7 @@ export const IssueContain = styled.div`
     backdrop-filter: blur(15px);
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    z-index: 15;
+    z-index: 5;
   }
   img {
     position: absolute;

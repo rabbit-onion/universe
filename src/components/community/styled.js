@@ -23,8 +23,8 @@ export const CommunityWrap = styled.div`
     border-radius: 20px;
   }
 
-  section {
-    margin-bottom: 30px;
+  .hotpost_img_wrap {
+    position: relative;
   }
   .overlay-div {
     position: absolute;
@@ -127,7 +127,7 @@ export const HotpostContentCover = styled.div`
   background-color: black;
   opacity: 0.2;
   z-index: 5;
-  border-radius: 25px;
+  border-radius: 20px;
 `;
 
 export const GenrePostWrap = styled.div`

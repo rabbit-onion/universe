@@ -33,7 +33,6 @@ const DateSlide = () => {
     <>
       <div className="inner div_top_margin">
         <h2>요일별 신작</h2>
-        <button> {'>'} </button>
         <DateButtonGroup>
           {Object.keys(dateslideData).map((day) => (
             <button

@@ -70,7 +70,7 @@ const CommunityMain = () => {
                   key={index}
                   onMouseEnter={() => handleMouseEnter(index)} // 마우스 오버 핸들러 호출
                   onMouseLeave={handleMouseLeave} // 마우스 아웃 핸들러 호출
-                  className={` ${hoveredIndex === index ? 'hovered' : ''}`} // 조건부 클래스 추가
+                  className={` hotpost_img_wrap ${hoveredIndex === index ? 'hovered' : ''}`} // 조건부 클래스 추가
                 >
                   <HotpostContentCover />
                   <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
