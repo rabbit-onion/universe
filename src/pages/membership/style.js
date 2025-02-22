@@ -6,29 +6,29 @@ export const MembershipWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 1972px;
+  height: 131.4667rem;
 
-  @media (max-width: 768px) {
-    height: 1663px;
+  @media (max-width: 51.2rem) {
+    height: 110.8667rem;
   }
 `;
 
 export const MembershipBox = styled.div`
-  height: 1972px;
+  height: 131.4667rem;
 
   h2 {
-    font-size: 40px;
+    font-size: 2.6667rem;
     font-weight: bold;
     font-family: 'Pretendard';
     color: #ffffff;
   }
 
   @media ${device.tabletMX} {
-    height: 1743px;
-    width: 768px;
+    height: 116.2rem;
+    width: 51.2rem;
 
     h2 {
-      font-size: 25px;
+      font-size: 1.6667rem;
       font-weight: bold;
       font-family: 'Pretendard';
       color: #ffffff;
@@ -36,29 +36,53 @@ export const MembershipBox = styled.div`
   }
 `;
 
+export const MembershipAd = styled.div`
+  width: 100vw;
+  height: 32.1333rem;
+  background-color: #4d94ff;
+  margin-bottom: 6.5333rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @media ${device.laptopMX} {
+    width: 51.2rem;
+    height: 21.2667rem;
+    background-color: #4d94ff;
+    margin-bottom: 2.7333rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+`;
+
 export const DivWrap = styled.div`
-  width: 750px;
-  height: 512px;
-  border-radius: 30px;
+  width: 50rem;
+  height: 34.1333rem;
+  border-radius: 2rem;
   background-color: #1d1d1d;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 55px;
-  gap: 24px;
+  padding-left: 3.6667rem;
+  gap: 1.6rem;
 
   span {
-    font-size: 25px;
+    font-size: 1.6667rem;
     font-weight: 700;
     color: #ffffff;
   }
 
   @media ${device.tabletMX} {
-    width: 606px;
-    height: 414px;
-    border-radius: 30px;
+    width: 40.4rem;
+    height: 27.6rem;
+    border-radius: 2rem;
 
-    margin: 0px 40px;
+    margin: 0rem 2.6667rem;
   }
 `;
 
@@ -69,34 +93,34 @@ export const Section = styled.div`
   justify-content: center;
   text-align: center;
   font-family: 'Pretendard';
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 1.6667rem;
+  line-height: 2rem;
   color: #ffffff;
 
   div {
     display: flex;
     align-items: center;
-    gap: 17px;
+    gap: 1.1333rem;
   }
   img {
-    height: 12px;
+    height: 0.8rem;
   }
   @media ${device.laptopMX} {
-    font-size: 18px;
+    font-size: 1.2rem;
   }
 `;
 
 export const Ad = styled.div`
-  font-size: 40px;
+  font-size: 2.6667rem;
   font-weight: bold;
   color: #0066ff;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 2.6667rem;
 
   @media ${device.laptopMX} {
-    font-size: 30px;
+    font-size: 2rem;
   }
 `;
 
@@ -105,50 +129,26 @@ export const List = styled.ul`
   justify-content: center;
   padding: 0;
   list-style: none;
-  gap: 60px;
+  gap: 4rem;
 
   @media ${device.laptopMX} {
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: 2.2667rem;
   }
 `;
 
 export const ContInner = styled.div`
-  padding: 0 123px;
+  padding: 0 8.2rem;
 
   h2 {
-    margin-bottom: 65px;
+    margin-bottom: 4.3333rem;
   }
 
   @media ${device.laptopMX} {
-    padding: 0 40px;
+    padding: 0 2.6667rem;
     h2 {
-      margin-bottom: 71px;
-    }
-  }
-`;
-
-export const MembershipAd = styled.div`
-  width: 1927px;
-  height: 482px;
-  background-color: #4d94ff;
-  margin-bottom: 98px;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-  @media ${device.laptopMX} {
-    width: 768px;
-    height: 319px;
-    background-color: #4d94ff;
-    margin-bottom: 41px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: auto;
+      margin-bottom: 4.7333rem;
     }
   }
 `;
@@ -157,30 +157,30 @@ export const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 94px;
+  margin-bottom: 6.2667rem;
 
   h1 {
-    font-size: 40px;
+    font-size: 2.6667rem;
     font-weight: bold;
     font-family: 'Pretendard';
     color: #ffffff;
   }
   p {
-    font-size: 25px;
+    font-size: 1.6667rem;
     font-weight: bold;
     font-family: 'Pretendard';
     color: #ffffff;
   }
 
   @media ${device.laptopMX} {
-    margin-bottom: 55px;
+    margin-bottom: 3.6667rem;
 
     h1 {
-      font-size: 20px;
+      font-size: 1.3333rem;
       font-weight: 700;
     }
     p {
-      font-size: 15px;
+      font-size: 1rem;
       font-weight: 700;
     }
   }
@@ -200,33 +200,33 @@ export const PayBox = styled.div`
   justify-content: center;
 
   button {
-    width: 449px;
-    height: 82px;
-    border-radius: 55px;
+    width: 29.9333rem;
+    height: 5.4667rem;
+    border-radius: 3.6667rem;
     background-color: #0066ff;
     display: flex;
     justify-content: center;
     color: #ffffff;
     font-family: 'Pretendard';
     align-items: center;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
     font-weight: 700;
-    line-height: 36px;
+    line-height: 2.4rem;
 
-    margin-bottom: 86px;
-    margin-top: 94px;
+    margin-bottom: 5.7333rem;
+    margin-top: 6.2667rem;
   }
 
   @media ${device.laptopMX} {
     button {
-      width: 265px;
-      height: 43px;
-      border-radius: 38px;
-      font-size: 16px;
+      width: 17.6667rem;
+      height: 2.8667rem;
+      border-radius: 2.5333rem;
+      font-size: 1.0667rem;
 
-      margin-bottom: 60px;
-      margin-top: 49px;
+      margin-bottom: 4rem;
+      margin-top: 3.2667rem;
     }
   }
 `;
@@ -236,14 +236,14 @@ export const ShortcutBox = styled.div`
   justify-content: center;
 
   button {
-    width: 1683px;
-    height: 92px;
+    width: 112.2rem;
+    height: 6.1333rem;
     background-color: #4d94ff;
-    border-radius: 18px;
+    border-radius: 1.2rem;
     color: #ffffff;
     font-family: 'Pretendard';
     align-items: center;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -251,10 +251,10 @@ export const ShortcutBox = styled.div`
 
   @media ${device.laptopMX} {
     button {
-      width: 688px;
-      height: 30px;
-      border-radius: 7px;
-      font-size: 10px;
+      width: 45.8667rem;
+      height: 2rem;
+      border-radius: 0.4667rem;
+      font-size: 0.6667rem;
       font-weight: 600;
     }
   }
