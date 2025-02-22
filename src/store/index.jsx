@@ -1,9 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
-
-const dummyReducer = (state = {}) => state; // 빈 리듀서
+import videoR from './modules/videoSlice';
+import dateslideR from './modules/dateslideSlice';
+import hotpostR from './modules/hotpostSlice';
+import pagenationR from './modules/paginationSlice';
+import postR from './modules/postSlice';
 
 export const store = configureStore({
   reducer: {
-    dummy: dummyReducer, // 임시 리듀서 추가
+    videoR,
+    dateslideR,
+    hotpostR,
+    pagenationR,
+    postR,
   },
 });
