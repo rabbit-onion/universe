@@ -26,7 +26,6 @@ export const MembershipBox = styled.div`
   @media ${device.tabletMX} {
     height: 116.2rem;
     width: 51.2rem;
-
     h2 {
       font-size: 1.6667rem;
       font-weight: bold;
@@ -40,8 +39,8 @@ export const MembershipAd = styled.div`
   width: 100vw;
   height: 32.1333rem;
   background-color: #4d94ff;
+  margin: auto;
   margin-bottom: 6.5333rem;
-
   img {
     width: 100%;
     height: 100%;
@@ -118,7 +117,7 @@ export const Ad = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 2.6667rem;
-
+  margin-bottom: 1rem;
   @media ${device.laptopMX} {
     font-size: 2rem;
   }
