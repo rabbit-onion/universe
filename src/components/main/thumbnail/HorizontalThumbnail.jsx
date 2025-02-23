@@ -4,7 +4,7 @@ import { MainThumbnailWrap, WhiteBlur } from '../../../pages/main/style';
 const HorizontalThumbnail = () => {
   return (
     <MainThumbnailWrap>
-      <img src="../public/images/pattern/thunail.png"></img>
+      <img src="/images/pattern/thunail.png"></img>
       <WhiteBlur />
     </MainThumbnailWrap>
   );
