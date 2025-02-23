@@ -36,7 +36,7 @@
 - 작품에 포함된 태그를 통해 해당되는 작품들을 검색 가능
 
 
-## 기술 스택
+## 기술 스택 📚
 
 ### Environment
 
@@ -50,7 +50,6 @@
 ### Development
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=white)
 ![Material UI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=MUI&logoColor=white)
 ![Styled-Components](https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white)
 
@@ -91,9 +90,9 @@
     │   ├── profile
     │   ├── profile
     │   └── index.js
-    ├── pages
-    ├── store
-    ├── styled 
+    ├── pages : 각 page에 해당하는 index.js
+    ├── store : Slice 구조들
+    ├── styled : Global Styled
     ├── ui
     ├── App.css
     ├── App.jsx
