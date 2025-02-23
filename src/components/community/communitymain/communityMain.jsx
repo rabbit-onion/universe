@@ -34,7 +34,7 @@ const CommunityMain = () => {
   return (
     <>
       <CommunityBanner>
-        <img src="../public/images/pattern/community_banner.png"></img>
+        <img src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/community/intro-overlay-btn.png"></img>
       </CommunityBanner>
       <CommunityWrap>
         <section>
