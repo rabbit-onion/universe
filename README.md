@@ -2,7 +2,7 @@
 
 > **React기반 애니메이션 OTT 서비스** </br> **개발 기간 : 2025.02.01 ~~ XX**
 
-# 팀원 구성 
+## 팀원 구성 
 
 천사랑 : 팀장 / 비디오 파트 개발
  
@@ -12,7 +12,9 @@
 
 오하늘 : 디자인
 
-# 프로젝트 소개
+
+
+## 프로젝트 소개
 
 애니메이션 OTT 서비스 'LAFTEL'을 참고하여 만든 웹페이지입니다.
 
@@ -30,7 +32,7 @@
 - 작품에 포함된 태그를 통해 해당되는 작품들을 검색 가능
 
 
-# 기술 스택
+## 기술 스택
 
 ### 개발 환경
 
@@ -48,17 +50,42 @@
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=white)
 ![Material UI](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=MUI&logoColor=white)
-<img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white">
+![Material UI](https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white)
 
 ### Communication
 ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=Slack&logoColor=white)
 ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white)
 
- 
-# 주요 기능
 
-- 
+## 아키텍쳐
 
+### 디렉토리 구조
+```bash
+├── README.md
+├── package-lock.json
+├── package.json
+├── public
+│   ├── images
+│   │   ├── pattern
+│   │   └── video
+│   └── video
+└── src
+    ├── assets
+    │   └── api : api, db 관련 
+    ├── common 
+    │   ├── footer
+    │   ├── header
+    │   ├── Layout.jsx
+    │   └── ModalLayout.jsx
+    ├── components
+    ├── pages
+    ├── store
+    ├── styled 
+    ├── ui
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    └── main.jsx
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+
