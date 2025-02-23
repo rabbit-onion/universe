@@ -2,6 +2,10 @@
 
 > **React기반 애니메이션 OTT 서비스** </br> **개발 기간 : 2025.02.01 ~~ XX**
 
+## 배포 주소
+
+> **vercel 주소 :** https://universe-ivory-one.vercel.app/
+
 ## 팀원 구성 
 
 천사랑 : 팀장 / 비디오 파트 개발
@@ -70,12 +74,23 @@
 └── src
     ├── assets
     │   └── api : api, db 관련 
-    ├── common 
+    ├── common : footer, header, layout 관련
     │   ├── footer
     │   ├── header
     │   ├── Layout.jsx
     │   └── ModalLayout.jsx
-    ├── components
+    ├── components : 각 page에 해당하는 components
+    │   ├── banner
+    │   ├── commnunity
+    │   ├── home
+    │   ├── layout
+    │   ├── login
+    │   ├── main
+    │   ├── mypage
+    │   ├── pagination
+    │   ├── profile
+    │   ├── profile
+    │   └── index.js
     ├── pages
     ├── store
     ├── styled 
