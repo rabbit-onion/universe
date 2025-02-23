@@ -18,17 +18,17 @@ const NewAnimation = () => {
         <AniSection>
           <LeftAniPic>
             <picture>
-              <img src="../public/images/pattern/horizon/jusul.webp"></img>
+              <img src="/images/pattern/horizon/jusul.webp"></img>
             </picture>
           </LeftAniPic>
           <RightAniPic>
             <picture>
-              <img src="../public/images/pattern/horizon/monster8.webp"></img>
+              <img src="/images/pattern/horizon/monster8.webp"></img>
             </picture>
           </RightAniPic>
           <MainAniPic>
             <picture>
-              <img src="../public/images/pattern/horizon/onepiece.webp"></img>
+              <img src="/images/pattern/horizon/onepiece.webp"></img>
             </picture>
           </MainAniPic>
         </AniSection>

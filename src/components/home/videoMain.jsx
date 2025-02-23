@@ -6,7 +6,7 @@ const VideoMain = () => {
   return (
     <div>
       <VideoMainWrap>
-        <video src="../public/video/membership_video.mp4" autoPlay muted loop></video>
+        <video src="/video/membership_video.mp4" autoPlay muted loop></video>
         <h2>
           동시 방영 신작부터 <br></br>역대 인기작까지 한번에
         </h2>

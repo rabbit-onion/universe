@@ -12,7 +12,7 @@ const DeviceMockup = () => {
     >
       <h2>원하는 기기로 자유롭게 감상</h2>
       <h3>스마트폰, 테블릿, PC, TV까지!</h3>
-      <img className="device_mockup_img" src="../public/images/pattern/all_mockup.png"></img>
+      <img className="device_mockup_img" src="/images/pattern/all_mockup.png"></img>
     </motion.div>
   );
 };

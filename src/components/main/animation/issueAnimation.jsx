@@ -16,11 +16,11 @@ const IssueAnimation = () => {
             </BlackBlur>
             <IssueContain>
               <div>
-                <img src="../public/images/pattern/vertical/bleach.jpg"></img>
+                <img src="/images/pattern/vertical/bleach.jpg"></img>
                 <button>공식 예고편 보러가기</button>
               </div>
             </IssueContain>
-            <IssueAnimationImg src="../public/images/pattern/thunail.png" />
+            <IssueAnimationImg src="/images/pattern/thunail.png" />
           </div>
         </IssueContentWrap>
       </div>

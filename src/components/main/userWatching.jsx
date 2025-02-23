@@ -8,19 +8,19 @@ const UserWatching = () => {
         <h2>XX님이 시청중인 컨텐츠</h2>
         <div className="content_wrap">
           <VerticalUserWatching>
-            <img src="../public/images/pattern/vertical/keroro.jpg"></img>
+            <img src="/images/pattern/vertical/keroro.jpg"></img>
             <div>
               <p>캐릭캐릭체인지</p>
             </div>
           </VerticalUserWatching>
           <VerticalUserWatching>
-            <img src="../public/images/pattern/vertical/keroro.jpg"></img>
+            <img src="/images/pattern/vertical/keroro.jpg"></img>
             <div>
               <p>캐릭캐릭체인지</p>
             </div>
           </VerticalUserWatching>
           <VerticalUserWatching>
-            <img src="../public/images/pattern/vertical/keroro.jpg"></img>
+            <img src="/images/pattern/vertical/keroro.jpg"></img>
             <div>
               <p>캐릭캐릭체인지</p>
             </div>

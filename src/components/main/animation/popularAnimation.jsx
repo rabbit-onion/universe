@@ -11,31 +11,31 @@ import { PopularAnimationWrap } from '../style';
 const PopularAnimation = () => {
   const thumbnails = [
     {
-      src: '../public/images/pattern/vertical/bleach.jpg',
+      src: '/images/pattern/vertical/bleach.jpg',
       alt: 'thumbnail 1',
-      num: '../public/images/pattern/popular_1.png',
+      num: '/images/pattern/popular_1.png',
     },
     {
-      src: '../public/images/pattern/vertical/digimon.jpg',
+      src: '/images/pattern/vertical/digimon.jpg',
       alt: 'thumbnail 2',
-      num: '../public/images/pattern/popular_2.png',
+      num: '/images/pattern/popular_2.png',
     },
     {
-      src: '../public/images/pattern/vertical/magic.jpg',
+      src: '/images/pattern/vertical/magic.jpg',
       alt: 'thumbnail 3',
-      num: '../public/images/pattern/popular_3.png',
+      num: '/images/pattern/popular_3.png',
     },
     {
-      src: '../public/images/pattern/vertical/wakako.jpg',
+      src: '/images/pattern/vertical/wakako.jpg',
       alt: 'thumbnail 4',
-      num: '../public/images/pattern/popular_4.png',
+      num: '/images/pattern/popular_4.png',
     },
-    { src: '../public/images/pattern/vertical/digimon.jpg', alt: 'thumbnail 5' },
-    { src: '../public/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
-    { src: '../public/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
-    { src: '../public/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
-    { src: '../public/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
-    { src: '../public/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
+    { src: '/images/pattern/vertical/digimon.jpg', alt: 'thumbnail 5' },
+    { src: '/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
+    { src: '/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
+    { src: '/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
+    { src: '/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
+    { src: '/images/pattern/vertical/wakako.jpg', alt: 'thumbnail 4' },
   ];
 
   return (

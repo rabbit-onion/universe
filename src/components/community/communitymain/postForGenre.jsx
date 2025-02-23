@@ -3,10 +3,10 @@ import { GenrePostWrap } from '../styled';
 
 const PostForGenre = () => {
   const buttondata = [
-    { src: '../public/images/pattern/genre_drama.png' },
-    { src: '../public/images/pattern/genre_sf.png' },
-    { src: '../public/images/pattern/genre_fantasy.png' },
-    { src: '../public/images/pattern/genre_romance.png' },
+    { src: '/images/pattern/genre_drama.png' },
+    { src: '/images/pattern/genre_sf.png' },
+    { src: '/images/pattern/genre_fantasy.png' },
+    { src: '/images/pattern/genre_romance.png' },
   ];
   return (
     <div>

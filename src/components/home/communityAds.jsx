@@ -19,7 +19,7 @@ const CommunityAds = () => {
           <h3>다양한 사람들과 함께 덕질을 공유하면서</h3>
           <h3>즐거움을 느껴보세요</h3>
         </div>
-        <img src="../public/images/pattern/mac_mockup.png" alt="mac_mockup" />
+        <img src="/images/pattern/mac_mockup.png" alt="mac_mockup" />
       </CommunitySection>
     </motion.div>
   );

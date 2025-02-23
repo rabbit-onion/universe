@@ -11,7 +11,7 @@ const StartUniverse = () => {
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true }}
     >
-      <StartLogo src="../public/images/pattern/logo.png" />
+      <StartLogo src="/images/pattern/logo.png" />
       <div className="div_top_margin">
         <h2>지금 시작하세요</h2>
       </div>

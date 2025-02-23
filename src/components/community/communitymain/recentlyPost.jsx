@@ -50,7 +50,7 @@ const RecentlyPost = () => {
             <RecentlyPostWrap>
               <RecentlyPostDocSec>
                 <div>
-                  <img src="../public/images/pattern/horizon/moruka.webp"></img>
+                  <img src="/images/pattern/horizon/moruka.webp"></img>
                   <p>박준용</p>
                 </div>
                 <h2>{item.title}</h2>
