@@ -60,8 +60,18 @@ export const HomeWrap = styled.div`
   .membership_button {
     padding: 2vh 4vw;
     background-color: #0066ff;
-    color: white;
     border-radius: 40px;
-    font-size: 20px;
+    a {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: white;
+    }
+  }
+  .center_wrap {
+    padding-bottom: 18.6667rem;
   }
 `;
