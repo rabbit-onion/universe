@@ -9,6 +9,7 @@ import 'swiper/css/scrollbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { dateslideActions } from '../../../store/modules/dateslideSlice';
 import { DateButtonGroup } from '../style';
+import AllBtn from '../../../ui/button/AllBtn';
 
 const DateSlide = () => {
   const { dateslideData, currentDate } = useSelector((state) => state.dateslideR);
@@ -78,6 +79,22 @@ const DateSlide = () => {
               >
                 <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
                   <img src={image.src} alt={image.alt} className="slide-image" />
+                  <div className={` age_img15 ${image.age === 15 ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/15.svg"></img>
+                  </div>
+                  <div className={` age_img12 ${image.age === 12 ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/12.svg"></img>
+                  </div>
+                  <div className={` age_img18 ${image.age === 18 ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/18.svg"></img>
+                  </div>
+                  <div className={` age_imgall ${image.age === 0 ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/all.png"></img>
+                  </div>
                   <section>{image.title}</section>
                 </div>
                 <img src={image.src} alt={image.alt} className="slide-image" />

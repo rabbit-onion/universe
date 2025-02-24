@@ -63,5 +63,6 @@ export const HomeWrap = styled.div`
     color: white;
     border-radius: 40px;
     font-size: 20px;
+    margin-bottom: 100px;
   }
 `;
