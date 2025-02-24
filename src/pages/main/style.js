@@ -23,6 +23,9 @@ export const MainWrap = styled.div`
   .bg-gr {
     background-color: #f5f5f5;
     padding: 5.2vw;
+    h2 span {
+      color: #0066ff;
+    }
   }
 
   .user_content_wrap {

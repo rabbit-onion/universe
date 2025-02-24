@@ -6,7 +6,7 @@ const UserWatching = () => {
   return (
     <>
       <div className="bg-gr div_top_margin">
-        <h2>XX님이 시청중인 컨텐츠</h2>
+        <h2>준용님이 시청중인 컨텐츠</h2>
         <div className="content_wrap">
           <VerticalUserWatching w="45">
             <img src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/watching/charChange.png"></img>

@@ -6,7 +6,9 @@ const HotPost = () => {
   return (
     <>
       <div className="bg-gr div_top_margin">
-        <h2>오늘 HOT한 게시물</h2>
+        <h2>
+          오늘 <span>HOT</span>한 게시물
+        </h2>
         <div className="content_wrap">
           {postsdata.map((item) => {
             return (

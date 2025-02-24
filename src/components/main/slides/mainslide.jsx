@@ -176,7 +176,8 @@ const Mainslide = ({ secondSlideData, thirdSlideData }) => {
   return (
     <>
       <div className="inner div_top_margin">
-        <h2>유니버스 독점작</h2>
+        {secondSlideData && <h2>스토리 맛집, 연출맛집 엄선작</h2>}
+        {thirdSlideData && <h2>동화같은 힐링 애니메이션</h2>}
         <div>
           <Swiper
             modules={[Navigation]}
