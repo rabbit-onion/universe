@@ -2,11 +2,11 @@
 
 > **React기반 애니메이션 OTT 서비스** </br> **개발 기간 : 2025.02.01 ~~ XX**
 
-## 배포 주소
+## 배포 주소 :globe_with_meridians:
 
 > **vercel 주소 :** https://universe-ivory-one.vercel.app/
 
-## 팀원 구성 
+## 팀원 구성 :people_holding_hands:
 
 천사랑 : 팀장 / 개발
  
@@ -18,7 +18,7 @@
 
 
 
-## 프로젝트 소개
+## 프로젝트 소개 :memo:
 
 애니메이션 OTT 서비스 'LAFTEL'을 참고하여 만든 웹페이지입니다.
 
