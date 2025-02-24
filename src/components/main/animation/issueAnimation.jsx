@@ -11,16 +11,20 @@ const IssueAnimation = () => {
         <IssueContentWrap>
           <div>
             <BlackBlur>
-              <h2>펭귄 하이웨이</h2>
+              <h2>약사의 혼잣말</h2>
               <p>2025년도 공개예정작</p>
+              <img
+                className="release-playBtn"
+                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/release-playBtn.svg"
+              />
             </BlackBlur>
             <IssueContain>
               <div>
-                <img src="/images/pattern/vertical/bleach.jpg"></img>
+                <img src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/release-thumb.png"></img>
                 <button>공식 예고편 보러가기</button>
               </div>
             </IssueContain>
-            <IssueAnimationImg src="/images/pattern/thunail.png" />
+            <IssueAnimationImg src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/pharmacist.png" />
           </div>
         </IssueContentWrap>
       </div>

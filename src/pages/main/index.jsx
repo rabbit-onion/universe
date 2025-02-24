@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HorizontalThumbnail from '../../components/main/thumbnail/HorizontalThumbnail';
 import Mainslide from '../../components/main/slides/mainslide';
 import { MainWrap } from './style';
@@ -10,19 +10,34 @@ import BottomBanner from '../../components/banner/bottomBanner';
 import FirstMainslide from '../../components/main/slides/firstMainslide';
 import DateSlide from '../../components/main/slides/dateSlide';
 import { Outlet } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { getVideo } from '../../store/modules/getThunk';
 
 const Main = () => {
+  const { videoData } = useSelector((state) => state.videoR);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getVideo());
+  }, []);
+
+  const firstSlideData = videoData.slice(0, 10);
+  const secondSlideData = videoData.slice(10, 20);
+  const thirdSlideData = videoData.slice(20, 30);
+
+  if (!videoData || videoData.length === 0) {
+    return <div>Loading . . . </div>;
+  }
+
   return (
     <>
-      {/* <div>메인페이지</div> */}
-
       <MainWrap>
         <HorizontalThumbnail />
-        <FirstMainslide />
+        <FirstMainslide firstSlideData={firstSlideData} />
         <DateSlide />
         <UserWatching />
-        <Mainslide />
-        <Mainslide />
+        <Mainslide secondSlideData={secondSlideData} />
+        <Mainslide thirdSlideData={thirdSlideData} />
         <PopularAnimation />
         <HotPost />
         <IssueAnimation />

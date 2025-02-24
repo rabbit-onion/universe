@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
   li { list-style: none }
   img { vertical-align: top; }
 
-    .inner {
+  .inner {
     padding-left: 5.2vw;
   }
   .swiper {
@@ -174,19 +174,19 @@ const GlobalStyle = createGlobalStyle`
     font-size: 0;
     line-height: 0;
   }
+    .plus_btn, .play_btn {
+      width: 39px !important;
+      height: auto !important;
+    }
     .plus_btn {
     position:absolute;
-    width : 8.5% !important;
-    height : 15.5% !important;
-        bottom: 25%;
-    left: 16%;
+    bottom: 30%;
+    left: 19%;
     }
     .play_btn {
     position: absolute;
-    width: 8% !important;
-    height: 15% !important;
-left: 5%;
-    bottom: 25%;
+    left: 5%;
+    bottom: 30%;
     }
 `;
 
