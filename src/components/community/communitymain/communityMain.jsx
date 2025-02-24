@@ -94,7 +94,11 @@ const CommunityMain = () => {
           })}
         </CommunitySwiperWrap>
         <div className="button_contain">
-          <button>게시물 전체보기</button>
+          <button>
+            <Link to="/community/posts" style={{ color: 'white' }}>
+              게시물 전체보기
+            </Link>
+          </button>
         </div>
       </CommunityWrap>
     </>
