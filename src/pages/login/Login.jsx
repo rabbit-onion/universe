@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ChkboxArea, FindAndJoin, LoginBox, LoginCont, SnsLoginBtns, TypingArea } from './style';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/modules/authSlice';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -86,7 +86,10 @@ const Login = () => {
             <span>|</span>
             <strong>비밀번호 재설정</strong>
             <span>|</span>
-            <strong>회원가입</strong>
+
+            <strong>
+              <Link to="/auth/join">회원가입</Link>
+            </strong>
           </FindAndJoin>
 
           <SnsLoginBtns>
