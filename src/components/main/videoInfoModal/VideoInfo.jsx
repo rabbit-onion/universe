@@ -26,6 +26,8 @@ import {
 } from './style';
 import EpisodeList from './EpisodeList';
 import RecommendList from './RecommendList';
+import PlayBtn from '../../../ui/button/PlayBtn';
+import { Link } from 'react-router-dom';
 
 const VideoInfo = () => {
   const { monsterData } = useSelector((state) => state.videoR);
@@ -101,10 +103,12 @@ const VideoInfo = () => {
           <TopBtns>
             <div>
               <button>
-                <img
-                  src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/playBtn.svg"
-                  alt=""
-                />
+                <Link to="/video/play">
+                  <img
+                    src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/modal/playBtn.svg"
+                    alt=""
+                  />
+                </Link>
               </button>
               <button>
                 <img
@@ -135,7 +139,7 @@ const VideoInfo = () => {
                 <div>
                   <strong>제작</strong>
                   <p>
-                    {production_companies.map((item, idx) => (
+                    {production_companies.map((item) => (
                       <span key={item.id}>"{item.name}" </span>
                     ))}
                   </p>
@@ -143,7 +147,7 @@ const VideoInfo = () => {
                 <div>
                   <strong>시리즈 특징 </strong>
                   <p>
-                    {genres.map((item, idx) => (
+                    {genres.map((item) => (
                       <span key={item.id}>"{item.name}" </span>
                     ))}
                   </p>

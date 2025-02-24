@@ -9,6 +9,7 @@ import IssueAnimation from '../../components/main/animation/issueAnimation';
 import BottomBanner from '../../components/banner/bottomBanner';
 import FirstMainslide from '../../components/main/slides/firstMainslide';
 import DateSlide from '../../components/main/slides/dateSlide';
+import { Outlet } from 'react-router-dom';
 
 const Main = () => {
   return (
@@ -27,6 +28,8 @@ const Main = () => {
         <IssueAnimation />
         <BottomBanner />
       </MainWrap>
+
+      <Outlet />
     </>
   );
 };

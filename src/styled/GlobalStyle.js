@@ -13,16 +13,14 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     font-size: 15px;
-
-}
+  }
   body {
     background-color :white;
     font-family: 'Pretendard', sans-serif;
     line-height: 1.5;
     color: #333;
     overflow-x : hidden;
-
-}
+  }
   a {
     text-decoration: none;
     color: #000;

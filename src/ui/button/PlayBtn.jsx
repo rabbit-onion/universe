@@ -6,7 +6,6 @@ export const PlayingBtn = styled.button`
   left: 20px;
   top: 20px;
   background: #ffffff;
-  background: color(display-p3 1 1 1);
   border-radius: 20px;
   font-family: 'Pretendard';
   font-style: normal;
