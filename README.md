@@ -7,14 +7,14 @@
 > **vercel 주소 :** https://universe-ivory-one.vercel.app/
 
 ## 팀원 구성 :people_holding_hands:
+<div>
+ <img src="https://github.com/rabbit-onion/universe/blob/main/public/images/pattern/%EC%B2%9C%EC%82%AC%EB%9E%91.png" width = "250"> </br> 천사랑 : 팀장 / 개발 
+</div> 
+<img src="https://github.com/rabbit-onion/universe/blob/main/public/images/pattern/%EB%B0%95%EC%9D%80%EC%A3%BC.png" width = "250"> </br> 박은주 : Component 등록 
 
-천사랑 : 팀장 / 개발
+ <img src="https://github.com/rabbit-onion/universe/blob/main/public/images/pattern/%EB%B0%95%EC%A4%80%EC%9A%A9.png" width = "250"> </br> 박준용 : 팀장 / 개발 
  
-박은주 : Component 등록 
-
-박준용 : 개발
-
-오하늘 : 디자인
+ <img src="https://github.com/rabbit-onion/universe/blob/main/public/images/pattern/%EC%98%A4%ED%95%98%EB%8A%98.png" width = "250"> </br> 오하늘 : 디자인 
 
 
 
