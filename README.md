@@ -97,7 +97,7 @@
     ├── App.css
     ├── App.jsx : 각 페이지의 route
     ├── index.css
-    └── main.jsx
+    └── main.jsx : provider, store
 
 ```
 
