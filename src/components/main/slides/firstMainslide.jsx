@@ -139,6 +139,10 @@ const FirstMainslide = () => {
                     {' '}
                     <img src="/images/pattern/all.png"></img>
                   </div>
+
+                  <img className="play_btn" src="/images/pattern/playbtn.png"></img>
+
+                  <img className="plus_btn" src="/images/pattern/plusbtn.png"></img>
                   <section>{image.title}</section>
                 </div>
                 <img src={image.src} alt={image.alt} className="slide-image" />
