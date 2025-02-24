@@ -1,7 +1,6 @@
 export { default as Main } from './main';
 export { default as Home } from './home';
 export { default as Login } from './login/Login';
-export { default as Logout } from './login/Logout';
 export { default as Join } from './login/Join';
 export { default as Search } from './search';
 export { default as DailyAni } from './dailyAni';

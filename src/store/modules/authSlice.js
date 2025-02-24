@@ -15,7 +15,7 @@ const authSlice = createSlice({
     login: (state, action) => {
       state.loading = true;
       const loginUser = action.payload;
-      const matchedUser = state.users.find((user) => user.email === loginUser.email && user.password === loginUser.pw);
+      const matchedUser = state.users.find((user) => user.email === loginUser.email && user.pw === loginUser.pw);
       if (matchedUser) {
         state.loading = false;
         state.user = matchedUser;

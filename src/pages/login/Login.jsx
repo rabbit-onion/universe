@@ -13,6 +13,14 @@ const Login = () => {
     pw: '',
   });
 
+  useEffect(() => {
+    if (!loading && isAuthenticated && user) {
+      navigate('/main');
+    } else if (!loading && error) {
+      alert(error);
+    }
+  }, [isAuthenticated, loading, error, user, navigate]);
+
   const changeInput = (e) => {
     const { name, value } = e.target;
     setLoginUser({ ...loginUser, [name]: value.replace(/\s/g, '') });
@@ -26,14 +34,6 @@ const Login = () => {
       dispatch(authActions.login(loginUser));
     }
   };
-
-  useEffect(() => {
-    if (!loading && isAuthenticated && user) {
-      navigate('/main');
-    } else if (!loading && error) {
-      alert(error);
-    }
-  }, [isAuthenticated]);
 
   return (
     <>
