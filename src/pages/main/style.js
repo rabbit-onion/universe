@@ -107,6 +107,33 @@ export const MainWrap = styled.div`
     transition: transform 0.8s ease;
     opacity: 1;
   }
+  .age_img15 {
+    display: none;
+    position: absolute;
+    top: -10%;
+    left: 5%;
+  }
+  .age_img12 {
+    display: none;
+    position: absolute;
+    top: -10%;
+    left: 5%;
+  }
+  .age_img18 {
+    display: none;
+    position: absolute;
+    top: -10%;
+    left: 5%;
+  }
+  .age_imgall {
+    display: none;
+    position: absolute;
+    top: -10%;
+    left: 5%;
+  }
+  .visible {
+    display: flex;
+  }
 `;
 
 export const VerticalUserWatching = styled.div`

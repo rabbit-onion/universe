@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { SlideTitle } from './styled';
 
 const FirstHomeSlide = () => {
   return (
@@ -20,8 +21,10 @@ const FirstHomeSlide = () => {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         viewport={{ once: true }}
       >
-        <h2>요즘 뜨는 모든 애니메이션</h2>
-        <h3>뜨거운 관심을 받는 애니메이션들이 모두 유니버스에</h3>
+        <SlideTitle>
+          <h2>요즘 뜨는 모든 애니메이션</h2>
+          <h3>뜨거운 관심을 받는 애니메이션들이 모두 유니버스에</h3>
+        </SlideTitle>
         <div>
           <Swiper
             className="swiper-container"

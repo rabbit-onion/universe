@@ -61,6 +61,8 @@ export const HomeWrap = styled.div`
     padding: 2vh 4vw;
     background-color: #0066ff;
     border-radius: 40px;
+    font-size: 20px;
+    margin-bottom: 100px;
     a {
       display: flex;
       width: 100%;

@@ -28,7 +28,7 @@ const RecentlyPost = () => {
           <option value="all" selected>
             전체
           </option>
-          <option value="1l">1</option>
+          <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
         </select>
@@ -37,9 +37,9 @@ const RecentlyPost = () => {
             <option value="all" selected>
               최신순
             </option>
-            <option value="1l">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+            <option value="1">제목순</option>
+            <option value="2">좋아요 많은순</option>
+            <option value="3">댓글 많은순</option>
           </select>
           <button>글쓰기</button>
         </div>
@@ -50,8 +50,8 @@ const RecentlyPost = () => {
             <RecentlyPostWrap>
               <RecentlyPostDocSec>
                 <div>
-                  <img src="/images/pattern/horizon/moruka.webp"></img>
-                  <p>박준용</p>
+                  <img src={item.usersrc}></img>
+                  <p>{item.name}</p>
                 </div>
                 <h2>{item.title}</h2>
                 <p>{item.doc}</p>
