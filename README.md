@@ -8,11 +8,11 @@
 
 ## 팀원 구성 
 
-천사랑 : 팀장 / 비디오 파트 개발
+천사랑 : 팀장 / 개발
  
 박은주 : Component 등록 
 
-박준용 : 나머지
+박준용 : 개발
 
 오하늘 : 디자인
 
@@ -93,9 +93,9 @@
     ├── pages : 각 page에 해당하는 index.js
     ├── store : Slice 구조들
     ├── styled : Global Styled
-    ├── ui
+    ├── ui : button, card 규격에 관련된 components
     ├── App.css
-    ├── App.jsx
+    ├── App.jsx : 각 페이지의 route
     ├── index.css
     └── main.jsx
 
