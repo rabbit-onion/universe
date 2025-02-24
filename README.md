@@ -58,7 +58,7 @@
 ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white)
 
 
-## 아키텍쳐
+## 아키텍쳐 :file_folder:
 
 ### 디렉토리 구조
 ```bash
