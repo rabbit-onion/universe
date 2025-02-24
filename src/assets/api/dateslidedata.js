@@ -15,7 +15,7 @@ export const dateslideData = {
     {
       src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/horimiya.webp',
       alt: 'thumbnail 3',
-      title: '호라미야',
+      title: '호리미야',
       age: 12,
     },
     {
@@ -141,7 +141,7 @@ export const dateslideData = {
     {
       src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/horimiya.webp',
       alt: 'thumbnail 3',
-      title: '호라미야',
+      title: '호리미야',
       age: 12,
     },
     {
@@ -266,7 +266,7 @@ export const dateslideData = {
     {
       src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/horimiya.webp',
       alt: 'thumbnail 3',
-      title: '호라미야',
+      title: '호리미야',
       age: 12,
     },
     {
@@ -392,7 +392,7 @@ export const dateslideData = {
     {
       src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/horimiya.webp',
       alt: 'thumbnail 3',
-      title: '호라미야',
+      title: '호리미야',
       age: 12,
     },
     {

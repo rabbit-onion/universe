@@ -75,14 +75,15 @@ export const HotpostContentTitle = styled.div`
 `;
 export const PopularAnimationWrap = styled.div`
   margin-top: 150px;
-  padding-left: 5.2vw;
+  padding-left: 5.5vw;
   .swiper-slide {
     align-items: flex-end;
     position: relative;
+    padding-left: 2rem;
   }
   .popular_num_img {
     position: absolute;
-    left: -20%;
+    left: -16%;
     width: 150px;
     height: 150px;
     border-radius: 0;
