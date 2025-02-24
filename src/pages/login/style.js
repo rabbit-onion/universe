@@ -50,6 +50,7 @@ export const TypingArea = styled.div`
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #525252;
+    color: #fff;
     &::placeholder {
       font-weight: 500;
       font-size: 20px;

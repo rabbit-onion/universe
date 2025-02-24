@@ -21,8 +21,8 @@ const App = () => {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Main />} />
-          <Route path="/home" element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/tagsearch" element={<Search />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/profile" element={<Profile />} />

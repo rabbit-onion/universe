@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { BiSolidFastForwardCircle } from 'react-icons/bi';
 
 const initialState = {
+  users: JSON.parse(localStorage.getItem('users')) || [],
   user: JSON.parse(localStorage.getItem('user')) || null,
   isAuthenticated: !!localStorage.getItem('user'),
   loading: false,
@@ -12,26 +12,22 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    loginStart: (state) => {
+    login: (state, action) => {
       state.loading = true;
-      state.error = null;
-    },
-    // 로그인 성공
-    loginSuccess: (state, action) => {
-      state.loading = false;
-      state.user = action.payload;
-      state.isAuthenticated = true;
-      state.error = null;
-      // LocalStorage에 사용자 정보 저장
-      localStorage.setItem('user', JSON.stringify(action.payload));
-    },
-    // 로그인 실패
-    loginFailure: (state, action) => {
-      state.loading = false;
-      state.user = null;
-      state.isAuthenticated = false;
-      state.error = action.payload;
-      localStorage.removeItem('user');
+      const loginUser = action.payload;
+      const matchedUser = state.users.find((user) => user.email === loginUser.email && user.password === loginUser.pw);
+      if (matchedUser) {
+        state.loading = false;
+        state.user = matchedUser;
+        state.isAuthenticated = true;
+        state.error = null;
+        localStorage.setItem('user', JSON.stringify(matchedUser));
+      } else {
+        state.loading = false;
+        state.user = null;
+        state.isAuthenticated = false;
+        state.error = '일치하는 회원정보가 없습니다.';
+      }
     },
     // 로그아웃
     logout: (state) => {
@@ -43,6 +39,9 @@ const authSlice = createSlice({
     // 회원가입 성공
     register: (state, action) => {
       state.loading = false;
+      state.users.push(action.payload);
+      localStorage.setItem('users', JSON.stringify(state.users));
+
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;
