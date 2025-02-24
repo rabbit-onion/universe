@@ -9,7 +9,6 @@ import 'swiper/css/scrollbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { dateslideActions } from '../../../store/modules/dateslideSlice';
 import { DateButtonGroup } from '../style';
-import AllBtn from '../../../ui/button/AllBtn';
 
 const DateSlide = () => {
   const { dateslideData, currentDate } = useSelector((state) => state.dateslideR);
@@ -95,6 +94,11 @@ const DateSlide = () => {
                     {' '}
                     <img src="/images/pattern/all.png"></img>
                   </div>
+
+                  <img className="play_btn" src="/images/pattern/playbtn.png"></img>
+
+                  <img className="plus_btn" src="/images/pattern/plusbtn.png"></img>
+
                   <section>{image.title}</section>
                 </div>
                 <img src={image.src} alt={image.alt} className="slide-image" />

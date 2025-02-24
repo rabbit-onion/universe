@@ -176,6 +176,20 @@ const GlobalStyle = createGlobalStyle`
     font-size: 0;
     line-height: 0;
   }
+    .plus_btn {
+    position:absolute;
+    width : 8.5% !important;
+    height : 15.5% !important;
+        bottom: 25%;
+    left: 16%;
+    }
+    .play_btn {
+    position: absolute;
+    width: 8% !important;
+    height: 15% !important;
+left: 5%;
+    bottom: 25%;
+    }
 `;
 
 export default GlobalStyle;
