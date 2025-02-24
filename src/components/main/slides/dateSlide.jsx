@@ -99,7 +99,10 @@ const DateSlide = () => {
 
                   <img className="plus_btn" src="/images/pattern/plusbtn.png"></img>
 
-                  <section>{image.title}</section>
+                  <section>
+                    {image.title}
+                    <p>판타지·액션 | TVA·완결</p>
+                  </section>
                 </div>
                 <img src={image.src} alt={image.alt} className="slide-image" />
               </SwiperSlide>

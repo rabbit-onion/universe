@@ -1,6 +1,7 @@
 import React from 'react';
 import { StartLogo } from './styled';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const StartUniverse = () => {
   return (
@@ -15,7 +16,9 @@ const StartUniverse = () => {
       <div className="div_top_margin">
         <h2>지금 시작하세요</h2>
       </div>
-      <button className="membership_button">멤버쉽 가입하기</button>
+      <button className="membership_button">
+        <Link to="/auth/join">멤버쉽 가입하기</Link>
+      </button>
     </motion.div>
   );
 };

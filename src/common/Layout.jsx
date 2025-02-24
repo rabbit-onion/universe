@@ -1,9 +1,13 @@
 import React from 'react';
 import Header from './header';
 import Footer from './footer';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import ModalLayout from './ModalLayout';
 
 const Layout = () => {
+  const location = useLocation();
+  const showModal = location.pathname.includes('/videoinfo');
+
   return (
     <div>
       <Header />
@@ -12,6 +16,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <Footer />
+      {showModal && <ModalLayout />}
     </div>
   );
 };

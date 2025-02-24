@@ -2,7 +2,6 @@ import GlobalStyle from './styled/GlobalStyle';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './common/Layout';
 import { Home, Main, NotFile, Search, Community, Membership, Login, Join, Profile, Video, Mypage } from './pages';
-import ModalLayout from './common/ModalLayout';
 import { AuthLayout, FindId, FindPw, Mybox, NonHeaderLayout, Storage, ViewPost, WritePost } from './components';
 import {
   CommentList,
@@ -21,8 +20,8 @@ const App = () => {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Main />} />
-          <Route path="/home" element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/tagsearch" element={<Search />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/profile" element={<Profile />} />
@@ -45,9 +44,7 @@ const App = () => {
               <Route path="comments" element={<CommentList />} />
             </Route>
           </Route>
-
-          {/* 추후 path=':작품ID'로 들어갈듯 */}
-          <Route path="/videoinfo" element={<ModalLayout />} />
+          <Route path=":page/videoinfo" element={null} />
         </Route>
 
         <Route path="/auth" element={<AuthLayout />}>

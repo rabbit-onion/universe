@@ -18,7 +18,7 @@ const Membership = () => {
     <MembershipWrap>
       <MembershipBox>
         <MembershipAd>
-          <img src="/public/images/pattern/membershipadd.png" alt="광고화면" />
+          <img src="/images/pattern/membershipadd.png" alt="광고화면" />
         </MembershipAd>
 
         <ContInner>
@@ -37,37 +37,37 @@ const Membership = () => {
                   </div>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       광고 없이 감상
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       프로필 1인 동시재생 1회선
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       최신화 시청
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       다운로드 지원
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       FHD 화질 지원
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       TV 앱 지원
                     </div>
                   </Section>
@@ -81,37 +81,37 @@ const Membership = () => {
                   </div>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       광고 없이 감상
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       프로필 4인 동시재생 4회선
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       최신화 시청
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       다운로드 지원
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       FHD 화질 지원
                     </div>
                   </Section>
                   <Section>
                     <div>
-                      <img src="/public/images/pattern/cheak.svg" alt="" />
+                      <img src="/images/pattern/cheak.svg" alt="" />
                       TV 앱 지원
                     </div>
                   </Section>

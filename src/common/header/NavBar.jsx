@@ -1,25 +1,39 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
+  HomeNavRight,
+  LogoutLi,
+  MembershipLi,
+  MenuBox,
+  MenuBoxBottom,
+  MenuBoxProfile,
+  MenuboxProfilePic,
+  MenuBoxTop,
   NavBarWrap,
   NavLeft,
   NavRight,
   ProfileBox,
   ProfileIcons,
+  ProfileMoreIcon,
   ProfilePic,
   SearchBox,
   SearchBtn,
   SearchContBox,
+  StorageBox,
+  Username,
 } from './style';
 import { useEffect, useRef, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import SearchContList from './SearchContList';
 import { searchVideos } from '../../store/modules/getThunk';
+import { authActions } from '../../store/modules/authSlice';
 
 const NavBar = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [clicked, setClicked] = useState(false);
   const [searchTxt, setSearchTxt] = useState(null);
   const searchBarRef = useRef(null);
+  const { isAuthenticated } = useSelector((state) => state.authR);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -55,6 +69,11 @@ const NavBar = () => {
     }
   };
 
+  const handleLogout = () => {
+    dispatch(authActions.logout());
+    navigate('/');
+  };
+
   return (
     <>
       <NavBarWrap>
@@ -70,68 +89,154 @@ const NavBar = () => {
           </li>
         </NavLeft>
 
-        <NavRight>
-          {clicked ? (
-            <SearchBox ref={searchBarRef}>
-              <form>
+        {isAuthenticated ? (
+          <NavRight>
+            {clicked ? (
+              <SearchBox ref={searchBarRef}>
+                <form>
+                  <img
+                    src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
+                    alt=""
+                  />
+                  <label htmlFor="search" className="hide">
+                    검색어
+                  </label>
+                  <input
+                    type="search"
+                    name="search"
+                    id="search"
+                    placeholder="제목으로 검색"
+                    autoFocus="true"
+                    onChange={changeInput}
+                    // onBlur={handleBlur}
+                  />
+                </form>
+
+                <SearchContBox>
+                  <SearchContList searchTxt={searchTxt} />
+                </SearchContBox>
+              </SearchBox>
+            ) : (
+              <SearchBtn
+                onClick={() => {
+                  setClicked(true);
+                }}
+              >
                 <img
                   src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
                   alt=""
                 />
-                <label htmlFor="search" className="hide">
-                  검색어
-                </label>
-                <input
-                  type="search"
-                  name="search"
-                  id="search"
-                  placeholder="제목으로 검색"
-                  autoFocus="true"
-                  onChange={changeInput}
-                  // onBlur={handleBlur}
-                />
-              </form>
+              </SearchBtn>
+            )}
 
-              <SearchContBox>
-                <SearchContList searchTxt={searchTxt} />
-              </SearchContBox>
-            </SearchBox>
-          ) : (
-            <SearchBtn
-              onClick={() => {
-                setClicked(true);
-              }}
-            >
-              <img
-                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/search.svg"
-                alt=""
-              />
-            </SearchBtn>
-          )}
-
-          <ProfileBox>
-            <ProfileIcons>
-              <ProfilePic>
+            <ProfileBox>
+              <ProfileIcons>
+                <ProfilePic>
+                  <img
+                    src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/profilePic.svg"
+                    alt=""
+                  />
+                </ProfilePic>
                 <img
-                  src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/profilePic.svg"
+                  src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/profileArrow.svg"
                   alt=""
                 />
-              </ProfilePic>
-              <img
-                src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/profileArrow.svg"
-                alt=""
-              />
-            </ProfileIcons>
-            {/* <MenuBox>
-              <div>
-                <div className="pic"></div>
-                <div className="txt"></div>
-              </div>
-              <div></div>
-              <div></div>
-            </MenuBox>    */}
-          </ProfileBox>
-        </NavRight>
+              </ProfileIcons>
+              <MenuBox className="menubox">
+                <MenuBoxTop>
+                  <MenuBoxProfile>
+                    <Link to="/mypage/storage/recent">
+                      <MenuboxProfilePic
+                        src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/profilePic.svg"
+                        alt=""
+                      />
+                      <div>
+                        <Username>
+                          박준용
+                          <ProfileMoreIcon
+                            src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/rightArrow.svg"
+                            alt=""
+                          />
+                        </Username>
+                        <p>
+                          <img
+                            src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/header/uni.svg"
+                            alt=""
+                          />
+                          Lv.5 귀요미
+                        </p>
+                      </div>
+                    </Link>
+                  </MenuBoxProfile>
+                  <StorageBox>
+                    <li>
+                      <Link to="/mypage/box/ratings">
+                        2<span>별점</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/mypage/box/reviews">
+                        5<span>리뷰</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/mypage/box/comments">
+                        18<span>댓글</span>
+                      </Link>
+                    </li>
+                  </StorageBox>
+                  <button>
+                    <Link to="/mypage/storage/recent">보관함</Link>
+                  </button>
+                  <hr />
+                </MenuBoxTop>
+                <MenuBoxBottom>
+                  <MembershipLi>
+                    <Link to="membership">
+                      <p>
+                        <img
+                          src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/card.svg"
+                          alt=""
+                        />
+                        유니버스 멤버십
+                      </p>
+                      <span>스탠다드</span>
+                    </Link>
+                  </MembershipLi>
+                  <li>
+                    <Link to="/main">
+                      <img
+                        src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/option.svg"
+                        alt=""
+                      />
+                      설정
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/main">
+                      <img
+                        src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/CScenter.svg"
+                        alt=""
+                      />
+                      고객센터
+                    </Link>
+                  </li>
+                  <LogoutLi onClick={handleLogout}>
+                    <img
+                      src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/icons/exit.svg"
+                      alt=""
+                    />
+                    로그아웃
+                  </LogoutLi>
+                </MenuBoxBottom>
+              </MenuBox>
+            </ProfileBox>
+          </NavRight>
+        ) : (
+          <HomeNavRight>
+            <Link to="/auth/login">로그인</Link> / <Link to="/auth/join">회원가입</Link>
+          </HomeNavRight>
+        )}
       </NavBarWrap>
     </>
   );

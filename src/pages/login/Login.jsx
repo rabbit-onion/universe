@@ -1,6 +1,40 @@
+import { useEffect, useState } from 'react';
 import { ChkboxArea, FindAndJoin, LoginBox, LoginCont, SnsLoginBtns, TypingArea } from './style';
+import { useDispatch, useSelector } from 'react-redux';
+import { authActions } from '../../store/modules/authSlice';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user, isAuthenticated, loading, error } = useSelector((state) => state.authR);
+  const [loginUser, setLoginUser] = useState({
+    email: '',
+    pw: '',
+  });
+
+  const changeInput = (e) => {
+    const { name, value } = e.target;
+    setLoginUser({ ...loginUser, [name]: value.replace(/\s/g, '') });
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (loginUser.email === '' || loginUser.pw === '') {
+      alert('이메일과 비밀번호를 입력해주세요.');
+    } else {
+      dispatch(authActions.login(loginUser));
+    }
+  };
+
+  useEffect(() => {
+    if (!loading && isAuthenticated && user) {
+      navigate('/main');
+    } else if (!loading && error) {
+      alert(error);
+    }
+  }, [isAuthenticated]);
+
   return (
     <>
       <LoginBox>
@@ -11,16 +45,30 @@ const Login = () => {
               alt=""
             />
           </h1>
-          <form>
+          <form onSubmit={onSubmit}>
             <TypingArea>
-              <label htmlFor="idOrEmail" className="hide">
-                이메일 주소 또는 아이디
+              <label htmlFor="email" className="hide">
+                이메일 주소
               </label>
-              <input type="text" name="idOrEmail" id="idOrEmail" placeholder="이메일 주소 또는 아이디" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="이메일 주소"
+                value={loginUser.email}
+                onChange={changeInput}
+              />
               <label htmlFor="pw" className="hide">
                 비밀번호
               </label>
-              <input type="password" name="pw" id="pw" placeholder="비밀번호" />
+              <input
+                type="password"
+                name="pw"
+                id="pw"
+                placeholder="비밀번호"
+                value={loginUser.pw}
+                onChange={changeInput}
+              />
             </TypingArea>
 
             <ChkboxArea>
@@ -38,7 +86,10 @@ const Login = () => {
             <span>|</span>
             <strong>비밀번호 재설정</strong>
             <span>|</span>
-            <strong>회원가입</strong>
+
+            <strong>
+              <Link to="/auth/join">회원가입</Link>
+            </strong>
           </FindAndJoin>
 
           <SnsLoginBtns>

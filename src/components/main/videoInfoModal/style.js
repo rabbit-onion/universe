@@ -360,7 +360,6 @@ export const PvCard = styled.div`
 
 export const ModalFooter = styled.div`
   width: 100%;
-  height: 332px;
   background-color: #4b4b4b;
   color: white;
   padding: 45px 60px;

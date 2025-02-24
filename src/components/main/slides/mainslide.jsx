@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -26,7 +26,7 @@ const Mainslide = () => {
     {
       src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/horimiya.webp',
       alt: 'thumbnail 3',
-      title: '호라미야',
+      title: '호리미야',
       age: 12,
     },
     {
@@ -145,7 +145,10 @@ const Mainslide = () => {
                   <img className="play_btn" src="/images/pattern/playbtn.png"></img>
 
                   <img className="plus_btn" src="/images/pattern/plusbtn.png"></img>
-                  <section>{image.title}</section>
+                  <section>
+                    {image.title}
+                    <p>판타지·액션 | TVA·완결</p>
+                  </section>
                 </div>
                 <img src={image.src} alt={image.alt} className="slide-image" />
               </SwiperSlide>

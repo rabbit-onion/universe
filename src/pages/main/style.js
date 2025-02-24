@@ -3,9 +3,14 @@ import { device } from '../../styled/Device';
 
 export const MainWrap = styled.div`
   h2 {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 50px;
+    margin-bottom: 3.3333rem;
+  }
+  .controlZidx {
+    position: relative;
+    z-index: 2;
+    margin-top: -4%;
   }
   .center_wrap {
     display: flex;
@@ -27,7 +32,7 @@ export const MainWrap = styled.div`
   }
 
   .content_wrap {
-    gap: 20px;
+    gap: 1.3333rem;
     display: flex;
     flex-direction: row;
   }
@@ -56,16 +61,26 @@ export const MainWrap = styled.div`
   .overlay-div img {
     width: 100%;
     height: 100%;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 1.3333rem 1.3333rem 0rem 0rem;
   }
 
   .overlay-div section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     width: 100%;
     height: 100%;
     background-color: white;
-    padding: 20px;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-    border-radius: 0px 0px 20px 20px;
+    padding: 1.3333rem;
+    filter: drop-shadow(0 0 0.3333rem rgba(0, 0, 0, 0.5));
+    border-radius: 0rem 0rem 1.3333rem 1.3333rem;
+    p {
+      margin-top: 6px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      color: #4b4b4b;
+    }
   }
 
   .overlay-div.active {
@@ -80,11 +95,11 @@ export const MainWrap = styled.div`
     background-color: rgba(0, 0, 0, 0.4);
     transition: transform 0.5s ease;
     position: absolute;
-    bottom: -1px;
-    top: 22px;
+    bottom: -0.0667rem;
+    top: 1.4667rem;
     left: 0;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 1.3333rem;
+    border-bottom-left-radius: 1.3333rem;
   }
   .swiper-button-prev:hover {
     transition: transform 0.8s ease;
@@ -97,11 +112,11 @@ export const MainWrap = styled.div`
     background-color: rgba(0, 0, 0, 0.4);
     transition: transform 0.5s ease;
     position: absolute;
-    bottom: -1px;
-    top: 22px;
+    bottom: -0.0667rem;
+    top: 1.4667rem;
     right: 0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 1.3333rem;
+    border-bottom-right-radius: 1.3333rem;
   }
   .swiper-button-next:hover {
     transition: transform 0.8s ease;
@@ -142,15 +157,15 @@ export const VerticalUserWatching = styled.div`
     height: 50vh;
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
-    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.1));
+    border-radius: 1rem;
+    filter: drop-shadow(0rem 0.2667rem 0.2rem rgba(0, 0, 0, 0.1));
   }
   @media ${device.laptopMX} {
     width: 20.8vw;
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
-    filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.1));
+    border-radius: 1rem;
+    filter: drop-shadow(0rem 0.2667rem 0.2rem rgba(0, 0, 0, 0.1));
   }
   @media ${device.tabletMX} {
     width: 27.7vw;
@@ -158,26 +173,31 @@ export const VerticalUserWatching = styled.div`
   img {
     width: 100%;
     height: 50vh;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
   }
   div {
     width: 100%;
-    padding: 20px;
+    padding: 1.3333rem;
     background-color: white;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     display: flex;
     align-items: center;
   }
   p {
-    font-size: 20px;
-    margin-left: 20px;
+    font-size: 1.3333rem;
+    margin-left: 1.3333rem;
   }
 `;
 
 export const MainThumbnailWrap = styled.div`
   position: relative;
+  overflow: hidden;
+  iframe {
+    scale: 1.15;
+    transform: translateY(-4%);
+  }
   img {
     width: 100%;
     height: 100%;
@@ -199,13 +219,50 @@ export const WhiteBlur = styled.div`
   background-position: 0 top;
   background-repeat: repeat-x;
   background-size: 100% 100%;
-  bottom: -1px;
+  bottom: -0.0667rem;
   height: 14.7vw;
   opacity: 1;
   top: auto;
   width: 100%;
+  z-index: 2;
 `;
 
+export const PlayBtnImg = styled.img``;
+export const InfoBtnImg = styled.img``;
+
+export const TxtBox = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  padding-left: 85px;
+  padding-bottom: 200px;
+  > img {
+    width: 31.2667rem;
+    height: 15.6667rem;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    gap: 0.8667rem;
+    margin-top: 11.4rem;
+    a {
+      position: relative;
+      z-index: 2;
+    }
+    ${PlayBtnImg} {
+      width: 10.6667rem;
+      height: 4.5333rem;
+    }
+    ${InfoBtnImg} {
+      width: 14.3333rem;
+      height: 4.5333rem;
+    }
+  }
+`;
+
+// ==========================================
 export const IssueContentWrap = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -217,26 +274,31 @@ export const BlackBlur = styled.div`
   height: 87vh;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 5;
-  border-radius: 25px;
+  border-radius: 1.6667rem;
   h2 {
-    font-size: 80px;
+    font-size: 5.3333rem;
     font-weight: bold;
     color: white;
-    margin: 60px 50px 0px;
+    margin: 4rem 3.3333rem 0rem;
   }
   p {
-    font-size: 40px;
+    font-size: 2.6667rem;
     font-weight: 400;
     color: white;
-    margin: 0px 50px;
+    margin: 0rem 3.3333rem;
+  }
+  .release-playBtn {
+    display: block;
+    margin: auto;
+    margin-top: 7%;
   }
   @media ${device.laptopMX} {
     height: 48vh;
     p {
-      font-size: 15px;
+      font-size: 1rem;
     }
     h2 {
-      font-size: 30px;
+      font-size: 2rem;
     }
   }
 `;
@@ -250,9 +312,9 @@ export const IssueContain = styled.div`
     top: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(15px);
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    backdrop-filter: blur(1rem);
+    border-top-right-radius: 1.6667rem;
+    border-bottom-right-radius: 1.6667rem;
     z-index: 5;
   }
   img {
@@ -262,20 +324,20 @@ export const IssueContain = styled.div`
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 30px;
+    border-radius: 2rem;
   }
   button {
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 30px;
+    border-radius: 2rem;
     width: 14vw;
     height: 6vh;
-    border: 2px solid #0066ff;
+    border: 0.1333rem solid #0066ff;
     background-color: transparent;
     color: white;
-    font-size: 24px;
+    font-size: 1.6rem;
   }
   @media ${device.laptopMX} {
     div {
@@ -285,7 +347,7 @@ export const IssueContain = styled.div`
     img {
       height: 23.5vh;
       width: 19.0625vw;
-      border-radius: 15px;
+      border-radius: 1rem;
     }
   }
 `;
@@ -293,7 +355,7 @@ export const IssueContain = styled.div`
 export const IssueAnimationImg = styled.img`
   width: 78.125vw;
   height: 87vh;
-  border-radius: 25px;
+  border-radius: 1.6667rem;
   @media ${device.laptopMX} {
     height: 48vh;
   }
