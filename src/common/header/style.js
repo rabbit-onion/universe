@@ -335,3 +335,15 @@ export const LogoutLi = styled.li`
   align-items: center;
   gap: 9px;
 `;
+
+export const HomeNavRight = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  a {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #303030;
+  }
+`;
