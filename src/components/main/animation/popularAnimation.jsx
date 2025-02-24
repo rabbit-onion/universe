@@ -11,22 +11,22 @@ import { PopularAnimationWrap } from '../style';
 const PopularAnimation = () => {
   const thumbnails = [
     {
-      src: '/images/pattern/vertical/bleach.jpg',
+      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/popular/bleachthousand.png',
       alt: 'thumbnail 1',
       num: '/images/pattern/popular_1.png',
     },
     {
-      src: '/images/pattern/vertical/digimon.jpg',
+      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/popular/nigewaka.png',
       alt: 'thumbnail 2',
       num: '/images/pattern/popular_2.png',
     },
     {
-      src: '/images/pattern/vertical/magic.jpg',
+      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/popular/psycho.png',
       alt: 'thumbnail 3',
       num: '/images/pattern/popular_3.png',
     },
     {
-      src: '/images/pattern/vertical/wakako.jpg',
+      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/popular/monster8.png',
       alt: 'thumbnail 4',
       num: '/images/pattern/popular_4.png',
     },

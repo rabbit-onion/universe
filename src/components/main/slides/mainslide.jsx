@@ -212,12 +212,11 @@ const Mainslide = ({ secondSlideData, thirdSlideData }) => {
               >
                 <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
                   <img src={data.thumb} alt={data.name || data.title} className="slide-image" />
-                  {
-                    <div className={` age_img18 ${data.adult ? 'visible' : ''}`}>
-                      {' '}
-                      <img src="/images/pattern/18.svg"></img>
-                    </div>
-                  }
+
+                  <div className={` age_img18 ${data.adult ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/18.svg"></img>
+                  </div>
                   {/* <div className={` age_img15 ${image.age === 15 ? 'visible' : ''}`}>
                     {' '}
                     <img src="/images/pattern/15.svg"></img>

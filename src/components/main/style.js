@@ -55,9 +55,10 @@ export const HotpostContentTitle = styled.div`
     font-size: 12px;
   }
   h2 {
-    margin-bottom: 20px;
+    margin-top: 1rem;
+    margin-bottom: 4.6667rem;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px !important;
   }
   @media ${device.laptopMX} {
     height: 10.4vh;

@@ -3,7 +3,7 @@ import { device } from '../../styled/Device';
 
 export const MainWrap = styled.div`
   h2 {
-    font-size: 2rem;
+    font-size: 2.3333rem;
     font-weight: 600;
     margin-bottom: 3.3333rem;
   }
@@ -152,6 +152,28 @@ export const MainWrap = styled.div`
 `;
 
 export const VerticalUserWatching = styled.div`
+  div {
+    position: relative;
+    div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 12px;
+      padding: 0;
+      border-radius: 0;
+      background: #d6d5d5;
+      div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: ${(props) => props.w}%;
+        height: 12px;
+        padding: 0;
+        background: #0068ff;
+        border-radius: 0px 20px 20px 0px;
+      }
+    }
+  }
   @media ${device.desktop} {
     width: 15.8vw;
     height: 50vh;
