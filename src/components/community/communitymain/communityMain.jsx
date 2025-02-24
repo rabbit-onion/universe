@@ -9,9 +9,14 @@ import {
 
 import { useDispatch, useSelector } from 'react-redux';
 import { hotpostActions } from '../../../store/modules/hotpostSlice';
+import { Link, useLocation } from 'react-router-dom';
 
 const CommunityMain = () => {
   const { hotpostmainData, currentMenu } = useSelector((state) => state.hotpostR);
+
+  const location = useLocation();
+  const pathSegments = location.pathname.split('/').filter(Boolean);
+  const currentPage = pathSegments[0] || 'main';
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const timeoutRef = useRef(null); // 타이머를 저장할 ref
@@ -34,7 +39,9 @@ const CommunityMain = () => {
   return (
     <>
       <CommunityBanner>
-        <img src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/community/intro-overlay-btn.png"></img>
+        <Link to={`/${currentPage}/videoinfo`}>
+          <img src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/community/intro-overlay-btn.png"></img>
+        </Link>
       </CommunityBanner>
       <CommunityWrap>
         <section>
@@ -87,7 +94,11 @@ const CommunityMain = () => {
           })}
         </CommunitySwiperWrap>
         <div className="button_contain">
-          <button>게시물 전체보기</button>
+          <button>
+            <Link to="/community/posts" style={{ color: 'white' }}>
+              게시물 전체보기
+            </Link>
+          </button>
         </div>
       </CommunityWrap>
     </>

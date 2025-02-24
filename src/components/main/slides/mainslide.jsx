@@ -7,77 +7,164 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const Mainslide = () => {
+const Mainslide = ({ secondSlideData, thirdSlideData }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const timeoutRef = useRef(null); // 타이머를 저장할 ref
-  const thumbnails = [
+  const pathUrl = 'https://image.tmdb.org/t/p/original';
+
+  // const thumbnails = [
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/blade.webp',
+  //     alt: 'thumbnail 1',
+  //     title: '귀멸의 칼날',
+  //     age: 15,
+  //   },
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/hell.webp',
+  //     alt: 'thumbnail 2',
+  //     title: '지옥락',
+  //     age: 15,
+  //   },
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/horimiya.webp',
+  //     alt: 'thumbnail 3',
+  //     title: '호리미야',
+  //     age: 12,
+  //   },
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/jusul.webp',
+  //     alt: 'thumbnail 4',
+  //     title: '주술회전',
+  //     age: 18,
+  //   },
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/mashle.webp',
+  //     alt: 'thumbnail 5',
+  //     title: '마슐',
+  //     age: 15,
+  //   },
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/frieren.webp',
+  //     alt: 'thumbnail 6',
+  //     title: '장송의 프리렌',
+  //     age: 15,
+  //   },
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/hosinoko.webp',
+  //     alt: 'thumbnail 7',
+  //     title: '최애의 아이',
+  //     age: 15,
+  //   },
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/moruka.webp',
+  //     alt: 'thumbnail 8',
+  //     title: '뿌이뿌이 모루카',
+  //     age: 0,
+  //   },
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/sinjjang.webp',
+  //     alt: 'thumbnail 9',
+  //     title: '짱구는 못말려(극장판) ~ 초시공! 태풍을 부르는 나의 신부',
+  //     age: 0,
+  //   },
+  //   {
+  //     src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/slamdunk.webp',
+  //     alt: 'thumbnail 10',
+  //     title: '슬램덩크',
+  //     age: 15,
+  //   },
+  // ];
+
+  // 마우스 오버 핸들러
+
+  const secondThumbsData = [
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/blade.webp',
-      alt: 'thumbnail 1',
-      title: '귀멸의 칼날',
-      age: 15,
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/1stSlides/duel.webp',
     },
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/hell.webp',
-      alt: 'thumbnail 2',
-      title: '지옥락',
-      age: 15,
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/1stSlides/sakaday.png',
     },
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/horimiya.webp',
-      alt: 'thumbnail 3',
-      title: '호리미야',
-      age: 12,
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/2ndSlides/Group 5.png',
     },
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/jusul.webp',
-      alt: 'thumbnail 4',
-      title: '주술회전',
-      age: 18,
+      url: '',
     },
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/mashle.webp',
-      alt: 'thumbnail 5',
-      title: '마슐',
-      age: 15,
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/2ndSlides/prpr.jpg',
     },
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/frieren.webp',
-      alt: 'thumbnail 6',
-      title: '장송의 프리렌',
-      age: 15,
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/2ndSlides/maruko.jpg',
     },
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/hosinoko.webp',
-      alt: 'thumbnail 7',
-      title: '최애의 아이',
-      age: 15,
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/2ndSlides/Group 4.png',
     },
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/moruka.webp',
-      alt: 'thumbnail 8',
-      title: '뿌이뿌이 모루카',
-      age: 0,
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/2ndSlides/dictionary.png',
     },
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/sinjjang.webp',
-      alt: 'thumbnail 9',
-      title: '짱구는 못말려(극장판) ~ 초시공! 태풍을 부르는 나의 신부',
-      age: 0,
+      url: '',
     },
     {
-      src: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/slamdunk.webp',
-      alt: 'thumbnail 10',
-      title: '슬램덩크',
-      age: 15,
+      url: '',
     },
   ];
 
-  // 마우스 오버 핸들러
+  const thirdThumbsData = [
+    {
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/3rdSlides/lion.png',
+    },
+    {
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/3rdSlides/moana.webp',
+    },
+    {
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/3rdSlides/sonic.webp',
+    },
+    {
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/3rdSlides/dogman.jpg',
+    },
+    {
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/3rdSlides/lvUp.png',
+    },
+    {
+      url: '',
+    },
+    {
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/3rdSlides/superbad.webp',
+    },
+    {
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/3rdSlides/Group 5.png',
+    },
+    {
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/3rdSlides/wildrobot.jpg',
+    },
+    {
+      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/3rdSlides/flow.jpg',
+    },
+  ];
+
+  let addedSlideData = [];
+
+  if (secondSlideData) {
+    addedSlideData = secondSlideData.map((data, idx) => {
+      return {
+        ...data,
+        thumb: secondThumbsData[idx]?.url || `${pathUrl}/${data.backdrop_path}`,
+      };
+    });
+  } else if (thirdSlideData) {
+    addedSlideData = thirdSlideData.map((data, idx) => {
+      return {
+        ...data,
+        thumb: thirdThumbsData[idx]?.url || `${pathUrl}/${data.backdrop_path}`,
+      };
+    });
+  }
+
   const handleMouseEnter = (index) => {
     timeoutRef.current = setTimeout(() => {
       setHoveredIndex(index); // 딜레이 후 상태 업데이트
-    }, 500); // 500ms 딜레이
+    }, 350); // 350ms 딜레이
   };
 
   // 마우스 아웃 핸들러
@@ -116,7 +203,7 @@ const Mainslide = () => {
               },
             }}
           >
-            {thumbnails.map((image, index) => (
+            {addedSlideData.map((data, index) => (
               <SwiperSlide
                 key={index}
                 onMouseEnter={() => handleMouseEnter(index)} // 마우스 오버 핸들러 호출
@@ -124,8 +211,13 @@ const Mainslide = () => {
                 className={`swiper-slide ${hoveredIndex === index ? 'hovered' : ''}`} // 조건부 클래스 추가
               >
                 <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
-                  <img src={image.src} alt={image.alt} className="slide-image" />
-                  <div className={` age_img15 ${image.age === 15 ? 'visible' : ''}`}>
+                  <img src={data.thumb} alt={data.name || data.title} className="slide-image" />
+
+                  <div className={` age_img18 ${data.adult ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/18.svg"></img>
+                  </div>
+                  {/* <div className={` age_img15 ${image.age === 15 ? 'visible' : ''}`}>
                     {' '}
                     <img src="/images/pattern/15.svg"></img>
                   </div>
@@ -140,17 +232,17 @@ const Mainslide = () => {
                   <div className={` age_imgall ${image.age === 0 ? 'visible' : ''}`}>
                     {' '}
                     <img src="/images/pattern/all.png"></img>
-                  </div>
+                  </div> */}
 
                   <img className="play_btn" src="/images/pattern/playbtn.png"></img>
 
                   <img className="plus_btn" src="/images/pattern/plusbtn.png"></img>
                   <section>
-                    {image.title}
+                    {data.name || data.title}
                     <p>판타지·액션 | TVA·완결</p>
                   </section>
                 </div>
-                <img src={image.src} alt={image.alt} className="slide-image" />
+                <img src={data.thumb} alt={data.name || data.title} className="slide-image" />
               </SwiperSlide>
             ))}
           </Swiper>

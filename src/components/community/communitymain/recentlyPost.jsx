@@ -10,6 +10,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { pagenationActions } from '../../../store/modules/paginationSlice';
 import LikePost from './likePost';
+import { Link } from 'react-router-dom';
 
 const RecentlyPost = () => {
   const { postsPerPage, currPage } = useSelector((state) => state.pagenationR);
@@ -41,24 +42,28 @@ const RecentlyPost = () => {
             <option value="2">좋아요 많은순</option>
             <option value="3">댓글 많은순</option>
           </select>
-          <button>글쓰기</button>
+          <button>
+            <Link to="/community/write">글쓰기</Link>
+          </button>
         </div>
       </RecentlyPostSelectWrap>
       {currentPost.map((item) => {
         return (
           <>
-            <RecentlyPostWrap>
-              <RecentlyPostDocSec>
-                <div>
-                  <img src={item.usersrc}></img>
-                  <p>{item.name}</p>
-                </div>
-                <h2>{item.title}</h2>
-                <p>{item.doc}</p>
-                <LikePost key={item.id} item={item} />
-              </RecentlyPostDocSec>
-              <RecentlyThumbnail src={item.src}></RecentlyThumbnail>
-            </RecentlyPostWrap>
+            <Link to="/community/viewpost">
+              <RecentlyPostWrap>
+                <RecentlyPostDocSec>
+                  <div>
+                    <img src={item.usersrc}></img>
+                    <p>{item.name}</p>
+                  </div>
+                  <h2>{item.title}</h2>
+                  <p>{item.doc}</p>
+                  <LikePost key={item.id} item={item} />
+                </RecentlyPostDocSec>
+                <RecentlyThumbnail src={item.src}></RecentlyThumbnail>
+              </RecentlyPostWrap>
+            </Link>
             <hr></hr>
           </>
         );

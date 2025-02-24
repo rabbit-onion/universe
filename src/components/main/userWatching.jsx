@@ -1,5 +1,6 @@
 import React from 'react';
 import { VerticalUserWatching } from '../../pages/main/style';
+import ProgressBar from '../../ui/ProgressBar';
 
 const UserWatching = () => {
   return (
@@ -7,22 +8,31 @@ const UserWatching = () => {
       <div className="bg-gr div_top_margin">
         <h2>XX님이 시청중인 컨텐츠</h2>
         <div className="content_wrap">
-          <VerticalUserWatching>
-            <img src="/images/pattern/vertical/keroro.jpg"></img>
+          <VerticalUserWatching w="45">
+            <img src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/watching/charChange.png"></img>
             <div>
+              <div>
+                <div></div>
+              </div>
               <p>캐릭캐릭체인지</p>
             </div>
           </VerticalUserWatching>
-          <VerticalUserWatching>
-            <img src="/images/pattern/vertical/keroro.jpg"></img>
+          <VerticalUserWatching w="90">
+            <img src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/watching/holidaysVillain.png"></img>
             <div>
-              <p>캐릭캐릭체인지</p>
+              <div>
+                <div></div>
+              </div>
+              <p>휴일의 악당</p>
             </div>
           </VerticalUserWatching>
-          <VerticalUserWatching>
-            <img src="/images/pattern/vertical/keroro.jpg"></img>
+          <VerticalUserWatching w="60">
+            <img src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/watching/killersclass.png"></img>
             <div>
-              <p>캐릭캐릭체인지</p>
+              <div>
+                <div></div>
+              </div>
+              <p>암살교실</p>
             </div>
           </VerticalUserWatching>
         </div>

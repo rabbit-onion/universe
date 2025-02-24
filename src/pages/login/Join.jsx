@@ -76,11 +76,14 @@ const Join = () => {
     if (name === 'pwConfirm') {
       if (!value || value === '') {
         setIsEqual(null);
+        setError({ ...error, [name]: '필수 항목입니다' });
       } else {
         if (value === formData.pw) {
           setIsEqual(true);
+          setError({ ...error, [name]: '' });
         } else {
           setIsEqual(false);
+          setError({ ...error, [name]: '다시 입력해주세요.' });
         }
       }
     }
@@ -90,20 +93,16 @@ const Join = () => {
     const existUserDatas = JSON.parse(localStorage.getItem('users')) || [];
     if (!formData.email || formData.email === '') {
       setError({ ...error, email: '이메일은 필수 항목입니다.' });
+    } else if (existUserDatas.some((data) => data.email === formData.email)) {
+      setError({ ...error, email: '이미 존재하는 이메일입니다.' });
     } else {
-      if (existUserDatas) {
-        if (existUserDatas.some((data) => data.email === formData.email)) {
-          setError({ ...error, email: '이미 존재하는 이메일입니다.' });
-        } else {
-          // 이메일 형식 검사
-          const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-          if (!emailRegex.test(formData.email)) {
-            setError({ ...error, email: '올바른 이메일 형식이 아닙니다' });
-          } else {
-            setError({ ...error, email: '' });
-            setIsValid(true);
-          }
-        }
+      // 이메일 형식 검사
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(formData.email)) {
+        setError({ ...error, email: '올바른 이메일 형식이 아닙니다' });
+      } else {
+        setError({ ...error, email: '' });
+        setIsValid(true);
       }
     }
   };
@@ -137,7 +136,7 @@ const Join = () => {
       alert('필수 약관에 동의해주세요.');
     } else {
       dispatch(authActions.register(formData));
-      navigate('/');
+      navigate('/main');
     }
   };
 
@@ -184,7 +183,7 @@ const Join = () => {
                   </button>
                 </EmailInput>
                 {error.email && <p>{error.email}</p>}
-                {error.emailValid && <IsValid>사용가능한 이메일입니다.</IsValid>}
+                {isValid && <IsValid>사용가능한 이메일입니다.</IsValid>}
               </li>
               <li>
                 <label htmlFor="pw">

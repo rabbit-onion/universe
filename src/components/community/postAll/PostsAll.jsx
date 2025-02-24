@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { AllWrap, BottomAdd, ButtonBox, Container, ContentTitle, ContentWrap, ListWrap, PaginationAll } from '../style';
 import PostList from './PostList';
 
@@ -11,7 +12,9 @@ const PostsAll = () => {
           </ContentTitle>
           <ButtonBox>
             <button>최신순</button>
-            <button>글쓰기</button>
+            <button>
+              <Link to="/community/write">글쓰기</Link>
+            </button>
           </ButtonBox>
           <ContentWrap>
             <ListWrap>

@@ -21,25 +21,23 @@ const FirstMainslide = ({ firstSlideData }) => {
       url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/1stSlides/ninja.jpg',
     },
     {
+      url: '',
+    },
+    {
       url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/1stSlides/mom.webp',
+    },
+    {
+      url: '',
     },
     {
       url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/1stSlides/invincible.jpg',
     },
+    { url: '' },
     {
       url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/1stSlides/keroro.jpg',
     },
     {
       url: '',
-    },
-    {
-      url: '',
-    },
-    {
-      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/1stSlides/duel.webp',
-    },
-    {
-      url: 'https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/main/1stSlides/sakaday.png',
     },
   ];
 
@@ -165,7 +163,7 @@ const FirstMainslide = ({ firstSlideData }) => {
                 className={`swiper-slide ${hoveredIndex === index ? 'hovered' : ''}`} // 조건부 클래스 추가
               >
                 <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
-                  <img src={data.thumb} alt={data.name} className="slide-image" />
+                  <img src={data.thumb} alt={data.name || data.title} className="slide-image" />
 
                   <div className={` age_img18 ${data.adult ? 'visible' : ''}`}>
                     {' '}
@@ -192,11 +190,11 @@ const FirstMainslide = ({ firstSlideData }) => {
 
                   <img className="plus_btn" src="/images/pattern/plusbtn.png"></img>
                   <section>
-                    {data.name}
+                    {data.name || data.title}
                     <p>판타지·액션 | TVA·완결</p>
                   </section>
                 </div>
-                <img src={data.thumb} alt={data.name} className="slide-image" />
+                <img src={data.thumb} alt={data.name || data.title} className="slide-image" />
               </SwiperSlide>
             ))}
           </Swiper>
