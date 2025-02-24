@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+
+export const SlideTitle = styled.div`
+  margin-bottom: 40px;
+  text-align: center;
+`;
 export const BlackBlur = styled.div`
   width: 90%;
   height: 90%;

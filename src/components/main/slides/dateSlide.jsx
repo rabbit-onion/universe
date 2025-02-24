@@ -78,6 +78,27 @@ const DateSlide = () => {
               >
                 <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
                   <img src={image.src} alt={image.alt} className="slide-image" />
+                  <div className={` age_img15 ${image.age === 15 ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/15.svg"></img>
+                  </div>
+                  <div className={` age_img12 ${image.age === 12 ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/12.svg"></img>
+                  </div>
+                  <div className={` age_img18 ${image.age === 18 ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/18.svg"></img>
+                  </div>
+                  <div className={` age_imgall ${image.age === 0 ? 'visible' : ''}`}>
+                    {' '}
+                    <img src="/images/pattern/all.png"></img>
+                  </div>
+
+                  <img className="play_btn" src="/images/pattern/playbtn.png"></img>
+
+                  <img className="plus_btn" src="/images/pattern/plusbtn.png"></img>
+
                   <section>{image.title}</section>
                 </div>
                 <img src={image.src} alt={image.alt} className="slide-image" />

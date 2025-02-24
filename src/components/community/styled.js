@@ -54,7 +54,7 @@ export const CommunityWrap = styled.div`
     height: 50%;
     background-color: white;
     padding: 20px;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
     border-radius: 0px 0px 20px 20px;
   }
 
@@ -75,6 +75,7 @@ export const CommunityBanner = styled.div`
 export const CommunitySwiperWrap = styled.div`
   display: flex;
   justify-content: space-around;
+  margin-top: 70px;
 `;
 
 export const HotpostButtonGroup = styled.div`
@@ -135,13 +136,23 @@ export const GenrePostWrap = styled.div`
   padding: 5.2vw;
   margin-top: 100px;
   button {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     margin-top: 80px;
   }
   img {
     width: 100%;
     height: 100%;
+  }
+  .swiper-button-prev {
+    height: 75%;
+    top: 31%;
+    left: 1%;
+  }
+  .swiper-button-next {
+    height: 75%;
+    top: 31%;
+    right: -6%;
   }
 `;
 export const RecentlyPostContainer = styled.div`
@@ -188,6 +199,9 @@ export const RecentlyPostDocSec = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  h2 {
+    font-size: 20px !important;
+  }
   div {
     display: flex;
     gap: 10px;

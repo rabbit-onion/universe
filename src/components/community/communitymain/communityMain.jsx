@@ -72,11 +72,14 @@ const CommunityMain = () => {
                   onMouseLeave={handleMouseLeave} // 마우스 아웃 핸들러 호출
                   className={` hotpost_img_wrap ${hoveredIndex === index ? 'hovered' : ''}`} // 조건부 클래스 추가
                 >
-                  <HotpostContentCover />
                   <div className={`overlay-div ${hoveredIndex === index ? 'active' : ''}`}>
                     <img src={image.src} alt={image.alt} />
-                    <section>{image.title}</section>
+                    <section>
+                      <div>{image.title}</div>
+                      <p>{image.tag}</p>
+                    </section>
                   </div>
+
                   <img src={image.src} alt={image.alt} />
                 </div>
               </>
