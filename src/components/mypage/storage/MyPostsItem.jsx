@@ -9,10 +9,7 @@ const MyPostsItem = ({ mypost }) => {
       <Card>
         <Link>
           <ImgBox>
-            <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/myPostThumb.png"
-              alt="게시글 썸네일"
-            />
+            <img src={thumbnail} alt="게시글 썸네일" />
           </ImgBox>
         </Link>
         <Link>

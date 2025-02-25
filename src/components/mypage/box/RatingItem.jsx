@@ -12,10 +12,7 @@ const RatingItem = ({ rating: ratingData }) => {
       <Card>
         <Link>
           <ImgBox>
-            <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/kamisama.webp"
-              alt={`${title} 썸네일`}
-            />
+            <img src={thumbnail} alt={`${title} 썸네일`} />
           </ImgBox>
 
           <TxtBox>

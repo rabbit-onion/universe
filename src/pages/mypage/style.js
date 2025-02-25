@@ -45,4 +45,7 @@ export const Inner = styled.div`
   width: 100%;
   height: 100%;
   padding: 2.0667rem 2.4rem 3.1333rem 2.7333rem;
+  h2 {
+    margin-bottom: 20px;
+  }
 `;

@@ -28,10 +28,7 @@ const CommentItem = ({ comment }) => {
           </CommentTxtBox>
 
           <ReviewImgBox>
-            <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/reviewThumb.png"
-              alt="나의 리뷰 스킵과 로퍼 썸네일"
-            />
+            <img src={thumbnail} alt="나의 리뷰 스킵과 로퍼 썸네일" />
           </ReviewImgBox>
         </Link>
       </ReviewCard>

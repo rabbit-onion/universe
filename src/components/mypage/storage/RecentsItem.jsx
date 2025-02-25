@@ -9,10 +9,7 @@ const RecentsItem = ({ recent }) => {
       <Card>
         <Link>
           <ImgBox>
-            <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/thumnails/animation-horizon/monster8.webp"
-              alt={title}
-            />
+            <img src={thumbnail} alt={title} />
             <IconBox>
               <img src="" alt="" />
               <img src="" alt="" />
