@@ -40,10 +40,7 @@ const ReviewItem = ({ review }) => {
           </ReviewTxtBox>
 
           <ReviewImgBox>
-            <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/reviewThumb.png"
-              alt={`${title} 썸네일`}
-            />
+            <img src={thumbnail} alt={`${title} 썸네일`} />
           </ReviewImgBox>
         </Link>
       </ReviewCard>

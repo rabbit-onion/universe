@@ -10,10 +10,7 @@ const LikedItem = ({ liked }) => {
       <Card>
         <Link>
           <ImgBox>
-            <img
-              src="https://raw.githubusercontent.com/rabbit-onion/universe-resources/refs/heads/main/images/mypage/likedThumb.webp"
-              alt={title}
-            />
+            <img src={thumbnail} alt={title} />
             <IconBox>
               <img src="" alt="" />
               <img src="" alt="" />
