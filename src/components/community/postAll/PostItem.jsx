@@ -5,7 +5,7 @@ const PostItem = () => {
     <>
       <CardWrap>
         <CardImage>
-          <img src="/public/images/pattern/horizon/allpost.png" alt="" />
+          <img src="/images/pattern/horizon/allpost.png" alt="" />
         </CardImage>
         <Card>
           <Left>
@@ -15,11 +15,11 @@ const PostItem = () => {
           <Right>
             <Reaction>
               <div>
-                <img src="/public/images/pattern/reactionhartIcon.svg" alt="" />
+                <img src="/images/pattern/reactionhartIcon.svg" alt="" />
                 <span>346</span>
               </div>
               <div>
-                <img src="/public/images/pattern/reactionmessageIcon.svg" alt="" />
+                <img src="/images/pattern/reactionmessageIcon.svg" alt="" />
                 <span>15</span>
               </div>
             </Reaction>

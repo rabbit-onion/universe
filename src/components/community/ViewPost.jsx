@@ -41,7 +41,7 @@ const ViewPost = () => {
         </ViewLine>
         <ViewText>
           <ViewImg>
-            <img src="/public/images/pattern/horizon/frommetoyou1.png" alt="" />
+            <img src="/images/pattern/horizon/frommetoyou1.png" alt="" />
           </ViewImg>
           <p>
             ‘너에게닿기를’ 시즌2 진짜 대박이었음! 시즌1에서 설렘 제대로 느끼고, 이젠 그 감정이 더 깊어지고 진지해져서
@@ -54,7 +54,7 @@ const ViewPost = () => {
             느낌이었음! 정말 시즌1을 재밌게 봤다면 시즌2는 절대 놓치지 말아야 할 작품! 진짜 추천!
           </p>
           <ViewImg>
-            <img src="/public/images/pattern/horizon/frommetoyou2.png" alt="" />
+            <img src="/images/pattern/horizon/frommetoyou2.png" alt="" />
           </ViewImg>
           <p>
             결국, 시즌2는 시즌1보다 훨씬 더 감동적이고 여운이 많이 남았어. 두 사람의 성장 이야기가 너무 진짜 같고,
@@ -64,7 +64,7 @@ const ViewPost = () => {
         <HartCount>
           <div>
             <em>
-              <img src="/public/images/pattern/hartcountIcon.svg" alt="" />
+              <img src="/images/pattern/hartcountIcon.svg" alt="" />
             </em>
             <p>136</p>
           </div>
@@ -83,17 +83,17 @@ const ViewPost = () => {
             <ul>
               <li>
                 <button>
-                  <img src="/public/images/pattern/Iconutility1.png" alt="" />
+                  <img src="/images/pattern/Iconutility1.png" alt="" />
                 </button>
               </li>
               <li>
                 <button>
-                  <img src="/public/images/pattern/Iconutility2.png" alt="" />
+                  <img src="/images/pattern/Iconutility2.png" alt="" />
                 </button>
               </li>
               <li>
                 <button>
-                  <img src="/public/images/pattern/Iconutility3.png" alt="" />
+                  <img src="/images/pattern/Iconutility3.png" alt="" />
                 </button>
               </li>
             </ul>
@@ -103,7 +103,7 @@ const ViewPost = () => {
           <UserProfile>
             <UserWrap>
               <ProfileImg>
-                <img src="/public/images/pattern/horizon/userprofile.png" alt="프로필사진" />
+                <img src="/images/pattern/horizon/userprofile.png" alt="프로필사진" />
               </ProfileImg>
               <p>박준용</p>
             </UserWrap>
@@ -129,7 +129,7 @@ const ViewPost = () => {
           <CommentAther>
             <AtherProfile>
               <AtherImg>
-                <img src="/public/images/pattern/horizon/commentprofile.jpg" alt="댓글프로필" />
+                <img src="/images/pattern/horizon/commentprofile.jpg" alt="댓글프로필" />
               </AtherImg>
               <div>
                 <h2>오늘은맑음</h2>
@@ -144,11 +144,11 @@ const ViewPost = () => {
             </AtherComment>
             <AtherBtn>
               <div>
-                <img src="/public/images/pattern/plusIcon.svg" alt="" />
+                <img src="/images/pattern/plusIcon.svg" alt="" />
                 <button>답글달기</button>
               </div>
               <div>
-                <img src="/public/images/pattern/heartIcon.svg" alt="" />
+                <img src="/images/pattern/heartIcon.svg" alt="" />
                 <button>34</button>
               </div>
             </AtherBtn>
